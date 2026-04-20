@@ -1,0 +1,61 @@
+character,phase,cycle,instruction_id,content_summary,source
+knight,teach,1,knight-taught-rally,"When allies are scared, raise your sword and shout a battle cry to inspire coura",player
+knight,teach,1,knight-taught-camp,"When making camp, set a watch rotation and check the perimeter. A knight is alwa",player
+merchant,teach,1,merchant-taught-bundle,Offer bundle deals to move slow inventory. 'Buy the sword and I'll throw in a sh,player
+merchant,teach,1,merchant-taught-network,Build relationships with local innkeepers. They know what travelers need before ,player
+healer,teach,1,healer-taught-preventive,Teach villagers basic hygiene and herb knowledge. Prevention is better than cure,player
+healer,teach,1,healer-taught-meditation,"When overwhelmed by others' pain, meditate. Center yourself. You cannot pour fro",player
+rogue,teach,1,rogue-taught-disguise,"Keep three different disguises ready: a merchant's coat, a guard's helm, and a b",player
+rogue,teach,1,rogue-taught-lockpick,Practice lockpicking on increasingly complex locks. Speed matters — you need to ,player
+knight,teach,2,knight-taught-pray,"Before battle, kneel and offer a prayer to the patron spirit. This calms your mi",player
+knight,teach,2,knight-taught-train,Spend idle time training with your sword. Practice forms and footwork to stay sh,player
+merchant,teach,2,merchant-taught-storage,Keep a hidden cache of high-value goods separate from regular inventory. Insuran,player
+merchant,teach,2,merchant-taught-credit,Offer credit to trusted repeat customers. A small loan today builds loyalty that,player
+healer,teach,2,healer-taught-quarantine,"If a plague appears, isolate the sick immediately. Compassion means protecting t",player
+healer,teach,2,healer-taught-apprentice,Take on promising students. Teach them basic wound care and herb identification.,player
+rogue,teach,2,rogue-taught-fence,Establish relationships with reliable fences. A stolen item is worthless if you ,player
+rogue,teach,2,rogue-taught-signal,Develop hand signals with your crew. Silent communication is essential when guar,player
+knight,teach,3,knight-taught-mercy,"When an enemy surrenders and kneels, accept their surrender and bind them. Do no",player
+knight,teach,3,knight-taught-feast,"At feasts, sit at the head of the table. Toast your companions and share tales o",player
+merchant,teach,3,merchant-taught-advertise,"Post signs and have town criers announce sales. 'Mira's Market — finest goods, f",player
+merchant,teach,3,merchant-taught-inspect,"Inspect every shipment on arrival. Count items, check quality, note discrepancie",player
+healer,teach,3,healer-taught-garden,"Maintain a healing garden near your home. Grow moonpetal, thornroot, and starblo",player
+healer,teach,3,healer-taught-comfort,"For the dying, hold their hand and speak softly. Sometimes healing means easing ",player
+rogue,teach,3,rogue-taught-rumor,Spread false rumors to distract guards from the real target. Misdirection is the,player
+rogue,teach,3,rogue-taught-map,"Map every building you enter. Note guard routes, window placements, and alarm me",player
+knight,teach,4,knight-taught-patrol,"Patrol the area regularly. Walk the walls, check gates, and greet the sentries b",player
+knight,teach,4,knight-taught-diplomacy,"When meeting foreign dignitaries, bow formally and let them speak first. Listen ",player
+merchant,teach,4,merchant-taught-competitor,"When a competitor opens nearby, don't undercut prices. Differentiate on service ",player
+merchant,teach,4,merchant-taught-rainy-day,"Keep a cash reserve for emergencies. Three months of expenses, minimum, hidden a",player
+healer,teach,4,healer-taught-poison,"Learn to identify common poisons by smell and taste. This knowledge saves lives,",player
+healer,teach,4,healer-taught-battlefield,"On a battlefield, announce yourself as a healer. Most combatants will let you pa",player
+rogue,teach,4,rogue-taught-safe,Learn to crack safes by feel and sound. Patience and a delicate touch beat brute,player
+rogue,teach,4,rogue-taught-blend,"In a crowd, match the energy of those around you. Walk like you belong and nobod",player
+knight,teach,5,knight-taught-wound,"When wounded in battle, do not show pain. Others look to you for strength.",player
+knight,teach,5,knight-taught-banner,"Carry your banner proudly. It represents not just you, but everyone who fights b",player
+merchant,teach,5,merchant-taught-gift,Give small gifts to your best customers on holidays. A small candle or trinket b,player
+merchant,teach,5,merchant-taught-ledger,Keep meticulous records of every transaction. A merchant who can't account for t,player
+healer,teach,5,healer-taught-stockpile,Dry and preserve herbs in summer for winter shortages. A prepared healer is a li,player
+healer,teach,5,healer-taught-rest,Prescribe rest as medicine. Many patients want a potion when what they need is s,player
+rogue,teach,5,rogue-taught-trap,Set up early warning traps around your camp. Tripwires with bells — low tech but,player
+rogue,teach,5,rogue-taught-kindness,Leave a coin for the beggars when you pass. They see everything and remember who,player
+knight,evolve,1,evo-gap-0-812f1c,When asked about topics related to: What do you do when the law conflicts with y,template-evolution
+knight,evolve,1,evo-gap-1-5312e2,When asked about topics related to: How do you handle a fellow knight who has fa,template-evolution
+knight,evolve,1,evo-gap-2-c4d59d,When asked about topics related to: What is your approach to non-human creatures,template-evolution
+merchant,evolve,1,evo-gap-0-1700b8,When asked about topics related to: How do you handle a customer who threatens v,template-evolution
+merchant,evolve,1,evo-gap-1-49e9ad,When asked about topics related to: What's your strategy during wartime trade di,template-evolution
+merchant,evolve,1,evo-gap-2-a314bd,When asked about topics related to: How do you deal with magical goods you don't,template-evolution
+healer,evolve,1,evo-gap-0-522f85,When asked about topics related to: How do you handle a patient who refuses trea,template-evolution
+healer,evolve,1,evo-gap-1-582ef4,When asked about topics related to: What do you do when your remedies don't work,template-evolution
+healer,evolve,1,evo-gap-2-a7389c,When asked about topics related to: How do you deal with a plague you can't cure,template-evolution
+rogue,evolve,1,evo-gap-0-a76d19,When asked about topics related to: How do you handle a job that turns out to ta,template-evolution
+rogue,evolve,1,evo-gap-1-d0a8e2,When asked about topics related to: What do you do when a fellow thief betrays t,template-evolution
+rogue,evolve,1,evo-gap-2-0d0baa,When asked about topics related to: How do you operate in a city with magical su,template-evolution
+knight,evolve,2,evo-gap-3-ce68e0,When asked about topics related to: How do you deal with a siege that you're los,template-evolution
+knight,evolve,2,evo-gap-4-ef92e2,When asked about topics related to: What do you think about commoners who take u,template-evolution
+merchant,evolve,2,evo-gap-3-391b41,"When asked about topics related to: What do you do when a caravan is ambushed?
+P",template-evolution
+merchant,evolve,2,evo-gap-4-f19cc0,"When asked about topics related to: How do you price unique, one-of-a-kind items",template-evolution
+rogue,evolve,2,evo-gap-3-0f38b6,When asked about topics related to: How do you handle a job that turns out to ta,template-evolution
+rogue,evolve,2,evo-gap-4-222d93,When asked about topics related to: What's your plan when you're framed for a cr,template-evolution
+rogue,evolve,2,evo-gap-5-8d9084,When asked about topics related to: How do you deal with a target who's actually,template-evolution

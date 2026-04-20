@@ -1,0 +1,5 @@
+child,parent_a,parent_b,child_size,dist_child_a,dist_child_b,dist_parents,coverage,stability,inherited_from_a,inherited_from_b
+paladin,knight,healer,23,0.050326,0.025309,0.120259,0.0500,0.5238,8,14
+smuggler,merchant,rogue,20,0.035158,0.031256,0.091579,0.3000,0.4865,9,10
+vigilante,knight,rogue,23,0.019336,0.042437,0.089365,0.1500,0.5460,13,9
+apothecary,healer,merchant,20,0.049481,0.055770,0.160537,0.0000,0.6603,9,10

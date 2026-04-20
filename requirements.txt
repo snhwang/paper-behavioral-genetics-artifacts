@@ -1,0 +1,6 @@
+bear @ git+https://github.com/snhwang/bear.git@v0.1.0
+scipy
+numpy
+python-dotenv
+openai
+PyYAML
