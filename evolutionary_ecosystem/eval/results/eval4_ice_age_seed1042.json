@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "seed": 1042,
+    "epoch": "ice_age",
+    "recombination": "locus",
+    "n_ticks": 10000,
+    "n_creatures": 30,
+    "elapsed_seconds": 12.9
+  },
+  "final": {
+    "population": 0,
+    "total_births": 0,
+    "total_deaths": 30,
+    "max_generation": 0,
+    "gene_diversity": 0.0,
+    "per_gene_diversity": {},
+    "hausdorff": 0.0,
+    "avg_behavior": {
+      "food_seeking": 0.3,
+      "combat": 0.3,
+      "survival": 0.3,
+      "stealth": 0.3,
+      "breeding": 0.3
+    }
+  },
+  "birth_log": [],
+  "snapshots": [
+    {
+      "tick": 0,
+      "epoch": "ice_age",
+      "population": 30,
+      "births": 0,
+      "deaths": 0,
+      "gene_diversity": 0.3218,
+      "avg_behavior": {
+        "food_seeking": 0.7907,
+        "combat": 0.7718,
+        "survival": 0.7284,
+        "stealth": 0.7897,
+        "breeding": 0.5714
+      }
+    },
+    {
+      "tick": 500,
+      "epoch": "ice_age",
+      "population": 30,
+      "births": 0,
+      "deaths": 0,
+      "gene_diversity": 0.3218,
+      "avg_behavior": {
+        "food_seeking": 0.7907,
+        "combat": 0.7718,
+        "survival": 0.7284,
+        "stealth": 0.7897,
+        "breeding": 0.5714
+      }
+    },
+    {
+      "tick": 1000,
+      "epoch": "ice_age",
+      "population": 27,
+      "births": 0,
+      "deaths": 3,
+      "gene_diversity": 0.3219,
+      "avg_behavior": {
+        "food_seeking": 0.7902,
+        "combat": 0.7713,
+        "survival": 0.7301,
+        "stealth": 0.7902,
+        "breeding": 0.5709
+      }
+    },
+    {
+      "tick": 1500,
+      "epoch": "ice_age",
+      "population": 23,
+      "births": 0,
+      "deaths": 7,
+      "gene_diversity": 0.3237,
+      "avg_behavior": {
+        "food_seeking": 0.7919,
+        "combat": 0.7705,
+        "survival": 0.7287,
+        "stealth": 0.7923,
+        "breeding": 0.5745
+      }
+    },
+    {
+      "tick": 2000,
+      "epoch": "ice_age",
+      "population": 18,
+      "births": 0,
+      "deaths": 12,
+      "gene_diversity": 0.324,
+      "avg_behavior": {
+        "food_seeking": 0.7901,
+        "combat": 0.7683,
+        "survival": 0.7244,
+        "stealth": 0.7884,
+        "breeding": 0.5736
+      }
+    },
+    {
+      "tick": 2500,
+      "epoch": "ice_age",
+      "population": 15,
+      "births": 0,
+      "deaths": 15,
+      "gene_diversity": 0.3257,
+      "avg_behavior": {
+        "food_seeking": 0.7933,
+        "combat": 0.7731,
+        "survival": 0.7289,
+        "stealth": 0.7909,
+        "breeding": 0.5678
+      }
+    },
+    {
+      "tick": 3000,
+      "epoch": "predator_bloom",
+      "population": 5,
+      "births": 0,
+      "deaths": 25,
+      "gene_diversity": 0.3113,
+      "avg_behavior": {
+        "food_seeking": 0.8017,
+        "combat": 0.7765,
+        "survival": 0.7443,
+        "stealth": 0.8078,
+        "breeding": 0.562
+      }
+    },
+    {
+      "tick": 3500,
+      "epoch": "predator_bloom",
+      "population": 3,
+      "births": 0,
+      "deaths": 27,
+      "gene_diversity": 0.3537,
+      "avg_behavior": {
+        "food_seeking": 0.7763,
+        "combat": 0.7744,
+        "survival": 0.7395,
+        "stealth": 0.8008,
+        "breeding": 0.5633
+      }
+    },
+    {
+      "tick": 4000,
+      "epoch": "predator_bloom",
+      "population": 2,
+      "births": 0,
+      "deaths": 28,
+      "gene_diversity": 0.3661,
+      "avg_behavior": {
+        "food_seeking": 0.7751,
+        "combat": 0.7763,
+        "survival": 0.7371,
+        "stealth": 0.8058,
+        "breeding": 0.5751
+      }
+    },
+    {
+      "tick": 4500,
+      "epoch": "predator_bloom",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 5000,
+      "epoch": "predator_bloom",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 5500,
+      "epoch": "predator_bloom",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 6000,
+      "epoch": "expansion",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 6500,
+      "epoch": "expansion",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 7000,
+      "epoch": "expansion",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 7500,
+      "epoch": "expansion",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 8000,
+      "epoch": "expansion",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 8500,
+      "epoch": "expansion",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 9000,
+      "epoch": "famine",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    },
+    {
+      "tick": 9500,
+      "epoch": "famine",
+      "population": 0,
+      "births": 0,
+      "deaths": 30,
+      "gene_diversity": 0.0,
+      "avg_behavior": {
+        "food_seeking": 0.3,
+        "combat": 0.3,
+        "survival": 0.3,
+        "stealth": 0.3,
+        "breeding": 0.3
+      }
+    }
+  ],
+  "epoch_snapshots": []
+}

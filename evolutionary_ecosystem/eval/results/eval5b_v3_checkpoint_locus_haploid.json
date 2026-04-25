@@ -1,0 +1,26 @@
+{
+  "label": "locus_haploid",
+  "trials": [
+    {
+      "behavior_diversity": 0.0123,
+      "gene_diversity": 0.3083,
+      "per_gene_diversity": {
+        "personality": 0.4674,
+        "social_style": 0.4416,
+        "movement_style": 0.0,
+        "reaction_pattern": 0.2816,
+        "mating": 0.0571,
+        "foraging": 0.0577,
+        "predator_defense": 0.3719,
+        "climate_survival": 0.4225,
+        "territorial": 0.3465,
+        "stealth": 0.3882,
+        "sensory": 0.5565
+      },
+      "n_creatures": 50,
+      "n_with_retriever": 50,
+      "total_births": 172,
+      "max_generation": 32
+    }
+  ]
+}

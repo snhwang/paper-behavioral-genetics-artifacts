@@ -1,0 +1,12 @@
+{
+  "seed": 142,
+  "bear_on": true,
+  "n_ticks": 10000,
+  "n_creatures": 12,
+  "final_population": 45,
+  "total_births": 127,
+  "total_deaths": 94,
+  "max_generation": 7,
+  "gene_diversity": 0.3467,
+  "hausdorff": 0.5719363636363636
+}

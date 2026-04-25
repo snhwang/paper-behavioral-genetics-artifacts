@@ -1,0 +1,233 @@
+{
+  "parameters": {
+    "n_ticks": 10000,
+    "n_creatures": 12,
+    "n_trials": 5,
+    "seeds": [
+      42,
+      142,
+      242,
+      342,
+      442
+    ],
+    "llm_model": "gemma4:e2b",
+    "status": "complete"
+  },
+  "summary": {
+    "bear_on": {
+      "final_population": {
+        "mean": 47.2,
+        "std": 3.5637
+      },
+      "total_births": {
+        "mean": 128.0,
+        "std": 3.0822
+      },
+      "max_generation": {
+        "mean": 7.6,
+        "std": 0.5477
+      },
+      "gene_diversity": {
+        "mean": 0.348,
+        "std": 0.0104
+      },
+      "hausdorff": {
+        "mean": 0.5871,
+        "std": 0.0105
+      }
+    },
+    "bear_off": {
+      "final_population": {
+        "mean": 46.2,
+        "std": 4.4385
+      },
+      "total_births": {
+        "mean": 116.2,
+        "std": 2.7749
+      },
+      "max_generation": {
+        "mean": 12.6,
+        "std": 2.3022
+      },
+      "gene_diversity": {
+        "mean": 0.3614,
+        "std": 0.0128
+      },
+      "hausdorff": {
+        "mean": 0.5823,
+        "std": 0.0163
+      }
+    }
+  },
+  "statistical_tests": {
+    "final_population": {
+      "bear_on_mean": 47.2,
+      "bear_on_std": 3.5637,
+      "bear_off_mean": 46.2,
+      "bear_off_std": 4.4385,
+      "cohens_d": 0.248,
+      "p_value": 0.6684,
+      "significant_005": false
+    },
+    "total_births": {
+      "bear_on_mean": 128.0,
+      "bear_on_std": 3.0822,
+      "bear_off_mean": 116.2,
+      "bear_off_std": 2.7749,
+      "cohens_d": 4.024,
+      "p_value": 0.0112,
+      "significant_005": true
+    },
+    "max_generation": {
+      "bear_on_mean": 7.6,
+      "bear_on_std": 0.5477,
+      "bear_off_mean": 12.6,
+      "bear_off_std": 2.3022,
+      "cohens_d": -2.988,
+      "p_value": 0.0099,
+      "significant_005": true
+    },
+    "gene_diversity": {
+      "bear_on_mean": 0.348,
+      "bear_on_std": 0.0104,
+      "bear_off_mean": 0.3614,
+      "bear_off_std": 0.0128,
+      "cohens_d": -1.156,
+      "p_value": 0.2222,
+      "significant_005": false
+    },
+    "hausdorff": {
+      "bear_on_mean": 0.5871,
+      "bear_on_std": 0.0105,
+      "bear_off_mean": 0.5823,
+      "bear_off_std": 0.0163,
+      "cohens_d": 0.343,
+      "p_value": 0.6905,
+      "significant_005": false
+    }
+  },
+  "bear_on_trials": [
+    {
+      "seed": 142,
+      "bear_on": true,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 45,
+      "total_births": 127,
+      "total_deaths": 94,
+      "max_generation": 7,
+      "gene_diversity": 0.3467,
+      "hausdorff": 0.5719363636363636
+    },
+    {
+      "seed": 242,
+      "bear_on": true,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 50,
+      "total_births": 130,
+      "total_deaths": 92,
+      "max_generation": 8,
+      "gene_diversity": 0.3315,
+      "hausdorff": 0.5979454545454546
+    },
+    {
+      "seed": 342,
+      "bear_on": true,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 49,
+      "total_births": 130,
+      "total_deaths": 93,
+      "max_generation": 7,
+      "gene_diversity": 0.3479,
+      "hausdorff": 0.5827545454545455
+    },
+    {
+      "seed": 42,
+      "bear_on": true,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 42,
+      "total_births": 123,
+      "total_deaths": 93,
+      "max_generation": 8,
+      "gene_diversity": 0.356,
+      "hausdorff": 0.5956727272727274
+    },
+    {
+      "seed": 442,
+      "bear_on": true,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 50,
+      "total_births": 130,
+      "total_deaths": 92,
+      "max_generation": 8,
+      "gene_diversity": 0.3577,
+      "hausdorff": 0.5869545454545455
+    }
+  ],
+  "bear_off_trials": [
+    {
+      "seed": 142,
+      "bear_on": false,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 40,
+      "total_births": 117,
+      "total_deaths": 89,
+      "max_generation": 11,
+      "gene_diversity": 0.3771,
+      "hausdorff": 0.5925272727272728
+    },
+    {
+      "seed": 242,
+      "bear_on": false,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 50,
+      "total_births": 118,
+      "total_deaths": 80,
+      "max_generation": 11,
+      "gene_diversity": 0.3541,
+      "hausdorff": 0.5912090909090909
+    },
+    {
+      "seed": 342,
+      "bear_on": false,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 49,
+      "total_births": 115,
+      "total_deaths": 78,
+      "max_generation": 11,
+      "gene_diversity": 0.373,
+      "hausdorff": 0.5763363636363636
+    },
+    {
+      "seed": 42,
+      "bear_on": false,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 49,
+      "total_births": 112,
+      "total_deaths": 75,
+      "max_generation": 16,
+      "gene_diversity": 0.3483,
+      "hausdorff": 0.5953909090909091
+    },
+    {
+      "seed": 442,
+      "bear_on": false,
+      "n_ticks": 10000,
+      "n_creatures": 12,
+      "final_population": 43,
+      "total_births": 119,
+      "total_deaths": 88,
+      "max_generation": 14,
+      "gene_diversity": 0.3546,
+      "hausdorff": 0.5562636363636364
+    }
+  ]
+}

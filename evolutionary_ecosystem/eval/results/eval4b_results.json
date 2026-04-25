@@ -1,0 +1,21 @@
+{
+  "parameters": {
+    "n_ticks": 10000,
+    "n_creatures": 6,
+    "seeds": [
+      42,
+      1042,
+      2042
+    ],
+    "llm_model": "gemma4:e2b",
+    "llm_base_url": "http://192.168.1.175:11434/v1"
+  },
+  "epoch_profiles": {
+    "abundance": [],
+    "ice_age": [],
+    "predator_bloom": [],
+    "expansion": [],
+    "famine": []
+  },
+  "anova": {}
+}

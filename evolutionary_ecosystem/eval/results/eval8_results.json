@@ -1,0 +1,4724 @@
+{
+  "config": {
+    "archetypes": [
+      "Bold",
+      "Timid",
+      "Curious",
+      "Calm"
+    ],
+    "n_teach_cycles": 5,
+    "teach_per_cycle": 2,
+    "n_evolve_cycles": 5,
+    "seed": 42,
+    "seeds": [
+      42,
+      1042,
+      2042,
+      3042,
+      4042
+    ],
+    "n_trials": 5
+  },
+  "snapshots": [
+    {
+      "phase": "baseline",
+      "cycle": 0,
+      "name": "Bold",
+      "corpus_size": 31,
+      "drift": 0.0,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.31,
+      "taught": 0,
+      "evolved": 0
+    },
+    {
+      "phase": "baseline",
+      "cycle": 0,
+      "name": "Timid",
+      "corpus_size": 31,
+      "drift": 0.0,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.083,
+      "taught": 0,
+      "evolved": 0
+    },
+    {
+      "phase": "baseline",
+      "cycle": 0,
+      "name": "Curious",
+      "corpus_size": 31,
+      "drift": 0.0,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.4,
+      "stability": 0.12,
+      "taught": 0,
+      "evolved": 0
+    },
+    {
+      "phase": "baseline",
+      "cycle": 0,
+      "name": "Calm",
+      "corpus_size": 31,
+      "drift": 0.0,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.167,
+      "taught": 0,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 1,
+      "name": "Bold",
+      "corpus_size": 33,
+      "drift": 0.0007999999797903001,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.217,
+      "taught": 2,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 1,
+      "name": "Timid",
+      "corpus_size": 33,
+      "drift": 0.0008999999845400453,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.083,
+      "taught": 2,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 1,
+      "name": "Curious",
+      "corpus_size": 33,
+      "drift": 0.0008999999845400453,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.083,
+      "taught": 2,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 1,
+      "name": "Calm",
+      "corpus_size": 33,
+      "drift": 0.0008999999845400453,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.167,
+      "taught": 2,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 2,
+      "name": "Bold",
+      "corpus_size": 35,
+      "drift": 0.002199999988079071,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.4,
+      "stability": 0.12,
+      "taught": 4,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 2,
+      "name": "Timid",
+      "corpus_size": 35,
+      "drift": 0.002400000113993883,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.037,
+      "taught": 4,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 2,
+      "name": "Curious",
+      "corpus_size": 35,
+      "drift": 0.0026000000070780516,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.083,
+      "taught": 4,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 2,
+      "name": "Calm",
+      "corpus_size": 35,
+      "drift": 0.002300000051036477,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.167,
+      "taught": 4,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 3,
+      "name": "Bold",
+      "corpus_size": 37,
+      "drift": 0.0044999998062849045,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.4,
+      "stability": 0.12,
+      "taught": 6,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 3,
+      "name": "Timid",
+      "corpus_size": 37,
+      "drift": 0.004600000102072954,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.4,
+      "stability": 0.0,
+      "taught": 6,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 3,
+      "name": "Curious",
+      "corpus_size": 37,
+      "drift": 0.00430000014603138,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.6,
+      "stability": 0.037,
+      "taught": 6,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 3,
+      "name": "Calm",
+      "corpus_size": 37,
+      "drift": 0.004600000102072954,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.226,
+      "taught": 6,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 4,
+      "name": "Bold",
+      "corpus_size": 39,
+      "drift": 0.006599999964237213,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.12,
+      "taught": 8,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 4,
+      "name": "Timid",
+      "corpus_size": 39,
+      "drift": 0.0071000000461936,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.45,
+      "stability": 0.037,
+      "taught": 8,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 4,
+      "name": "Curious",
+      "corpus_size": 39,
+      "drift": 0.006800000090152025,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.6,
+      "stability": 0.037,
+      "taught": 8,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 4,
+      "name": "Calm",
+      "corpus_size": 39,
+      "drift": 0.0066999997943639755,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.226,
+      "taught": 8,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 5,
+      "name": "Bold",
+      "corpus_size": 41,
+      "drift": 0.00930000003427267,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.12,
+      "taught": 10,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 5,
+      "name": "Timid",
+      "corpus_size": 41,
+      "drift": 0.010499999858438969,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.037,
+      "taught": 10,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 5,
+      "name": "Curious",
+      "corpus_size": 41,
+      "drift": 0.009399999864399433,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.65,
+      "stability": 0.074,
+      "taught": 10,
+      "evolved": 0
+    },
+    {
+      "phase": "teach",
+      "cycle": 5,
+      "name": "Calm",
+      "corpus_size": 41,
+      "drift": 0.009100000374019146,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.18,
+      "taught": 10,
+      "evolved": 0
+    },
+    {
+      "phase": "evolve",
+      "cycle": 1,
+      "name": "Bold",
+      "corpus_size": 44,
+      "drift": 0.01489999983459711,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.083,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 1,
+      "name": "Timid",
+      "corpus_size": 44,
+      "drift": 0.015300000086426735,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.037,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 1,
+      "name": "Curious",
+      "corpus_size": 44,
+      "drift": 0.013899999670684338,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.65,
+      "stability": 0.074,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 1,
+      "name": "Calm",
+      "corpus_size": 44,
+      "drift": 0.013799999840557575,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.143,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 2,
+      "name": "Bold",
+      "corpus_size": 44,
+      "drift": 0.01489999983459711,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.083,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 2,
+      "name": "Timid",
+      "corpus_size": 46,
+      "drift": 0.019300000742077827,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.037,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 2,
+      "name": "Curious",
+      "corpus_size": 46,
+      "drift": 0.017500000074505806,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.65,
+      "stability": 0.12,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 2,
+      "name": "Calm",
+      "corpus_size": 46,
+      "drift": 0.018200000748038292,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.143,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 3,
+      "name": "Bold",
+      "corpus_size": 44,
+      "drift": 0.01489999983459711,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.083,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 3,
+      "name": "Timid",
+      "corpus_size": 46,
+      "drift": 0.019300000742077827,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.037,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 3,
+      "name": "Curious",
+      "corpus_size": 46,
+      "drift": 0.017500000074505806,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.65,
+      "stability": 0.12,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 3,
+      "name": "Calm",
+      "corpus_size": 46,
+      "drift": 0.018200000748038292,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.143,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 4,
+      "name": "Bold",
+      "corpus_size": 44,
+      "drift": 0.01489999983459711,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.083,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 4,
+      "name": "Timid",
+      "corpus_size": 46,
+      "drift": 0.019300000742077827,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.037,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 4,
+      "name": "Curious",
+      "corpus_size": 46,
+      "drift": 0.017500000074505806,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.65,
+      "stability": 0.12,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 4,
+      "name": "Calm",
+      "corpus_size": 46,
+      "drift": 0.018200000748038292,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.143,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 5,
+      "name": "Bold",
+      "corpus_size": 44,
+      "drift": 0.01489999983459711,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.55,
+      "stability": 0.083,
+      "taught": 10,
+      "evolved": 3
+    },
+    {
+      "phase": "evolve",
+      "cycle": 5,
+      "name": "Timid",
+      "corpus_size": 46,
+      "drift": 0.019300000742077827,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.5,
+      "stability": 0.037,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 5,
+      "name": "Curious",
+      "corpus_size": 46,
+      "drift": 0.017500000074505806,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.65,
+      "stability": 0.12,
+      "taught": 10,
+      "evolved": 5
+    },
+    {
+      "phase": "evolve",
+      "cycle": 5,
+      "name": "Calm",
+      "corpus_size": 46,
+      "drift": 0.018200000748038292,
+      "coverage": 1.0,
+      "gene_cat_coverage": 0.35,
+      "stability": 0.143,
+      "taught": 10,
+      "evolved": 5
+    }
+  ],
+  "breeding": [
+    {
+      "child": "Sentinel",
+      "parent_a": "Bold",
+      "parent_b": "Calm",
+      "corpus_size": 45,
+      "from_a": 15,
+      "from_b": 29,
+      "dist_to_a": 0.059700001031160355,
+      "dist_to_b": 0.014999999664723873,
+      "gene_cat_coverage": 1.0,
+      "parent_a_gene_cat_coverage": 1.0,
+      "parent_b_gene_cat_coverage": 1.0,
+      "coverage": 0.55,
+      "locus_choices": {
+        "climate_survival": "Bold",
+        "foraging": "Bold",
+        "mating": "Calm",
+        "personality": "Calm",
+        "predator_defense": "Calm",
+        "reaction_pattern": "Calm",
+        "sensory": "Calm",
+        "social_style": "Calm",
+        "stealth": "Calm",
+        "territorial": "Bold"
+      }
+    },
+    {
+      "child": "Scout",
+      "parent_a": "Timid",
+      "parent_b": "Curious",
+      "corpus_size": 48,
+      "from_a": 30,
+      "from_b": 17,
+      "dist_to_a": 0.013799999840557575,
+      "dist_to_b": 0.05559999868273735,
+      "gene_cat_coverage": 1.0,
+      "parent_a_gene_cat_coverage": 1.0,
+      "parent_b_gene_cat_coverage": 1.0,
+      "coverage": 0.55,
+      "locus_choices": {
+        "climate_survival": "Timid",
+        "foraging": "Timid",
+        "mating": "Curious",
+        "personality": "Timid",
+        "predator_defense": "Timid",
+        "reaction_pattern": "Curious",
+        "sensory": "Timid",
+        "social_style": "Timid",
+        "stealth": "Timid",
+        "territorial": "Curious"
+      }
+    },
+    {
+      "child": "Explorer",
+      "parent_a": "Bold",
+      "parent_b": "Curious",
+      "corpus_size": 47,
+      "from_a": 22,
+      "from_b": 24,
+      "dist_to_a": 0.05270000174641609,
+      "dist_to_b": 0.027799999341368675,
+      "gene_cat_coverage": 1.0,
+      "parent_a_gene_cat_coverage": 1.0,
+      "parent_b_gene_cat_coverage": 1.0,
+      "coverage": 0.65,
+      "locus_choices": {
+        "climate_survival": "Bold",
+        "foraging": "Curious",
+        "mating": "Bold",
+        "personality": "Curious",
+        "predator_defense": "Bold",
+        "reaction_pattern": "Bold",
+        "sensory": "Curious",
+        "social_style": "Curious",
+        "stealth": "Bold",
+        "territorial": "Bold"
+      }
+    },
+    {
+      "child": "Guardian",
+      "parent_a": "Calm",
+      "parent_b": "Timid",
+      "corpus_size": 46,
+      "from_a": 30,
+      "from_b": 15,
+      "dist_to_a": 0.00930000003427267,
+      "dist_to_b": 0.04050000011920929,
+      "gene_cat_coverage": 1.0,
+      "parent_a_gene_cat_coverage": 1.0,
+      "parent_b_gene_cat_coverage": 1.0,
+      "coverage": 0.5,
+      "locus_choices": {
+        "climate_survival": "Calm",
+        "foraging": "Calm",
+        "mating": "Timid",
+        "personality": "Calm",
+        "predator_defense": "Calm",
+        "reaction_pattern": "Calm",
+        "sensory": "Timid",
+        "social_style": "Timid",
+        "stealth": "Calm",
+        "territorial": "Timid"
+      }
+    }
+  ],
+  "per_trial": [
+    {
+      "trial": 1,
+      "seed": 42,
+      "snapshots": [
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Bold",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.31,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Timid",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Curious",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Calm",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 33,
+          "drift": 0.0007999999797903001,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.217,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 35,
+          "drift": 0.002199999988079071,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 35,
+          "drift": 0.002400000113993883,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.037,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 35,
+          "drift": 0.0026000000070780516,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 35,
+          "drift": 0.002300000051036477,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 37,
+          "drift": 0.0044999998062849045,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.0,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 37,
+          "drift": 0.00430000014603138,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 39,
+          "drift": 0.006599999964237213,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 39,
+          "drift": 0.0071000000461936,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.45,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 39,
+          "drift": 0.006800000090152025,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 39,
+          "drift": 0.0066999997943639755,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 41,
+          "drift": 0.00930000003427267,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 41,
+          "drift": 0.010499999858438969,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 41,
+          "drift": 0.009399999864399433,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 41,
+          "drift": 0.009100000374019146,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.18,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 44,
+          "drift": 0.015300000086426735,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 44,
+          "drift": 0.013899999670684338,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 44,
+          "drift": 0.013799999840557575,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        }
+      ],
+      "breeding": [
+        {
+          "child": "Sentinel",
+          "parent_a": "Bold",
+          "parent_b": "Calm",
+          "corpus_size": 45,
+          "from_a": 15,
+          "from_b": 29,
+          "dist_to_a": 0.059700001031160355,
+          "dist_to_b": 0.014999999664723873,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Bold",
+            "mating": "Calm",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Calm",
+            "social_style": "Calm",
+            "stealth": "Calm",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Scout",
+          "parent_a": "Timid",
+          "parent_b": "Curious",
+          "corpus_size": 48,
+          "from_a": 30,
+          "from_b": 17,
+          "dist_to_a": 0.013799999840557575,
+          "dist_to_b": 0.05559999868273735,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Timid",
+            "foraging": "Timid",
+            "mating": "Curious",
+            "personality": "Timid",
+            "predator_defense": "Timid",
+            "reaction_pattern": "Curious",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Timid",
+            "territorial": "Curious"
+          }
+        },
+        {
+          "child": "Explorer",
+          "parent_a": "Bold",
+          "parent_b": "Curious",
+          "corpus_size": 47,
+          "from_a": 22,
+          "from_b": 24,
+          "dist_to_a": 0.05270000174641609,
+          "dist_to_b": 0.027799999341368675,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.65,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Curious",
+            "mating": "Bold",
+            "personality": "Curious",
+            "predator_defense": "Bold",
+            "reaction_pattern": "Bold",
+            "sensory": "Curious",
+            "social_style": "Curious",
+            "stealth": "Bold",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Guardian",
+          "parent_a": "Calm",
+          "parent_b": "Timid",
+          "corpus_size": 46,
+          "from_a": 30,
+          "from_b": 15,
+          "dist_to_a": 0.00930000003427267,
+          "dist_to_b": 0.04050000011920929,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.5,
+          "locus_choices": {
+            "climate_survival": "Calm",
+            "foraging": "Calm",
+            "mating": "Timid",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Calm",
+            "territorial": "Timid"
+          }
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "seed": 1042,
+      "snapshots": [
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Bold",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.31,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Timid",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Curious",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Calm",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 33,
+          "drift": 0.0007999999797903001,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.217,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 35,
+          "drift": 0.002199999988079071,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 35,
+          "drift": 0.002400000113993883,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.037,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 35,
+          "drift": 0.0026000000070780516,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 35,
+          "drift": 0.002300000051036477,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 37,
+          "drift": 0.0044999998062849045,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.0,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 37,
+          "drift": 0.00430000014603138,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 39,
+          "drift": 0.006599999964237213,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 39,
+          "drift": 0.0071000000461936,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.45,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 39,
+          "drift": 0.006800000090152025,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 39,
+          "drift": 0.0066999997943639755,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 41,
+          "drift": 0.00930000003427267,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 41,
+          "drift": 0.010499999858438969,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 41,
+          "drift": 0.009399999864399433,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 41,
+          "drift": 0.009100000374019146,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.18,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 44,
+          "drift": 0.015300000086426735,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 44,
+          "drift": 0.013899999670684338,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 44,
+          "drift": 0.013799999840557575,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        }
+      ],
+      "breeding": [
+        {
+          "child": "Sentinel",
+          "parent_a": "Bold",
+          "parent_b": "Calm",
+          "corpus_size": 45,
+          "from_a": 15,
+          "from_b": 29,
+          "dist_to_a": 0.059700001031160355,
+          "dist_to_b": 0.014999999664723873,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Bold",
+            "mating": "Calm",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Calm",
+            "social_style": "Calm",
+            "stealth": "Calm",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Scout",
+          "parent_a": "Timid",
+          "parent_b": "Curious",
+          "corpus_size": 48,
+          "from_a": 30,
+          "from_b": 17,
+          "dist_to_a": 0.013799999840557575,
+          "dist_to_b": 0.05559999868273735,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Timid",
+            "foraging": "Timid",
+            "mating": "Curious",
+            "personality": "Timid",
+            "predator_defense": "Timid",
+            "reaction_pattern": "Curious",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Timid",
+            "territorial": "Curious"
+          }
+        },
+        {
+          "child": "Explorer",
+          "parent_a": "Bold",
+          "parent_b": "Curious",
+          "corpus_size": 47,
+          "from_a": 22,
+          "from_b": 24,
+          "dist_to_a": 0.05270000174641609,
+          "dist_to_b": 0.027799999341368675,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.65,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Curious",
+            "mating": "Bold",
+            "personality": "Curious",
+            "predator_defense": "Bold",
+            "reaction_pattern": "Bold",
+            "sensory": "Curious",
+            "social_style": "Curious",
+            "stealth": "Bold",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Guardian",
+          "parent_a": "Calm",
+          "parent_b": "Timid",
+          "corpus_size": 46,
+          "from_a": 30,
+          "from_b": 15,
+          "dist_to_a": 0.00930000003427267,
+          "dist_to_b": 0.04050000011920929,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.5,
+          "locus_choices": {
+            "climate_survival": "Calm",
+            "foraging": "Calm",
+            "mating": "Timid",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Calm",
+            "territorial": "Timid"
+          }
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "seed": 2042,
+      "snapshots": [
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Bold",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.31,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Timid",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Curious",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Calm",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 33,
+          "drift": 0.0007999999797903001,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.217,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 35,
+          "drift": 0.002199999988079071,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 35,
+          "drift": 0.002400000113993883,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.037,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 35,
+          "drift": 0.0026000000070780516,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 35,
+          "drift": 0.002300000051036477,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 37,
+          "drift": 0.0044999998062849045,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.0,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 37,
+          "drift": 0.00430000014603138,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 39,
+          "drift": 0.006599999964237213,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 39,
+          "drift": 0.0071000000461936,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.45,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 39,
+          "drift": 0.006800000090152025,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 39,
+          "drift": 0.0066999997943639755,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 41,
+          "drift": 0.00930000003427267,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 41,
+          "drift": 0.010499999858438969,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 41,
+          "drift": 0.009399999864399433,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 41,
+          "drift": 0.009100000374019146,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.18,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 44,
+          "drift": 0.015300000086426735,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 44,
+          "drift": 0.013899999670684338,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 44,
+          "drift": 0.013799999840557575,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        }
+      ],
+      "breeding": [
+        {
+          "child": "Sentinel",
+          "parent_a": "Bold",
+          "parent_b": "Calm",
+          "corpus_size": 45,
+          "from_a": 15,
+          "from_b": 29,
+          "dist_to_a": 0.059700001031160355,
+          "dist_to_b": 0.014999999664723873,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Bold",
+            "mating": "Calm",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Calm",
+            "social_style": "Calm",
+            "stealth": "Calm",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Scout",
+          "parent_a": "Timid",
+          "parent_b": "Curious",
+          "corpus_size": 48,
+          "from_a": 30,
+          "from_b": 17,
+          "dist_to_a": 0.013799999840557575,
+          "dist_to_b": 0.05559999868273735,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Timid",
+            "foraging": "Timid",
+            "mating": "Curious",
+            "personality": "Timid",
+            "predator_defense": "Timid",
+            "reaction_pattern": "Curious",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Timid",
+            "territorial": "Curious"
+          }
+        },
+        {
+          "child": "Explorer",
+          "parent_a": "Bold",
+          "parent_b": "Curious",
+          "corpus_size": 47,
+          "from_a": 22,
+          "from_b": 24,
+          "dist_to_a": 0.05270000174641609,
+          "dist_to_b": 0.027799999341368675,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.65,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Curious",
+            "mating": "Bold",
+            "personality": "Curious",
+            "predator_defense": "Bold",
+            "reaction_pattern": "Bold",
+            "sensory": "Curious",
+            "social_style": "Curious",
+            "stealth": "Bold",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Guardian",
+          "parent_a": "Calm",
+          "parent_b": "Timid",
+          "corpus_size": 46,
+          "from_a": 30,
+          "from_b": 15,
+          "dist_to_a": 0.00930000003427267,
+          "dist_to_b": 0.04050000011920929,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.5,
+          "locus_choices": {
+            "climate_survival": "Calm",
+            "foraging": "Calm",
+            "mating": "Timid",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Calm",
+            "territorial": "Timid"
+          }
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "seed": 3042,
+      "snapshots": [
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Bold",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.31,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Timid",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Curious",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Calm",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 33,
+          "drift": 0.0007999999797903001,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.217,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 35,
+          "drift": 0.002199999988079071,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 35,
+          "drift": 0.002400000113993883,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.037,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 35,
+          "drift": 0.0026000000070780516,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 35,
+          "drift": 0.002300000051036477,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 37,
+          "drift": 0.0044999998062849045,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.0,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 37,
+          "drift": 0.00430000014603138,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 39,
+          "drift": 0.006599999964237213,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 39,
+          "drift": 0.0071000000461936,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.45,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 39,
+          "drift": 0.006800000090152025,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 39,
+          "drift": 0.0066999997943639755,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 41,
+          "drift": 0.00930000003427267,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 41,
+          "drift": 0.010499999858438969,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 41,
+          "drift": 0.009399999864399433,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 41,
+          "drift": 0.009100000374019146,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.18,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 44,
+          "drift": 0.015300000086426735,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 44,
+          "drift": 0.013899999670684338,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 44,
+          "drift": 0.013799999840557575,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        }
+      ],
+      "breeding": [
+        {
+          "child": "Sentinel",
+          "parent_a": "Bold",
+          "parent_b": "Calm",
+          "corpus_size": 45,
+          "from_a": 15,
+          "from_b": 29,
+          "dist_to_a": 0.059700001031160355,
+          "dist_to_b": 0.014999999664723873,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Bold",
+            "mating": "Calm",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Calm",
+            "social_style": "Calm",
+            "stealth": "Calm",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Scout",
+          "parent_a": "Timid",
+          "parent_b": "Curious",
+          "corpus_size": 48,
+          "from_a": 30,
+          "from_b": 17,
+          "dist_to_a": 0.013799999840557575,
+          "dist_to_b": 0.05559999868273735,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Timid",
+            "foraging": "Timid",
+            "mating": "Curious",
+            "personality": "Timid",
+            "predator_defense": "Timid",
+            "reaction_pattern": "Curious",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Timid",
+            "territorial": "Curious"
+          }
+        },
+        {
+          "child": "Explorer",
+          "parent_a": "Bold",
+          "parent_b": "Curious",
+          "corpus_size": 47,
+          "from_a": 22,
+          "from_b": 24,
+          "dist_to_a": 0.05270000174641609,
+          "dist_to_b": 0.027799999341368675,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.65,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Curious",
+            "mating": "Bold",
+            "personality": "Curious",
+            "predator_defense": "Bold",
+            "reaction_pattern": "Bold",
+            "sensory": "Curious",
+            "social_style": "Curious",
+            "stealth": "Bold",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Guardian",
+          "parent_a": "Calm",
+          "parent_b": "Timid",
+          "corpus_size": 46,
+          "from_a": 30,
+          "from_b": 15,
+          "dist_to_a": 0.00930000003427267,
+          "dist_to_b": 0.04050000011920929,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.5,
+          "locus_choices": {
+            "climate_survival": "Calm",
+            "foraging": "Calm",
+            "mating": "Timid",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Calm",
+            "territorial": "Timid"
+          }
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "seed": 4042,
+      "snapshots": [
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Bold",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.31,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Timid",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Curious",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "baseline",
+          "cycle": 0,
+          "name": "Calm",
+          "corpus_size": 31,
+          "drift": 0.0,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 0,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 33,
+          "drift": 0.0007999999797903001,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.217,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 33,
+          "drift": 0.0008999999845400453,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 2,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 35,
+          "drift": 0.002199999988079071,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 35,
+          "drift": 0.002400000113993883,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.037,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 35,
+          "drift": 0.0026000000070780516,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.083,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 35,
+          "drift": 0.002300000051036477,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.167,
+          "taught": 4,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 37,
+          "drift": 0.0044999998062849045,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.12,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.4,
+          "stability": 0.0,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 37,
+          "drift": 0.00430000014603138,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 37,
+          "drift": 0.004600000102072954,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 6,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 39,
+          "drift": 0.006599999964237213,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 39,
+          "drift": 0.0071000000461936,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.45,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 39,
+          "drift": 0.006800000090152025,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.6,
+          "stability": 0.037,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 39,
+          "drift": 0.0066999997943639755,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.226,
+          "taught": 8,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 41,
+          "drift": 0.00930000003427267,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 41,
+          "drift": 0.010499999858438969,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 41,
+          "drift": 0.009399999864399433,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "teach",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 41,
+          "drift": 0.009100000374019146,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.18,
+          "taught": 10,
+          "evolved": 0
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Timid",
+          "corpus_size": 44,
+          "drift": 0.015300000086426735,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Curious",
+          "corpus_size": 44,
+          "drift": 0.013899999670684338,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.074,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 1,
+          "name": "Calm",
+          "corpus_size": 44,
+          "drift": 0.013799999840557575,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 2,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 3,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 4,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Bold",
+          "corpus_size": 44,
+          "drift": 0.01489999983459711,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.55,
+          "stability": 0.083,
+          "taught": 10,
+          "evolved": 3
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Timid",
+          "corpus_size": 46,
+          "drift": 0.019300000742077827,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.5,
+          "stability": 0.037,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Curious",
+          "corpus_size": 46,
+          "drift": 0.017500000074505806,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.65,
+          "stability": 0.12,
+          "taught": 10,
+          "evolved": 5
+        },
+        {
+          "phase": "evolve",
+          "cycle": 5,
+          "name": "Calm",
+          "corpus_size": 46,
+          "drift": 0.018200000748038292,
+          "coverage": 1.0,
+          "gene_cat_coverage": 0.35,
+          "stability": 0.143,
+          "taught": 10,
+          "evolved": 5
+        }
+      ],
+      "breeding": [
+        {
+          "child": "Sentinel",
+          "parent_a": "Bold",
+          "parent_b": "Calm",
+          "corpus_size": 45,
+          "from_a": 15,
+          "from_b": 29,
+          "dist_to_a": 0.059700001031160355,
+          "dist_to_b": 0.014999999664723873,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Bold",
+            "mating": "Calm",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Calm",
+            "social_style": "Calm",
+            "stealth": "Calm",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Scout",
+          "parent_a": "Timid",
+          "parent_b": "Curious",
+          "corpus_size": 48,
+          "from_a": 30,
+          "from_b": 17,
+          "dist_to_a": 0.013799999840557575,
+          "dist_to_b": 0.05559999868273735,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.55,
+          "locus_choices": {
+            "climate_survival": "Timid",
+            "foraging": "Timid",
+            "mating": "Curious",
+            "personality": "Timid",
+            "predator_defense": "Timid",
+            "reaction_pattern": "Curious",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Timid",
+            "territorial": "Curious"
+          }
+        },
+        {
+          "child": "Explorer",
+          "parent_a": "Bold",
+          "parent_b": "Curious",
+          "corpus_size": 47,
+          "from_a": 22,
+          "from_b": 24,
+          "dist_to_a": 0.05270000174641609,
+          "dist_to_b": 0.027799999341368675,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.65,
+          "locus_choices": {
+            "climate_survival": "Bold",
+            "foraging": "Curious",
+            "mating": "Bold",
+            "personality": "Curious",
+            "predator_defense": "Bold",
+            "reaction_pattern": "Bold",
+            "sensory": "Curious",
+            "social_style": "Curious",
+            "stealth": "Bold",
+            "territorial": "Bold"
+          }
+        },
+        {
+          "child": "Guardian",
+          "parent_a": "Calm",
+          "parent_b": "Timid",
+          "corpus_size": 46,
+          "from_a": 30,
+          "from_b": 15,
+          "dist_to_a": 0.00930000003427267,
+          "dist_to_b": 0.04050000011920929,
+          "gene_cat_coverage": 1.0,
+          "parent_a_gene_cat_coverage": 1.0,
+          "parent_b_gene_cat_coverage": 1.0,
+          "coverage": 0.5,
+          "locus_choices": {
+            "climate_survival": "Calm",
+            "foraging": "Calm",
+            "mating": "Timid",
+            "personality": "Calm",
+            "predator_defense": "Calm",
+            "reaction_pattern": "Calm",
+            "sensory": "Timid",
+            "social_style": "Timid",
+            "stealth": "Calm",
+            "territorial": "Timid"
+          }
+        }
+      ]
+    }
+  ],
+  "statistical_summary": {
+    "n_trials": 5,
+    "seeds": [
+      42,
+      1042,
+      2042,
+      3042,
+      4042
+    ],
+    "per_archetype": {
+      "Bold": {
+        "baseline": {
+          "corpus_size": {
+            "mean": 31.0,
+            "std": 0.0,
+            "ci_95": [
+              31.0,
+              31.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0,
+            "std": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.35,
+            "std": 0.0,
+            "ci_95": [
+              0.35,
+              0.35
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.3095,
+            "std": 0.0,
+            "ci_95": [
+              0.3095,
+              0.3095
+            ],
+            "n": 5
+          }
+        },
+        "final_teach": {
+          "corpus_size": {
+            "mean": 41.0,
+            "std": 0.0,
+            "ci_95": [
+              41.0,
+              41.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0093,
+            "std": 0.0,
+            "ci_95": [
+              0.0093,
+              0.0093
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.55,
+            "std": 0.0,
+            "ci_95": [
+              0.55,
+              0.55
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.1204,
+            "std": 0.0,
+            "ci_95": [
+              0.1204,
+              0.1204
+            ],
+            "n": 5
+          }
+        },
+        "final_evolve": {
+          "corpus_size": {
+            "mean": 44.0,
+            "std": 0.0,
+            "ci_95": [
+              44.0,
+              44.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0149,
+            "std": 0.0,
+            "ci_95": [
+              0.0149,
+              0.0149
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.55,
+            "std": 0.0,
+            "ci_95": [
+              0.55,
+              0.55
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.0833,
+            "std": 0.0,
+            "ci_95": [
+              0.0833,
+              0.0833
+            ],
+            "n": 5
+          }
+        }
+      },
+      "Timid": {
+        "baseline": {
+          "corpus_size": {
+            "mean": 31.0,
+            "std": 0.0,
+            "ci_95": [
+              31.0,
+              31.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0,
+            "std": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.35,
+            "std": 0.0,
+            "ci_95": [
+              0.35,
+              0.35
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.0833,
+            "std": 0.0,
+            "ci_95": [
+              0.0833,
+              0.0833
+            ],
+            "n": 5
+          }
+        },
+        "final_teach": {
+          "corpus_size": {
+            "mean": 41.0,
+            "std": 0.0,
+            "ci_95": [
+              41.0,
+              41.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0105,
+            "std": 0.0,
+            "ci_95": [
+              0.0105,
+              0.0105
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.5,
+            "std": 0.0,
+            "ci_95": [
+              0.5,
+              0.5
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.037,
+            "std": 0.0,
+            "ci_95": [
+              0.037,
+              0.037
+            ],
+            "n": 5
+          }
+        },
+        "final_evolve": {
+          "corpus_size": {
+            "mean": 46.0,
+            "std": 0.0,
+            "ci_95": [
+              46.0,
+              46.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0193,
+            "std": 0.0,
+            "ci_95": [
+              0.0193,
+              0.0193
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.5,
+            "std": 0.0,
+            "ci_95": [
+              0.5,
+              0.5
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.037,
+            "std": 0.0,
+            "ci_95": [
+              0.037,
+              0.037
+            ],
+            "n": 5
+          }
+        }
+      },
+      "Curious": {
+        "baseline": {
+          "corpus_size": {
+            "mean": 31.0,
+            "std": 0.0,
+            "ci_95": [
+              31.0,
+              31.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0,
+            "std": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.4,
+            "std": 0.0,
+            "ci_95": [
+              0.4,
+              0.4
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.1204,
+            "std": 0.0,
+            "ci_95": [
+              0.1204,
+              0.1204
+            ],
+            "n": 5
+          }
+        },
+        "final_teach": {
+          "corpus_size": {
+            "mean": 41.0,
+            "std": 0.0,
+            "ci_95": [
+              41.0,
+              41.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0094,
+            "std": 0.0,
+            "ci_95": [
+              0.0094,
+              0.0094
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.65,
+            "std": 0.0,
+            "ci_95": [
+              0.65,
+              0.65
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.0741,
+            "std": 0.0,
+            "ci_95": [
+              0.0741,
+              0.0741
+            ],
+            "n": 5
+          }
+        },
+        "final_evolve": {
+          "corpus_size": {
+            "mean": 46.0,
+            "std": 0.0,
+            "ci_95": [
+              46.0,
+              46.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0175,
+            "std": 0.0,
+            "ci_95": [
+              0.0175,
+              0.0175
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.65,
+            "std": 0.0,
+            "ci_95": [
+              0.65,
+              0.65
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.1204,
+            "std": 0.0,
+            "ci_95": [
+              0.1204,
+              0.1204
+            ],
+            "n": 5
+          }
+        }
+      },
+      "Calm": {
+        "baseline": {
+          "corpus_size": {
+            "mean": 31.0,
+            "std": 0.0,
+            "ci_95": [
+              31.0,
+              31.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0,
+            "std": 0.0,
+            "ci_95": [
+              0.0,
+              0.0
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.35,
+            "std": 0.0,
+            "ci_95": [
+              0.35,
+              0.35
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.1667,
+            "std": 0.0,
+            "ci_95": [
+              0.1667,
+              0.1667
+            ],
+            "n": 5
+          }
+        },
+        "final_teach": {
+          "corpus_size": {
+            "mean": 41.0,
+            "std": 0.0,
+            "ci_95": [
+              41.0,
+              41.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0091,
+            "std": 0.0,
+            "ci_95": [
+              0.0091,
+              0.0091
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.35,
+            "std": 0.0,
+            "ci_95": [
+              0.35,
+              0.35
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.1799,
+            "std": 0.0,
+            "ci_95": [
+              0.1799,
+              0.1799
+            ],
+            "n": 5
+          }
+        },
+        "final_evolve": {
+          "corpus_size": {
+            "mean": 46.0,
+            "std": 0.0,
+            "ci_95": [
+              46.0,
+              46.0
+            ],
+            "n": 5
+          },
+          "drift": {
+            "mean": 0.0182,
+            "std": 0.0,
+            "ci_95": [
+              0.0182,
+              0.0182
+            ],
+            "n": 5
+          },
+          "coverage": {
+            "mean": 1.0,
+            "std": 0.0,
+            "ci_95": [
+              1.0,
+              1.0
+            ],
+            "n": 5
+          },
+          "gene_cat_coverage": {
+            "mean": 0.35,
+            "std": 0.0,
+            "ci_95": [
+              0.35,
+              0.35
+            ],
+            "n": 5
+          },
+          "stability": {
+            "mean": 0.1429,
+            "std": 0.0,
+            "ci_95": [
+              0.1429,
+              0.1429
+            ],
+            "n": 5
+          }
+        }
+      }
+    },
+    "breeding": {
+      "Sentinel": {
+        "parents": [
+          "Bold",
+          "Calm"
+        ],
+        "corpus_size": {
+          "mean": 45.0,
+          "std": 0.0,
+          "ci_95": [
+            45.0,
+            45.0
+          ],
+          "n": 5
+        },
+        "gene_cat_coverage": {
+          "mean": 1.0,
+          "std": 0.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ],
+          "n": 5
+        },
+        "coverage": {
+          "mean": 0.55,
+          "std": 0.0,
+          "ci_95": [
+            0.55,
+            0.55
+          ],
+          "n": 5
+        },
+        "dist_to_a": {
+          "mean": 0.0597,
+          "std": 0.0,
+          "ci_95": [
+            0.0597,
+            0.0597
+          ],
+          "n": 5
+        },
+        "dist_to_b": {
+          "mean": 0.015,
+          "std": 0.0,
+          "ci_95": [
+            0.015,
+            0.015
+          ],
+          "n": 5
+        }
+      },
+      "Scout": {
+        "parents": [
+          "Timid",
+          "Curious"
+        ],
+        "corpus_size": {
+          "mean": 48.0,
+          "std": 0.0,
+          "ci_95": [
+            48.0,
+            48.0
+          ],
+          "n": 5
+        },
+        "gene_cat_coverage": {
+          "mean": 1.0,
+          "std": 0.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ],
+          "n": 5
+        },
+        "coverage": {
+          "mean": 0.55,
+          "std": 0.0,
+          "ci_95": [
+            0.55,
+            0.55
+          ],
+          "n": 5
+        },
+        "dist_to_a": {
+          "mean": 0.0138,
+          "std": 0.0,
+          "ci_95": [
+            0.0138,
+            0.0138
+          ],
+          "n": 5
+        },
+        "dist_to_b": {
+          "mean": 0.0556,
+          "std": 0.0,
+          "ci_95": [
+            0.0556,
+            0.0556
+          ],
+          "n": 5
+        }
+      },
+      "Explorer": {
+        "parents": [
+          "Bold",
+          "Curious"
+        ],
+        "corpus_size": {
+          "mean": 47.0,
+          "std": 0.0,
+          "ci_95": [
+            47.0,
+            47.0
+          ],
+          "n": 5
+        },
+        "gene_cat_coverage": {
+          "mean": 1.0,
+          "std": 0.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ],
+          "n": 5
+        },
+        "coverage": {
+          "mean": 0.65,
+          "std": 0.0,
+          "ci_95": [
+            0.65,
+            0.65
+          ],
+          "n": 5
+        },
+        "dist_to_a": {
+          "mean": 0.0527,
+          "std": 0.0,
+          "ci_95": [
+            0.0527,
+            0.0527
+          ],
+          "n": 5
+        },
+        "dist_to_b": {
+          "mean": 0.0278,
+          "std": 0.0,
+          "ci_95": [
+            0.0278,
+            0.0278
+          ],
+          "n": 5
+        }
+      },
+      "Guardian": {
+        "parents": [
+          "Calm",
+          "Timid"
+        ],
+        "corpus_size": {
+          "mean": 46.0,
+          "std": 0.0,
+          "ci_95": [
+            46.0,
+            46.0
+          ],
+          "n": 5
+        },
+        "gene_cat_coverage": {
+          "mean": 1.0,
+          "std": 0.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ],
+          "n": 5
+        },
+        "coverage": {
+          "mean": 0.5,
+          "std": 0.0,
+          "ci_95": [
+            0.5,
+            0.5
+          ],
+          "n": 5
+        },
+        "dist_to_a": {
+          "mean": 0.0093,
+          "std": 0.0,
+          "ci_95": [
+            0.0093,
+            0.0093
+          ],
+          "n": 5
+        },
+        "dist_to_b": {
+          "mean": 0.0405,
+          "std": 0.0,
+          "ci_95": [
+            0.0405,
+            0.0405
+          ],
+          "n": 5
+        }
+      }
+    },
+    "tests": [
+      {
+        "description": "One-sample t-test on final drift for Bold (H0: drift=0)",
+        "t_statistic": Infinity,
+        "p_value": 0.0,
+        "significant_at_05": true
+      },
+      {
+        "description": "One-sample t-test on final drift for Timid (H0: drift=0)",
+        "t_statistic": Infinity,
+        "p_value": 0.0,
+        "significant_at_05": true
+      },
+      {
+        "description": "One-sample t-test on final drift for Curious (H0: drift=0)",
+        "t_statistic": Infinity,
+        "p_value": 0.0,
+        "significant_at_05": true
+      },
+      {
+        "description": "One-sample t-test on final drift for Calm (H0: drift=0)",
+        "t_statistic": Infinity,
+        "p_value": 0.0,
+        "significant_at_05": true
+      },
+      {
+        "description": "Paired t-test coverage before vs after teaching for Bold",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Paired t-test coverage before vs after teaching for Timid",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Paired t-test coverage before vs after teaching for Curious",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Paired t-test coverage before vs after teaching for Calm",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Independent t-test offspring (Sentinel) vs parent (Bold,Calm) gene coverage",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Independent t-test offspring (Scout) vs parent (Timid,Curious) gene coverage",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Independent t-test offspring (Explorer) vs parent (Bold,Curious) gene coverage",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      },
+      {
+        "description": "Independent t-test offspring (Guardian) vs parent (Calm,Timid) gene coverage",
+        "t_statistic": NaN,
+        "p_value": NaN,
+        "significant_at_05": false
+      }
+    ]
+  }
+}

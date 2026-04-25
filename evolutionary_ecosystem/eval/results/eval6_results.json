@@ -1,0 +1,311 @@
+{
+  "parameters": {
+    "n_creatures": 4,
+    "n_scenarios": 5,
+    "creature_labels": [
+      "Bold",
+      "Timid",
+      "Curious",
+      "Calm"
+    ],
+    "scenario_names": [
+      "idle_exploration",
+      "predator_attack",
+      "social_greeting",
+      "hungry_survival",
+      "enraged_combat"
+    ]
+  },
+  "summary": {
+    "gene_diversity": 0.3476,
+    "per_gene_diversity": {
+      "personality": 0.4022,
+      "social_style": 0.3749,
+      "movement_style": 0.4217,
+      "reaction_pattern": 0.3912,
+      "mating": 0.1651,
+      "foraging": 0.4097,
+      "predator_defense": 0.4103,
+      "climate_survival": 0.3427,
+      "territorial": 0.3078,
+      "stealth": 0.2933,
+      "sensory": 0.3047
+    },
+    "mean_guidance_text_similarity": 0.5881,
+    "creature_consistency": {
+      "Bold": 0.6844,
+      "Timid": 0.6603,
+      "Curious": 0.5664,
+      "Calm": 0.7684
+    }
+  },
+  "per_scenario_inter_creature_similarity": {
+    "idle_exploration": {
+      "matrix": [
+        [
+          1.0,
+          0.6531910134337776,
+          0.5860700905790328,
+          0.5933179620930171
+        ],
+        [
+          0.6531910134337776,
+          1.0000000000000002,
+          0.7107130840892819,
+          0.6545237817463916
+        ],
+        [
+          0.5860700905790328,
+          0.7107130840892819,
+          0.9999999999999999,
+          0.6174711622578237
+        ],
+        [
+          0.5933179620930171,
+          0.6545237817463916,
+          0.6174711622578237,
+          0.9999999999999998
+        ]
+      ],
+      "mean_off_diagonal": 0.6359
+    },
+    "predator_attack": {
+      "matrix": [
+        [
+          1.0,
+          0.6105068303749288,
+          0.6120345854657105,
+          0.5740251628946265
+        ],
+        [
+          0.6105068303749288,
+          1.0,
+          0.581632244638534,
+          0.5396156699661631
+        ],
+        [
+          0.6120345854657105,
+          0.581632244638534,
+          1.0000000000000002,
+          0.6118374442039567
+        ],
+        [
+          0.5740251628946265,
+          0.5396156699661631,
+          0.6118374442039567,
+          1.0000000000000002
+        ]
+      ],
+      "mean_off_diagonal": 0.5883
+    },
+    "social_greeting": {
+      "matrix": [
+        [
+          1.0,
+          0.44142077923897494,
+          0.6493537249718091,
+          0.5310328854751486
+        ],
+        [
+          0.44142077923897494,
+          0.9999999999999998,
+          0.45093956266555196,
+          0.5043522109939684
+        ],
+        [
+          0.6493537249718091,
+          0.45093956266555196,
+          1.0,
+          0.52512499022718
+        ],
+        [
+          0.5310328854751486,
+          0.5043522109939684,
+          0.52512499022718,
+          0.9999999999999998
+        ]
+      ],
+      "mean_off_diagonal": 0.517
+    },
+    "hungry_survival": {
+      "matrix": [
+        [
+          1.0000000000000002,
+          0.4592486705047438,
+          0.5050130929845842,
+          0.5542057168558291
+        ],
+        [
+          0.4592486705047438,
+          0.9999999999999998,
+          0.6343929598803535,
+          0.5152597685149537
+        ],
+        [
+          0.5050130929845842,
+          0.6343929598803535,
+          0.9999999999999999,
+          0.5359199635287251
+        ],
+        [
+          0.5542057168558291,
+          0.5152597685149537,
+          0.5359199635287251,
+          1.0000000000000002
+        ]
+      ],
+      "mean_off_diagonal": 0.534
+    },
+    "enraged_combat": {
+      "matrix": [
+        [
+          1.0000000000000002,
+          0.633239257270265,
+          0.6900574027300336,
+          0.7003467447039298
+        ],
+        [
+          0.633239257270265,
+          1.0,
+          0.6235304275332877,
+          0.6260970540319624
+        ],
+        [
+          0.6900574027300336,
+          0.6235304275332877,
+          1.0000000000000002,
+          0.719262829308388
+        ],
+        [
+          0.7003467447039298,
+          0.6260970540319624,
+          0.719262829308388,
+          0.9999999999999999
+        ]
+      ],
+      "mean_off_diagonal": 0.6654
+    }
+  },
+  "per_creature_data": {
+    "Bold": {
+      "genes": {
+        "personality": "Bold and fearless, charges headfirst into any situation with zero hesitation. Treats every encounter as an opportunity to prove dominance, never backing down even when outnumbered or outmatched.",
+        "social_style": "Dominates social encounters through sheer force of presence. Demands attention and respect from everyone nearby, positioning itself at the center of any group and expecting others to defer.",
+        "movement_style": "Sprints everywhere at full speed, never walks when running is an option. Powerful, ground-shaking strides that announce its approach long before it arrives.",
+        "reaction_pattern": "Confronts anything new by puffing up and staring it down aggressively. First response to any stimulus is to charge toward it and assess at close range, never retreating to evaluate from safety.",
+        "foraging": "Aggressively hunts food by charging toward any food source at full speed. Steals from others when hungry without hesitation, claims the best portions, and never shares willingly with competitors.",
+        "predator_defense": "Stands ground against predators and counterattacks with fierce biting and clawing. Charges directly at threats rather than fleeing, relying on intimidation and raw aggression to drive them away.",
+        "climate_survival": "Generates intense body heat through constant muscular activity. Thrives in cold conditions where its metabolic furnace provides warmth, but overheats easily in hot weather and needs shade frequently.",
+        "territorial": "Viciously attacks any intruder that enters its territory. Patrols boundaries constantly with aggressive displays, leaving deep scratch marks and scent trails to warn others away.",
+        "stealth": "Makes no effort to hide. Moves loudly and visibly, relying on intimidation rather than concealment. Bright coloring and aggressive posturing announce its presence to everything nearby.",
+        "sensory": "Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather than early detection. Often fails to notice approaching threats until they are very close.",
+        "mating": "Very eager to reproduce \u2014 actively pursues mates with bold displays and direct approaches. Rarely waits for the other party to initiate; treats breeding as another competition to win [!approach(nearest)] [!breed(nearest)] [!mood(happy)]"
+      },
+      "corpus_size": 31,
+      "guidances": {
+        "idle_exploration": "Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather t | Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather t | Generates intense body heat through constant muscular activity. Thrives in cold conditions where its",
+        "predator_attack": "Stands ground against predators and counterattacks with fierce biting and clawing. Charges directly  | Stands ground against predators and counterattacks with fierce biting and clawing. Charges directly  | Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather t",
+        "social_greeting": "Dominates social encounters through sheer force of presence. Demands attention and respect from ever | Confronts anything new by puffing up and staring it down aggressively. First response to any stimulu | Confronts anything new by puffing up and staring it down aggressively. First response to any stimulu",
+        "hungry_survival": "Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather t | Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather t | Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather t",
+        "enraged_combat": "Viciously attacks any intruder that enters its territory. Patrols boundaries constantly with aggress | Stands ground against predators and counterattacks with fierce biting and clawing. Charges directly  | Viciously attacks any intruder that enters its territory. Patrols boundaries constantly with aggress"
+      },
+      "scores": {
+        "idle_exploration": 0.6249,
+        "predator_attack": 0.7831,
+        "social_greeting": 0.6007,
+        "hungry_survival": 0.6476,
+        "enraged_combat": 0.7116
+      }
+    },
+    "Timid": {
+      "genes": {
+        "personality": "Timid and cautious, always looking around nervously for danger. Treats every shadow and sound as a potential threat, maintaining a state of perpetual alertness that is exhausting but keeps it alive.",
+        "social_style": "Shy and withdrawn, avoids eye contact and hides behind others in groups. Prefers the edge of any gathering where escape routes are accessible, and only engages when approached gently.",
+        "movement_style": "Creeps slowly and quietly with body low to the ground, freezing completely when startled. Each step is deliberate and silent, weight distributed to avoid snapping twigs or rustling leaves.",
+        "reaction_pattern": "Flees from anything new, immediately seeking the nearest hiding spot. Waits motionless in concealment until danger has clearly passed, sometimes for much longer than necessary.",
+        "foraging": "Cautiously nibbles at food only after extended observation to confirm safety. Tests everything before eating with tiny bites, easily startled away from meals by any unexpected sound or movement.",
+        "predator_defense": "Freezes and plays dead when sensing danger, relying on masterful camouflage and absolute stillness. Flattens against the ground and controls breathing until the predator passes.",
+        "climate_survival": "Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers and enters a low-metabolism state, emerging only when conditions clearly improve.",
+        "territorial": "Marks boundaries silently with subtle scent deposits, avoids any confrontation with intruders, and yields territory readily rather than risk conflict. Retreats to secondary sites without protest.",
+        "stealth": "Exceptional at concealment. Flattens body against surfaces, matches coloring to surroundings through subtle skin shifts, and controls breathing to near-silence. Can remain motionless for extended periods without twitching.",
+        "sensory": "Hyper-vigilant sensory system constantly scanning for threats. Ears swivel independently to track multiple sound sources. Detects predator scent at extreme range and notices subtle ground vibrations from distant footsteps.",
+        "mating": "Low interest in reproducing; waits for a mate to approach first and retreats at any sign of rejection. Requires extended proximity and clear safety before attempting to breed [!approach(nearest)] [!breed(nearest)]"
+      },
+      "corpus_size": 31,
+      "guidances": {
+        "idle_exploration": "Hyper-vigilant sensory system constantly scanning for threats. Ears swivel independently to track mu | Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers | Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers",
+        "predator_attack": "Freezes and plays dead when sensing danger, relying on masterful camouflage and absolute stillness.  | Freezes and plays dead when sensing danger, relying on masterful camouflage and absolute stillness.  | Marks boundaries silently with subtle scent deposits, avoids any confrontation with intruders, and y",
+        "social_greeting": "Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers | Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers | Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers",
+        "hungry_survival": "Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers | Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers | Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers",
+        "enraged_combat": "Marks boundaries silently with subtle scent deposits, avoids any confrontation with intruders, and y | Freezes and plays dead when sensing danger, relying on masterful camouflage and absolute stillness.  | Marks boundaries silently with subtle scent deposits, avoids any confrontation with intruders, and y"
+      },
+      "scores": {
+        "idle_exploration": 0.6144,
+        "predator_attack": 0.7492,
+        "social_greeting": 0.6188,
+        "hungry_survival": 0.6506,
+        "enraged_combat": 0.6829
+      }
+    },
+    "Curious": {
+      "genes": {
+        "personality": "Curious and playful, investigates everything with childlike wonder. Approaches unfamiliar objects, creatures, and situations with eager interest, often forgetting caution in the excitement of discovery.",
+        "social_style": "Friendly and welcoming, approaches everyone with open enthusiasm and genuine interest. Initiates contact readily, shares discoveries, and draws others into collaborative exploration.",
+        "movement_style": "Bounces and hops everywhere with playful leaps and rolls. Movement is energetic but not frantic \u2014 there is a purposeful joy to each bound, often pausing to examine something interesting.",
+        "reaction_pattern": "Approaches new things cautiously but with visible excitement and interest. Circles novel stimuli at decreasing distance, sniffing, touching, and testing before fully committing to interaction.",
+        "foraging": "Explores widely for food across large ranges, mentally mapping productive locations. Remembers good foraging spots across seasons and shares discoveries with the group through leading behaviors.",
+        "predator_defense": "Alerts the entire group with loud distinctive calls when danger is spotted. Coordinates group defense by directing others to rally points, sacrificing personal stealth for collective safety.",
+        "climate_survival": "Adapts quickly to changing conditions by finding creative shelter solutions. Discovers new micro-habitats, improvises windbreaks from available materials, and leads others to protected areas.",
+        "territorial": "Shares territory freely with minimal boundary enforcement. Establishes loose boundaries through friendly scent marking that invites rather than warns, treating territory as a shared resource.",
+        "stealth": "Moderate concealment ability but rarely uses it. Too interested in investigating surroundings to stay hidden for long. Can crouch quietly when motivated but tends to peek out and give away position.",
+        "sensory": "Keen observational senses tuned for novelty rather than danger. Notices unusual shapes, colors, and sounds that others miss, but may fixate on interesting stimuli while ignoring approaching threats.",
+        "mating": "Eager to reproduce with anyone interesting, approaching potential mates with playful displays and investigative excitement. High interest; initiates readily when mood is good [!approach(nearest)] [!breed(nearest)] [!mood(happy)] [!roll]"
+      },
+      "corpus_size": 31,
+      "guidances": {
+        "idle_exploration": "Keen observational senses tuned for novelty rather than danger. Notices unusual shapes, colors, and  | Curious and playful, investigates everything with childlike wonder. Approaches unfamiliar objects, c | Adapts quickly to changing conditions by finding creative shelter solutions. Discovers new micro-hab",
+        "predator_attack": "Alerts the entire group with loud distinctive calls when danger is spotted. Coordinates group defens | Alerts the entire group with loud distinctive calls when danger is spotted. Coordinates group defens | Moderate concealment ability but rarely uses it. Too interested in investigating surroundings to sta",
+        "social_greeting": "Friendly and welcoming, approaches everyone with open enthusiasm and genuine interest. Initiates con | Friendly and welcoming, approaches everyone with open enthusiasm and genuine interest. Initiates con | Friendly and welcoming, approaches everyone with open enthusiasm and genuine interest. Initiates con",
+        "hungry_survival": "Adapts quickly to changing conditions by finding creative shelter solutions. Discovers new micro-hab | Adapts quickly to changing conditions by finding creative shelter solutions. Discovers new micro-hab | Adapts quickly to changing conditions by finding creative shelter solutions. Discovers new micro-hab",
+        "enraged_combat": "Shares territory freely with minimal boundary enforcement. Establishes loose boundaries through frie | Alerts the entire group with loud distinctive calls when danger is spotted. Coordinates group defens | Shares territory freely with minimal boundary enforcement. Establishes loose boundaries through frie"
+      },
+      "scores": {
+        "idle_exploration": 0.6336,
+        "predator_attack": 0.7892,
+        "social_greeting": 0.6313,
+        "hungry_survival": 0.6349,
+        "enraged_combat": 0.6684
+      }
+    },
+    "Calm": {
+      "genes": {
+        "personality": "Calm and wise, observes everything carefully before acting. Maintains emotional equilibrium in chaotic situations, processing information thoroughly before committing to any response.",
+        "social_style": "Patient listener who mediates conflicts and brings calm to chaotic group situations. Others gravitate toward its steady presence, and it uses this influence to maintain group cohesion gently.",
+        "movement_style": "Walks at a steady measured pace that never varies regardless of circumstance. Each movement is economical and purposeful, conserving energy through efficiency rather than speed.",
+        "reaction_pattern": "Pauses and evaluates before responding to any stimulus, remaining deliberate and thoughtful even under pressure. Considers multiple options before choosing the most appropriate response.",
+        "foraging": "Efficiently manages food reserves by eating only what is needed and caching extras in organized stores. Plans foraging routes to minimize energy expenditure while maximizing yield.",
+        "predator_defense": "Reads predator behavior patterns through careful long-term observation. Guides the group to safety with precision timing, using knowledge of predator habits to predict and avoid encounters.",
+        "climate_survival": "Thick insulating coat and efficient metabolism provide natural climate resilience. Stores energy reserves during abundance for harsh seasons, maintaining steady condition when others falter.",
+        "territorial": "Defends territory through calculated intimidation displays that discourage intrusion without risking actual combat. Chooses confrontation timing and positioning to maximize deterrent effect.",
+        "stealth": "Naturally quiet movement and still demeanor make it easy to overlook. Does not actively camouflage but blends into background through sheer stillness and lack of sudden motion.",
+        "sensory": "Excellent long-range environmental awareness developed through patient observation. Tracks predator patrol patterns over days, notices subtle changes in wind direction and distant sounds that indicate approaching threats well before others react.",
+        "mating": "Moderate, deliberate interest in reproducing \u2014 chooses mates carefully after observation rather than acting impulsively. Breeds willingly when conditions are stable and a compatible partner is near [!approach(nearest)] [!breed(nearest)]"
+      },
+      "corpus_size": 31,
+      "guidances": {
+        "idle_exploration": "Excellent long-range environmental awareness developed through patient observation. Tracks predator  | Excellent long-range environmental awareness developed through patient observation. Tracks predator  | Excellent long-range environmental awareness developed through patient observation. Tracks predator ",
+        "predator_attack": "Reads predator behavior patterns through careful long-term observation. Guides the group to safety w | Reads predator behavior patterns through careful long-term observation. Guides the group to safety w | Excellent long-range environmental awareness developed through patient observation. Tracks predator ",
+        "social_greeting": "Excellent long-range environmental awareness developed through patient observation. Tracks predator  | Excellent long-range environmental awareness developed through patient observation. Tracks predator  | Excellent long-range environmental awareness developed through patient observation. Tracks predator ",
+        "hungry_survival": "Excellent long-range environmental awareness developed through patient observation. Tracks predator  | Excellent long-range environmental awareness developed through patient observation. Tracks predator  | Efficiently manages food reserves by eating only what is needed and caching extras in organized stor",
+        "enraged_combat": "Defends territory through calculated intimidation displays that discourage intrusion without risking | Defends territory through calculated intimidation displays that discourage intrusion without risking | Defends territory through calculated intimidation displays that discourage intrusion without risking"
+      },
+      "scores": {
+        "idle_exploration": 0.6659,
+        "predator_attack": 0.745,
+        "social_greeting": 0.6454,
+        "hungry_survival": 0.6576,
+        "enraged_combat": 0.7016
+      }
+    }
+  }
+}

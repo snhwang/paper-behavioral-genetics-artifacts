@@ -1,0 +1,890 @@
+{
+  "parameters": {
+    "n_ticks": 200000,
+    "n_creatures": 30,
+    "max_population": 50,
+    "n_trials": 5,
+    "base_seed": 42,
+    "snapshot_interval": 100
+  },
+  "summary": {
+    "max_generation_mean": 710.4,
+    "max_generation_std": 32.253,
+    "total_births_mean": 2018.2,
+    "total_births_std": 37.091,
+    "total_deaths_mean": 1999.4,
+    "total_deaths_std": 34.863,
+    "final_population_mean": 50.0,
+    "final_population_std": 0.0,
+    "gene_diversity_mean": 0.211,
+    "gene_diversity_std": 0.01
+  },
+  "confidence_intervals_95": {
+    "max_generation": [
+      665.626,
+      755.174
+    ],
+    "total_births": [
+      1966.7091,
+      2069.6909
+    ],
+    "total_deaths": [
+      1951.0022,
+      2047.7978
+    ],
+    "final_population": [
+      50.0,
+      50.0
+    ],
+    "gene_diversity": [
+      0.1967,
+      0.2252
+    ]
+  },
+  "statistical_tests": {
+    "food_seeking": {
+      "mean_slope": 2.56e-06,
+      "std_slope": 7.77e-06,
+      "ci_95": [
+        -7.08e-06,
+        1.221e-05
+      ],
+      "t_statistic": 0.7381,
+      "p_value": 0.5014,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "food_competition": {
+      "mean_slope": 3.08e-06,
+      "std_slope": 4.85e-06,
+      "ci_95": [
+        -2.95e-06,
+        9.11e-06
+      ],
+      "t_statistic": 1.4192,
+      "p_value": 0.2288,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "food_scarcity": {
+      "mean_slope": -4.58e-06,
+      "std_slope": 1.015e-05,
+      "ci_95": [
+        -1.718e-05,
+        8.03e-06
+      ],
+      "t_statistic": -1.0083,
+      "p_value": 0.3704,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "combat": {
+      "mean_slope": -5.09e-06,
+      "std_slope": 1.152e-05,
+      "ci_95": [
+        -1.94e-05,
+        9.21e-06
+      ],
+      "t_statistic": -0.9884,
+      "p_value": 0.3789,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "group_defense": {
+      "mean_slope": -7.81e-06,
+      "std_slope": 1.077e-05,
+      "ci_95": [
+        -2.119e-05,
+        5.56e-06
+      ],
+      "t_statistic": -1.6216,
+      "p_value": 0.1802,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "threat_assessment": {
+      "mean_slope": -3.23e-06,
+      "std_slope": 1.121e-05,
+      "ci_95": [
+        -1.714e-05,
+        1.069e-05
+      ],
+      "t_statistic": -0.6441,
+      "p_value": 0.5546,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "breeding": {
+      "mean_slope": 9.4e-07,
+      "std_slope": 1.426e-05,
+      "ci_95": [
+        -1.677e-05,
+        1.865e-05
+      ],
+      "t_statistic": 0.1474,
+      "p_value": 0.89,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "social": {
+      "mean_slope": 1.275e-05,
+      "std_slope": 6.22e-06,
+      "ci_95": [
+        5.03e-06,
+        2.047e-05
+      ],
+      "t_statistic": 4.5851,
+      "p_value": 0.0101,
+      "significant_005": true,
+      "n_trials": 5
+    },
+    "cooperation": {
+      "mean_slope": 8.86e-06,
+      "std_slope": 6.89e-06,
+      "ci_95": [
+        3e-07,
+        1.742e-05
+      ],
+      "t_statistic": 2.8748,
+      "p_value": 0.0452,
+      "significant_005": true,
+      "n_trials": 5
+    },
+    "herding": {
+      "mean_slope": 6.7e-07,
+      "std_slope": 1.11e-05,
+      "ci_95": [
+        -1.312e-05,
+        1.445e-05
+      ],
+      "t_statistic": 0.1346,
+      "p_value": 0.8995,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "survival": {
+      "mean_slope": 8.91e-06,
+      "std_slope": 9.99e-06,
+      "ci_95": [
+        -3.5e-06,
+        2.131e-05
+      ],
+      "t_statistic": 1.9937,
+      "p_value": 0.117,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "shelter_seeking": {
+      "mean_slope": 1.908e-05,
+      "std_slope": 1.608e-05,
+      "ci_95": [
+        -8.8e-07,
+        3.904e-05
+      ],
+      "t_statistic": 2.6537,
+      "p_value": 0.0568,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "heat_endurance": {
+      "mean_slope": 1.6e-06,
+      "std_slope": 2.545e-05,
+      "ci_95": [
+        -3e-05,
+        3.32e-05
+      ],
+      "t_statistic": 0.1406,
+      "p_value": 0.895,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "territory": {
+      "mean_slope": 3.3e-06,
+      "std_slope": 1.122e-05,
+      "ci_95": [
+        -1.063e-05,
+        1.723e-05
+      ],
+      "t_statistic": 0.6576,
+      "p_value": 0.5467,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "resource_guarding": {
+      "mean_slope": -3.14e-06,
+      "std_slope": 1.033e-05,
+      "ci_95": [
+        -1.597e-05,
+        9.69e-06
+      ],
+      "t_statistic": -0.6796,
+      "p_value": 0.534,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "exploration": {
+      "mean_slope": 2.45e-06,
+      "std_slope": 2.65e-05,
+      "ci_95": [
+        -3.045e-05,
+        3.536e-05
+      ],
+      "t_statistic": 0.2071,
+      "p_value": 0.8461,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "curiosity": {
+      "mean_slope": 8.11e-06,
+      "std_slope": 3.603e-05,
+      "ci_95": [
+        -3.663e-05,
+        5.285e-05
+      ],
+      "t_statistic": 0.5033,
+      "p_value": 0.6412,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "rest_decision": {
+      "mean_slope": 5.08e-06,
+      "std_slope": 7.98e-06,
+      "ci_95": [
+        -4.83e-06,
+        1.499e-05
+      ],
+      "t_statistic": 1.4234,
+      "p_value": 0.2277,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "stealth": {
+      "mean_slope": 1.193e-05,
+      "std_slope": 1.267e-05,
+      "ci_95": [
+        -3.81e-06,
+        2.766e-05
+      ],
+      "t_statistic": 2.1046,
+      "p_value": 0.1031,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "ambush": {
+      "mean_slope": 3.94e-06,
+      "std_slope": 1.466e-05,
+      "ci_95": [
+        -1.426e-05,
+        2.214e-05
+      ],
+      "t_statistic": 0.6007,
+      "p_value": 0.5804,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "detection": {
+      "mean_slope": 6.77e-06,
+      "std_slope": 6e-06,
+      "ci_95": [
+        -6.8e-07,
+        1.422e-05
+      ],
+      "t_statistic": 2.5218,
+      "p_value": 0.0652,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "tracking": {
+      "mean_slope": 4.35e-06,
+      "std_slope": 1.658e-05,
+      "ci_95": [
+        -1.623e-05,
+        2.494e-05
+      ],
+      "t_statistic": 0.5873,
+      "p_value": 0.5886,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "navigation": {
+      "mean_slope": 5.11e-06,
+      "std_slope": 1.223e-05,
+      "ci_95": [
+        -1.008e-05,
+        2.03e-05
+      ],
+      "t_statistic": 0.9337,
+      "p_value": 0.4033,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "pacing": {
+      "mean_slope": 8.8e-07,
+      "std_slope": 1.037e-05,
+      "ci_95": [
+        -1.2e-05,
+        1.376e-05
+      ],
+      "t_statistic": 0.1905,
+      "p_value": 0.8582,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "surprise_reaction": {
+      "mean_slope": 1.19e-06,
+      "std_slope": 2.519e-05,
+      "ci_95": [
+        -3.009e-05,
+        3.247e-05
+      ],
+      "t_statistic": 0.1058,
+      "p_value": 0.9208,
+      "significant_005": false,
+      "n_trials": 5
+    },
+    "noise_response": {
+      "mean_slope": 5.42e-06,
+      "std_slope": 1.867e-05,
+      "ci_95": [
+        -1.776e-05,
+        2.86e-05
+      ],
+      "t_statistic": 0.6497,
+      "p_value": 0.5513,
+      "significant_005": false,
+      "n_trials": 5
+    }
+  },
+  "trials": [
+    {
+      "trial": 0,
+      "seed": 42,
+      "max_generation": 772,
+      "total_births": 2036,
+      "total_deaths": 2016,
+      "final_population": 50,
+      "gene_diversity": 0.2101,
+      "per_gene_diversity": {
+        "personality": 0.2151,
+        "social_style": 0.1529,
+        "movement_style": 0.2404,
+        "reaction_pattern": 0.2732,
+        "mating": 0.1891,
+        "foraging": 0.1339,
+        "predator_defense": 0.1914,
+        "climate_survival": 0.2272,
+        "territorial": 0.2623,
+        "stealth": 0.2103,
+        "sensory": 0.2153
+      },
+      "gen0_profile": {
+        "food_seeking": 0.7811,
+        "food_competition": 0.7501,
+        "food_scarcity": 0.7448,
+        "combat": 0.7961,
+        "group_defense": 0.7819,
+        "threat_assessment": 0.7771,
+        "breeding": 0.7979,
+        "social": 0.7268,
+        "cooperation": 0.7037,
+        "herding": 0.7681,
+        "survival": 0.7694,
+        "shelter_seeking": 0.7354,
+        "heat_endurance": 0.7233,
+        "territory": 0.7483,
+        "resource_guarding": 0.7654,
+        "exploration": 0.7272,
+        "curiosity": 0.7258,
+        "rest_decision": 0.6991,
+        "stealth": 0.822,
+        "ambush": 0.8055,
+        "detection": 0.8209,
+        "tracking": 0.7783,
+        "navigation": 0.6655,
+        "pacing": 0.7053,
+        "surprise_reaction": 0.7098,
+        "noise_response": 0.7409
+      },
+      "final_gen_profile": {
+        "food_seeking": 0.7889,
+        "food_competition": 0.7485,
+        "food_scarcity": 0.7457,
+        "combat": 0.8015,
+        "group_defense": 0.7931,
+        "threat_assessment": 0.7847,
+        "breeding": 0.7696,
+        "social": 0.7373,
+        "cooperation": 0.7121,
+        "herding": 0.7789,
+        "survival": 0.7767,
+        "shelter_seeking": 0.7691,
+        "heat_endurance": 0.7331,
+        "territory": 0.7506,
+        "resource_guarding": 0.7706,
+        "exploration": 0.7403,
+        "curiosity": 0.7392,
+        "rest_decision": 0.708,
+        "stealth": 0.8195,
+        "ambush": 0.8011,
+        "detection": 0.8417,
+        "tracking": 0.7955,
+        "navigation": 0.6788,
+        "pacing": 0.7093,
+        "surprise_reaction": 0.7265,
+        "noise_response": 0.7427
+      },
+      "slopes": {
+        "food_seeking": 1.577e-05,
+        "food_competition": -7e-07,
+        "food_scarcity": -1.497e-05,
+        "combat": -9.55e-06,
+        "group_defense": -1.389e-05,
+        "threat_assessment": 7.9e-07,
+        "breeding": -9.91e-06,
+        "social": 1.352e-05,
+        "cooperation": 5.72e-06,
+        "herding": 4.05e-06,
+        "survival": 6.46e-06,
+        "shelter_seeking": 2.679e-05,
+        "heat_endurance": 6.37e-06,
+        "territory": -2.48e-06,
+        "resource_guarding": -7.71e-06,
+        "exploration": -1.736e-05,
+        "curiosity": -1.343e-05,
+        "rest_decision": 1.15e-06,
+        "stealth": 9.06e-06,
+        "ambush": -2.18e-06,
+        "detection": 8.32e-06,
+        "tracking": -6.86e-06,
+        "navigation": -4.81e-06,
+        "pacing": -1.066e-05,
+        "surprise_reaction": -2.767e-05,
+        "noise_response": -1.484e-05
+      }
+    },
+    {
+      "trial": 1,
+      "seed": 1042,
+      "max_generation": 712,
+      "total_births": 2038,
+      "total_deaths": 2018,
+      "final_population": 50,
+      "gene_diversity": 0.2155,
+      "per_gene_diversity": {
+        "personality": 0.2593,
+        "social_style": 0.1364,
+        "movement_style": 0.2531,
+        "reaction_pattern": 0.2801,
+        "mating": 0.1725,
+        "foraging": 0.296,
+        "predator_defense": 0.1695,
+        "climate_survival": 0.1795,
+        "territorial": 0.2285,
+        "stealth": 0.1717,
+        "sensory": 0.2236
+      },
+      "gen0_profile": {
+        "food_seeking": 0.7811,
+        "food_competition": 0.7501,
+        "food_scarcity": 0.7448,
+        "combat": 0.7961,
+        "group_defense": 0.7819,
+        "threat_assessment": 0.7771,
+        "breeding": 0.7979,
+        "social": 0.7268,
+        "cooperation": 0.7037,
+        "herding": 0.7681,
+        "survival": 0.7694,
+        "shelter_seeking": 0.7354,
+        "heat_endurance": 0.7233,
+        "territory": 0.7483,
+        "resource_guarding": 0.7654,
+        "exploration": 0.7272,
+        "curiosity": 0.7258,
+        "rest_decision": 0.6991,
+        "stealth": 0.822,
+        "ambush": 0.8055,
+        "detection": 0.8209,
+        "tracking": 0.7783,
+        "navigation": 0.6655,
+        "pacing": 0.7053,
+        "surprise_reaction": 0.7098,
+        "noise_response": 0.7409
+      },
+      "final_gen_profile": {
+        "food_seeking": 0.7886,
+        "food_competition": 0.7582,
+        "food_scarcity": 0.7456,
+        "combat": 0.8034,
+        "group_defense": 0.7784,
+        "threat_assessment": 0.7841,
+        "breeding": 0.7735,
+        "social": 0.7289,
+        "cooperation": 0.6978,
+        "herding": 0.7829,
+        "survival": 0.7979,
+        "shelter_seeking": 0.7938,
+        "heat_endurance": 0.7459,
+        "territory": 0.7402,
+        "resource_guarding": 0.7567,
+        "exploration": 0.7231,
+        "curiosity": 0.7092,
+        "rest_decision": 0.6931,
+        "stealth": 0.8324,
+        "ambush": 0.8108,
+        "detection": 0.7986,
+        "tracking": 0.7465,
+        "navigation": 0.6468,
+        "pacing": 0.7061,
+        "surprise_reaction": 0.72,
+        "noise_response": 0.7333
+      },
+      "slopes": {
+        "food_seeking": -4.22e-06,
+        "food_competition": -3.46e-06,
+        "food_scarcity": -1.188e-05,
+        "combat": 1.355e-05,
+        "group_defense": 7.54e-06,
+        "threat_assessment": 1.139e-05,
+        "breeding": -9.88e-06,
+        "social": 9.75e-06,
+        "cooperation": -2.7e-07,
+        "herding": -4.75e-06,
+        "survival": 7.95e-06,
+        "shelter_seeking": 3.36e-06,
+        "heat_endurance": -9.69e-06,
+        "territory": 2.076e-05,
+        "resource_guarding": 4.21e-06,
+        "exploration": 4.059e-05,
+        "curiosity": 6.745e-05,
+        "rest_decision": -3.5e-06,
+        "stealth": 1.355e-05,
+        "ambush": 1.092e-05,
+        "detection": -2.19e-06,
+        "tracking": 2.613e-05,
+        "navigation": 2.9e-06,
+        "pacing": 3.84e-06,
+        "surprise_reaction": 3.353e-05,
+        "noise_response": 1.552e-05
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 2042,
+      "max_generation": 683,
+      "total_births": 1949,
+      "total_deaths": 1935,
+      "final_population": 50,
+      "gene_diversity": 0.1924,
+      "per_gene_diversity": {
+        "personality": 0.1209,
+        "social_style": 0.2529,
+        "movement_style": 0.2389,
+        "reaction_pattern": 0.2497,
+        "mating": 0.0802,
+        "foraging": 0.2402,
+        "predator_defense": 0.2305,
+        "climate_survival": 0.2382,
+        "territorial": 0.1319,
+        "stealth": 0.1339,
+        "sensory": 0.1992
+      },
+      "gen0_profile": {
+        "food_seeking": 0.7811,
+        "food_competition": 0.7501,
+        "food_scarcity": 0.7448,
+        "combat": 0.7961,
+        "group_defense": 0.7819,
+        "threat_assessment": 0.7771,
+        "breeding": 0.7979,
+        "social": 0.7268,
+        "cooperation": 0.7037,
+        "herding": 0.7681,
+        "survival": 0.7694,
+        "shelter_seeking": 0.7354,
+        "heat_endurance": 0.7233,
+        "territory": 0.7483,
+        "resource_guarding": 0.7654,
+        "exploration": 0.7272,
+        "curiosity": 0.7258,
+        "rest_decision": 0.6991,
+        "stealth": 0.822,
+        "ambush": 0.8055,
+        "detection": 0.8209,
+        "tracking": 0.7783,
+        "navigation": 0.6655,
+        "pacing": 0.7053,
+        "surprise_reaction": 0.7098,
+        "noise_response": 0.7409
+      },
+      "final_gen_profile": {
+        "food_seeking": 0.8026,
+        "food_competition": 0.7609,
+        "food_scarcity": 0.7649,
+        "combat": 0.7932,
+        "group_defense": 0.7763,
+        "threat_assessment": 0.7807,
+        "breeding": 0.7895,
+        "social": 0.7277,
+        "cooperation": 0.701,
+        "herding": 0.7742,
+        "survival": 0.7514,
+        "shelter_seeking": 0.6839,
+        "heat_endurance": 0.7413,
+        "territory": 0.7468,
+        "resource_guarding": 0.7577,
+        "exploration": 0.7325,
+        "curiosity": 0.7209,
+        "rest_decision": 0.7241,
+        "stealth": 0.8274,
+        "ambush": 0.8305,
+        "detection": 0.8487,
+        "tracking": 0.8092,
+        "navigation": 0.6793,
+        "pacing": 0.7495,
+        "surprise_reaction": 0.7208,
+        "noise_response": 0.7445
+      },
+      "slopes": {
+        "food_seeking": -1.01e-06,
+        "food_competition": 7.56e-06,
+        "food_scarcity": 5.61e-06,
+        "combat": -1.325e-05,
+        "group_defense": -1.437e-05,
+        "threat_assessment": -1.549e-05,
+        "breeding": 6.41e-06,
+        "social": 1.024e-05,
+        "cooperation": 8.58e-06,
+        "herding": -9.28e-06,
+        "survival": 2.433e-05,
+        "shelter_seeking": 1.62e-06,
+        "heat_endurance": 2.75e-05,
+        "territory": 6.79e-06,
+        "resource_guarding": -9.87e-06,
+        "exploration": -2.735e-05,
+        "curiosity": -2.369e-05,
+        "rest_decision": 3.37e-06,
+        "stealth": 5.29e-06,
+        "ambush": -2.58e-06,
+        "detection": 5.21e-06,
+        "tracking": -1.668e-05,
+        "navigation": -7.79e-06,
+        "pacing": -2.84e-06,
+        "surprise_reaction": 1.31e-06,
+        "noise_response": -1.213e-05
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 3042,
+      "max_generation": 690,
+      "total_births": 2055,
+      "total_deaths": 2035,
+      "final_population": 50,
+      "gene_diversity": 0.2135,
+      "per_gene_diversity": {
+        "personality": 0.202,
+        "social_style": 0.2729,
+        "movement_style": 0.1729,
+        "reaction_pattern": 0.2847,
+        "mating": 0.2127,
+        "foraging": 0.203,
+        "predator_defense": 0.243,
+        "climate_survival": 0.1533,
+        "territorial": 0.2157,
+        "stealth": 0.1545,
+        "sensory": 0.2335
+      },
+      "gen0_profile": {
+        "food_seeking": 0.7811,
+        "food_competition": 0.7501,
+        "food_scarcity": 0.7448,
+        "combat": 0.7961,
+        "group_defense": 0.7819,
+        "threat_assessment": 0.7771,
+        "breeding": 0.7979,
+        "social": 0.7268,
+        "cooperation": 0.7037,
+        "herding": 0.7681,
+        "survival": 0.7694,
+        "shelter_seeking": 0.7354,
+        "heat_endurance": 0.7233,
+        "territory": 0.7483,
+        "resource_guarding": 0.7654,
+        "exploration": 0.7272,
+        "curiosity": 0.7258,
+        "rest_decision": 0.6991,
+        "stealth": 0.822,
+        "ambush": 0.8055,
+        "detection": 0.8209,
+        "tracking": 0.7783,
+        "navigation": 0.6655,
+        "pacing": 0.7053,
+        "surprise_reaction": 0.7098,
+        "noise_response": 0.7409
+      },
+      "final_gen_profile": {
+        "food_seeking": 0.7799,
+        "food_competition": 0.76,
+        "food_scarcity": 0.76,
+        "combat": 0.7968,
+        "group_defense": 0.7858,
+        "threat_assessment": 0.7849,
+        "breeding": 0.7708,
+        "social": 0.737,
+        "cooperation": 0.7188,
+        "herding": 0.7717,
+        "survival": 0.7883,
+        "shelter_seeking": 0.7316,
+        "heat_endurance": 0.7409,
+        "territory": 0.7827,
+        "resource_guarding": 0.7665,
+        "exploration": 0.7259,
+        "curiosity": 0.732,
+        "rest_decision": 0.7118,
+        "stealth": 0.8295,
+        "ambush": 0.8176,
+        "detection": 0.8416,
+        "tracking": 0.7883,
+        "navigation": 0.6719,
+        "pacing": 0.7131,
+        "surprise_reaction": 0.7165,
+        "noise_response": 0.7436
+      },
+      "slopes": {
+        "food_seeking": 2.57e-06,
+        "food_competition": 5.91e-06,
+        "food_scarcity": 6.89e-06,
+        "combat": -1.83e-06,
+        "group_defense": -6.6e-07,
+        "threat_assessment": 7.2e-07,
+        "breeding": 2.349e-05,
+        "social": 2.31e-05,
+        "cooperation": 1.813e-05,
+        "herding": 1.852e-05,
+        "survival": -3.51e-06,
+        "shelter_seeking": 3.882e-05,
+        "heat_endurance": -3.622e-05,
+        "territory": 8e-08,
+        "resource_guarding": 1.106e-05,
+        "exploration": 6.18e-06,
+        "curiosity": 1.458e-05,
+        "rest_decision": 1.775e-05,
+        "stealth": 3.255e-05,
+        "ambush": 2.567e-05,
+        "detection": 8.19e-06,
+        "tracking": 1.063e-05,
+        "navigation": 2.044e-05,
+        "pacing": 1.701e-05,
+        "surprise_reaction": 1.747e-05,
+        "noise_response": 2.901e-05
+      }
+    },
+    {
+      "trial": 4,
+      "seed": 4042,
+      "max_generation": 695,
+      "total_births": 2013,
+      "total_deaths": 1993,
+      "final_population": 50,
+      "gene_diversity": 0.2233,
+      "per_gene_diversity": {
+        "personality": 0.2005,
+        "social_style": 0.198,
+        "movement_style": 0.3031,
+        "reaction_pattern": 0.2996,
+        "mating": 0.1439,
+        "foraging": 0.2469,
+        "predator_defense": 0.1964,
+        "climate_survival": 0.2115,
+        "territorial": 0.222,
+        "stealth": 0.2078,
+        "sensory": 0.2261
+      },
+      "gen0_profile": {
+        "food_seeking": 0.7811,
+        "food_competition": 0.7501,
+        "food_scarcity": 0.7448,
+        "combat": 0.7961,
+        "group_defense": 0.7819,
+        "threat_assessment": 0.7771,
+        "breeding": 0.7979,
+        "social": 0.7268,
+        "cooperation": 0.7037,
+        "herding": 0.7681,
+        "survival": 0.7694,
+        "shelter_seeking": 0.7354,
+        "heat_endurance": 0.7233,
+        "territory": 0.7483,
+        "resource_guarding": 0.7654,
+        "exploration": 0.7272,
+        "curiosity": 0.7258,
+        "rest_decision": 0.6991,
+        "stealth": 0.822,
+        "ambush": 0.8055,
+        "detection": 0.8209,
+        "tracking": 0.7783,
+        "navigation": 0.6655,
+        "pacing": 0.7053,
+        "surprise_reaction": 0.7098,
+        "noise_response": 0.7409
+      },
+      "final_gen_profile": {
+        "food_seeking": 0.7998,
+        "food_competition": 0.7803,
+        "food_scarcity": 0.7554,
+        "combat": 0.8033,
+        "group_defense": 0.7927,
+        "threat_assessment": 0.7827,
+        "breeding": 0.7828,
+        "social": 0.7484,
+        "cooperation": 0.7307,
+        "herding": 0.7803,
+        "survival": 0.757,
+        "shelter_seeking": 0.7296,
+        "heat_endurance": 0.7066,
+        "territory": 0.734,
+        "resource_guarding": 0.769,
+        "exploration": 0.7338,
+        "curiosity": 0.7302,
+        "rest_decision": 0.6997,
+        "stealth": 0.8332,
+        "ambush": 0.8091,
+        "detection": 0.8484,
+        "tracking": 0.7874,
+        "navigation": 0.6742,
+        "pacing": 0.6982,
+        "surprise_reaction": 0.7174,
+        "noise_response": 0.7442
+      },
+      "slopes": {
+        "food_seeking": -2.9e-07,
+        "food_competition": 6.09e-06,
+        "food_scarcity": -8.54e-06,
+        "combat": -1.438e-05,
+        "group_defense": -1.768e-05,
+        "threat_assessment": -1.355e-05,
+        "breeding": -5.41e-06,
+        "social": 7.13e-06,
+        "cooperation": 1.215e-05,
+        "herding": -5.2e-06,
+        "survival": 9.3e-06,
+        "shelter_seeking": 2.481e-05,
+        "heat_endurance": 2.004e-05,
+        "territory": -8.65e-06,
+        "resource_guarding": -1.339e-05,
+        "exploration": 1.021e-05,
+        "curiosity": -4.36e-06,
+        "rest_decision": 6.64e-06,
+        "stealth": -8.1e-07,
+        "ambush": -1.214e-05,
+        "detection": 1.432e-05,
+        "tracking": 8.55e-06,
+        "navigation": 1.48e-05,
+        "pacing": -2.93e-06,
+        "surprise_reaction": -1.868e-05,
+        "noise_response": 9.56e-06
+      }
+    }
+  ]
+}

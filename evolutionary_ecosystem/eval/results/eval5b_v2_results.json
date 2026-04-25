@@ -1,0 +1,629 @@
+{
+  "metadata": {
+    "model": "gemma4:e2b",
+    "base_url": "http://192.168.1.175:11434/v1",
+    "n_pairs_per_seed": 10,
+    "n_offspring_per_pair": 3,
+    "seeds_part_a": [
+      42,
+      1042,
+      2042,
+      3042,
+      4042
+    ],
+    "n_ticks_part_b": 10000,
+    "n_trials_part_b": 7,
+    "seeds_part_b": [
+      42,
+      1042,
+      2042,
+      3042,
+      4042,
+      5042,
+      6042
+    ],
+    "mutation_rate": 0.15
+  },
+  "part_a": {
+    "description": "mean pairwise cosine distance across offspring per pair",
+    "n_pairs": 50,
+    "n_offspring_per_pair": 3,
+    "locus_based": {
+      "mean": 0.0005,
+      "std": 0.0004,
+      "values": [
+        0.0007,
+        0.0002,
+        0.0017,
+        0.0007,
+        0.0008,
+        0.0003,
+        0.0007,
+        0.0006,
+        0.001,
+        0.0002,
+        0.001,
+        0.0002,
+        0.0008,
+        0.0006,
+        0.0004,
+        0.0001,
+        0.0009,
+        0.0006,
+        0.0004,
+        0.0001,
+        0.0005,
+        0.0002,
+        0.0012,
+        0.0001,
+        0.0006,
+        0.0001,
+        0.0009,
+        0.0004,
+        0.0002,
+        0.0001,
+        0.0004,
+        0.0003,
+        0.0009,
+        0.0002,
+        0.0009,
+        0.0001,
+        0.001,
+        0.0004,
+        0.001,
+        0.0002,
+        0.0002,
+        0.0001,
+        0.0011,
+        0.0001,
+        0.0004,
+        0.0002,
+        0.0011,
+        0.0006,
+        0.0006,
+        0.0001
+      ]
+    },
+    "llm_blend": {
+      "mean": 0.0005,
+      "std": 0.0003,
+      "values": [
+        0.0004,
+        0.0004,
+        0.0005,
+        0.0007,
+        0.0004,
+        0.0002,
+        0.0006,
+        0.0002,
+        0.0003,
+        0.0005,
+        0.0001,
+        0.0001,
+        0.0003,
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0009,
+        0.0005,
+        0.0007,
+        0.0006,
+        0.0002,
+        0.0004,
+        0.0004,
+        0.0003,
+        0.0004,
+        0.0011,
+        0.0004,
+        0.0006,
+        0.0004,
+        0.0012,
+        0.0007,
+        0.002,
+        0.0005,
+        0.001,
+        0.0007,
+        0.0004,
+        0.001,
+        0.001,
+        0.0003,
+        0.0003,
+        0.0003,
+        0.0003,
+        0.0005,
+        0.0005,
+        0.0002,
+        0.0004,
+        0.0003,
+        0.0011,
+        0.0002,
+        0.0007
+      ]
+    },
+    "ratio": 1.0127,
+    "cohens_d": 0.0182,
+    "t_statistic": 0.0859,
+    "p_value": 0.931916791658358,
+    "pair_records": [
+      {
+        "seed": 42,
+        "pair": 0,
+        "locus_diversity": 0.0007,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 42,
+        "pair": 1,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 42,
+        "pair": 2,
+        "locus_diversity": 0.0017,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 42,
+        "pair": 3,
+        "locus_diversity": 0.0007,
+        "llm_diversity": 0.0007
+      },
+      {
+        "seed": 42,
+        "pair": 4,
+        "locus_diversity": 0.0008,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 42,
+        "pair": 5,
+        "locus_diversity": 0.0003,
+        "llm_diversity": 0.0002
+      },
+      {
+        "seed": 42,
+        "pair": 6,
+        "locus_diversity": 0.0007,
+        "llm_diversity": 0.0006
+      },
+      {
+        "seed": 42,
+        "pair": 7,
+        "locus_diversity": 0.0006,
+        "llm_diversity": 0.0002
+      },
+      {
+        "seed": 42,
+        "pair": 8,
+        "locus_diversity": 0.001,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 42,
+        "pair": 9,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 1042,
+        "pair": 0,
+        "locus_diversity": 0.001,
+        "llm_diversity": 0.0001
+      },
+      {
+        "seed": 1042,
+        "pair": 1,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0001
+      },
+      {
+        "seed": 1042,
+        "pair": 2,
+        "locus_diversity": 0.0008,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 1042,
+        "pair": 3,
+        "locus_diversity": 0.0006,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 1042,
+        "pair": 4,
+        "locus_diversity": 0.0004,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 1042,
+        "pair": 5,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 1042,
+        "pair": 6,
+        "locus_diversity": 0.0009,
+        "llm_diversity": 0.0009
+      },
+      {
+        "seed": 1042,
+        "pair": 7,
+        "locus_diversity": 0.0006,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 1042,
+        "pair": 8,
+        "locus_diversity": 0.0004,
+        "llm_diversity": 0.0007
+      },
+      {
+        "seed": 1042,
+        "pair": 9,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0006
+      },
+      {
+        "seed": 2042,
+        "pair": 0,
+        "locus_diversity": 0.0005,
+        "llm_diversity": 0.0002
+      },
+      {
+        "seed": 2042,
+        "pair": 1,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 2042,
+        "pair": 2,
+        "locus_diversity": 0.0012,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 2042,
+        "pair": 3,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 2042,
+        "pair": 4,
+        "locus_diversity": 0.0006,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 2042,
+        "pair": 5,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0011
+      },
+      {
+        "seed": 2042,
+        "pair": 6,
+        "locus_diversity": 0.0009,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 2042,
+        "pair": 7,
+        "locus_diversity": 0.0004,
+        "llm_diversity": 0.0006
+      },
+      {
+        "seed": 2042,
+        "pair": 8,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 2042,
+        "pair": 9,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0012
+      },
+      {
+        "seed": 3042,
+        "pair": 0,
+        "locus_diversity": 0.0004,
+        "llm_diversity": 0.0007
+      },
+      {
+        "seed": 3042,
+        "pair": 1,
+        "locus_diversity": 0.0003,
+        "llm_diversity": 0.002
+      },
+      {
+        "seed": 3042,
+        "pair": 2,
+        "locus_diversity": 0.0009,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 3042,
+        "pair": 3,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.001
+      },
+      {
+        "seed": 3042,
+        "pair": 4,
+        "locus_diversity": 0.0009,
+        "llm_diversity": 0.0007
+      },
+      {
+        "seed": 3042,
+        "pair": 5,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 3042,
+        "pair": 6,
+        "locus_diversity": 0.001,
+        "llm_diversity": 0.001
+      },
+      {
+        "seed": 3042,
+        "pair": 7,
+        "locus_diversity": 0.0004,
+        "llm_diversity": 0.001
+      },
+      {
+        "seed": 3042,
+        "pair": 8,
+        "locus_diversity": 0.001,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 3042,
+        "pair": 9,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 4042,
+        "pair": 0,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 4042,
+        "pair": 1,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 4042,
+        "pair": 2,
+        "locus_diversity": 0.0011,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 4042,
+        "pair": 3,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0005
+      },
+      {
+        "seed": 4042,
+        "pair": 4,
+        "locus_diversity": 0.0004,
+        "llm_diversity": 0.0002
+      },
+      {
+        "seed": 4042,
+        "pair": 5,
+        "locus_diversity": 0.0002,
+        "llm_diversity": 0.0004
+      },
+      {
+        "seed": 4042,
+        "pair": 6,
+        "locus_diversity": 0.0011,
+        "llm_diversity": 0.0003
+      },
+      {
+        "seed": 4042,
+        "pair": 7,
+        "locus_diversity": 0.0006,
+        "llm_diversity": 0.0011
+      },
+      {
+        "seed": 4042,
+        "pair": 8,
+        "locus_diversity": 0.0006,
+        "llm_diversity": 0.0002
+      },
+      {
+        "seed": 4042,
+        "pair": 9,
+        "locus_diversity": 0.0001,
+        "llm_diversity": 0.0007
+      }
+    ]
+  },
+  "part_b": {
+    "locus_trials": [
+      {
+        "avg_population": 12.94,
+        "pop_std": 2.95,
+        "total_births": 15,
+        "total_deaths": 12,
+        "max_generation": 5,
+        "final_population": 9,
+        "behavior_diversity": 0.0006
+      },
+      {
+        "avg_population": 10.31,
+        "pop_std": 4.36,
+        "total_births": 11,
+        "total_deaths": 15,
+        "max_generation": 1,
+        "final_population": 2,
+        "behavior_diversity": 0.0
+      },
+      {
+        "avg_population": 10.73,
+        "pop_std": 4.27,
+        "total_births": 11,
+        "total_deaths": 16,
+        "max_generation": 2,
+        "final_population": 1,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 13.79,
+        "pop_std": 1.92,
+        "total_births": 22,
+        "total_deaths": 15,
+        "max_generation": 9,
+        "final_population": 13,
+        "behavior_diversity": 0.0006
+      },
+      {
+        "avg_population": 11.52,
+        "pop_std": 3.54,
+        "total_births": 12,
+        "total_deaths": 14,
+        "max_generation": 2,
+        "final_population": 4,
+        "behavior_diversity": 0.0002
+      },
+      {
+        "avg_population": 12.8,
+        "pop_std": 3.92,
+        "total_births": 13,
+        "total_deaths": 18,
+        "max_generation": 3,
+        "final_population": 1,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 13.63,
+        "pop_std": 2.47,
+        "total_births": 18,
+        "total_deaths": 14,
+        "max_generation": 5,
+        "final_population": 10,
+        "behavior_diversity": 0.0005
+      }
+    ],
+    "llm_trials": [
+      {
+        "avg_population": 8.3,
+        "pop_std": 6.18,
+        "total_births": 11,
+        "total_deaths": 17,
+        "max_generation": 0,
+        "final_population": 0,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 7.83,
+        "pop_std": 5.88,
+        "total_births": 11,
+        "total_deaths": 17,
+        "max_generation": 0,
+        "final_population": 0,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 9.01,
+        "pop_std": 5.97,
+        "total_births": 11,
+        "total_deaths": 17,
+        "max_generation": 0,
+        "final_population": 0,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 7.6,
+        "pop_std": 6.12,
+        "total_births": 11,
+        "total_deaths": 17,
+        "max_generation": 0,
+        "final_population": 0,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 7.85,
+        "pop_std": 6.17,
+        "total_births": 11,
+        "total_deaths": 16,
+        "max_generation": 7,
+        "final_population": 1,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 9.17,
+        "pop_std": 6.08,
+        "total_births": 12,
+        "total_deaths": 18,
+        "max_generation": 0,
+        "final_population": 0,
+        "behavior_diversity": 0
+      },
+      {
+        "avg_population": 8.27,
+        "pop_std": 6.1,
+        "total_births": 12,
+        "total_deaths": 18,
+        "max_generation": 0,
+        "final_population": 0,
+        "behavior_diversity": 0
+      }
+    ],
+    "statistical_tests": {
+      "avg_population": {
+        "locus_mean": 12.2457,
+        "locus_std": 1.3941,
+        "llm_mean": 8.29,
+        "llm_std": 0.602,
+        "t_statistic": -6.6646,
+        "p_value": 0.0005520463913142505,
+        "cohens_d": -3.6839
+      },
+      "total_births": {
+        "locus_mean": 14.5714,
+        "locus_std": 4.1173,
+        "llm_mean": 11.2857,
+        "llm_std": 0.488,
+        "t_statistic": -2.1355,
+        "p_value": 0.07662544416017139,
+        "cohens_d": -1.1207
+      },
+      "total_deaths": {
+        "locus_mean": 14.8571,
+        "locus_std": 1.8645,
+        "llm_mean": 17.1429,
+        "llm_std": 0.6901,
+        "t_statistic": 3.5483,
+        "p_value": 0.012097434852593833,
+        "cohens_d": 1.626
+      },
+      "max_generation": {
+        "locus_mean": 3.8571,
+        "locus_std": 2.7343,
+        "llm_mean": 1.0,
+        "llm_std": 2.6458,
+        "t_statistic": -1.743,
+        "p_value": 0.13196574913327042,
+        "cohens_d": -1.062
+      },
+      "behavior_diversity": {
+        "locus_mean": 0.0003,
+        "locus_std": 0.0003,
+        "llm_mean": 0.0,
+        "llm_std": 0.0,
+        "t_statistic": -2.502,
+        "p_value": 0.04640111697750546,
+        "cohens_d": -1.3374
+      }
+    }
+  }
+}

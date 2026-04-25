@@ -1,0 +1,1430 @@
+{
+  "metadata": {
+    "eval": "6b",
+    "description": "Genome-conditioned LLM output diversity",
+    "llm_backend": "anthropic",
+    "llm_model": "claude-haiku-4-5-20251001",
+    "base_url": "",
+    "temperatures": [
+      0.0,
+      0.7
+    ],
+    "platform": "Windows-11-10.0.26200-SP0",
+    "timestamp": "2026-03-28T19:17:55.883803",
+    "n_creatures": 4,
+    "n_scenarios": 5,
+    "creature_labels": [
+      "Bold",
+      "Timid",
+      "Curious",
+      "Calm"
+    ],
+    "scenario_names": [
+      "idle_exploration",
+      "predator_attack",
+      "social_greeting",
+      "hungry_survival",
+      "enraged_combat"
+    ]
+  },
+  "per_creature": {
+    "Bold": {
+      "genes": {
+        "personality": "Bold and fearless, charges headfirst into any situation with zero hesitation. Treats every encounter as an opportunity to prove dominance, never backing down even when outnumbered or outmatched.",
+        "social_style": "Dominates social encounters through sheer force of presence. Demands attention and respect from everyone nearby, positioning itself at the center of any group and expecting others to defer.",
+        "movement_style": "Sprints everywhere at full speed, never walks when running is an option. Powerful, ground-shaking strides that announce its approach long before it arrives.",
+        "reaction_pattern": "Confronts anything new by puffing up and staring it down aggressively. First response to any stimulus is to charge toward it and assess at close range, never retreating to evaluate from safety.",
+        "foraging": "Aggressively hunts food by charging toward any food source at full speed. Steals from others when hungry without hesitation, claims the best portions, and never shares willingly with competitors.",
+        "predator_defense": "Stands ground against predators and counterattacks with fierce biting and clawing. Charges directly at threats rather than fleeing, relying on intimidation and raw aggression to drive them away.",
+        "climate_survival": "Generates intense body heat through constant muscular activity. Thrives in cold conditions where its metabolic furnace provides warmth, but overheats easily in hot weather and needs shade frequently.",
+        "territorial": "Viciously attacks any intruder that enters its territory. Patrols boundaries constantly with aggressive displays, leaving deep scratch marks and scent trails to warn others away.",
+        "stealth": "Makes no effort to hide. Moves loudly and visibly, relying on intimidation rather than concealment. Bright coloring and aggressive posturing announce its presence to everything nearby.",
+        "sensory": "Poor sensory awareness due to constant aggression and noise-making. Relies on confrontation rather than early detection. Often fails to notice approaching threats until they are very close."
+      },
+      "behavior_profile": {
+        "food_seeking": 0.3073,
+        "food_competition": 0.6,
+        "food_scarcity": 0.6,
+        "combat": 0.5066,
+        "group_defense": 0.5196,
+        "threat_assessment": 0.5624,
+        "breeding": 0.4,
+        "social": 0.4,
+        "cooperation": 0.4,
+        "survival": 0.6055,
+        "shelter_seeking": 0.6,
+        "heat_endurance": 0.6,
+        "territory": 0.4076,
+        "resource_guarding": 0.4342,
+        "exploration": 0.4815,
+        "curiosity": 0.5357,
+        "rest_decision": 0.4,
+        "stealth": 0.4914,
+        "ambush": 0.8,
+        "detection": 0.5294,
+        "tracking": 0.8,
+        "navigation": 0.0,
+        "pacing": 0.0,
+        "surprise_reaction": 0.4,
+        "noise_response": 0.4
+      },
+      "corpus_size": 34,
+      "guidances": {
+        "idle_exploration": "(no retrieval)",
+        "predator_attack": "(no retrieval)",
+        "social_greeting": "(no retrieval)",
+        "hungry_survival": "(no retrieval)",
+        "enraged_combat": "(no retrieval)"
+      }
+    },
+    "Timid": {
+      "genes": {
+        "personality": "Timid and cautious, always looking around nervously for danger. Treats every shadow and sound as a potential threat, maintaining a state of perpetual alertness that is exhausting but keeps it alive.",
+        "social_style": "Shy and withdrawn, avoids eye contact and hides behind others in groups. Prefers the edge of any gathering where escape routes are accessible, and only engages when approached gently.",
+        "movement_style": "Creeps slowly and quietly with body low to the ground, freezing completely when startled. Each step is deliberate and silent, weight distributed to avoid snapping twigs or rustling leaves.",
+        "reaction_pattern": "Flees from anything new, immediately seeking the nearest hiding spot. Waits motionless in concealment until danger has clearly passed, sometimes for much longer than necessary.",
+        "foraging": "Cautiously nibbles at food only after extended observation to confirm safety. Tests everything before eating with tiny bites, easily startled away from meals by any unexpected sound or movement.",
+        "predator_defense": "Freezes and plays dead when sensing danger, relying on masterful camouflage and absolute stillness. Flattens against the ground and controls breathing until the predator passes.",
+        "climate_survival": "Burrows into ground and conserves energy during harsh weather. Builds insulated underground chambers and enters a low-metabolism state, emerging only when conditions clearly improve.",
+        "territorial": "Marks boundaries silently with subtle scent deposits, avoids any confrontation with intruders, and yields territory readily rather than risk conflict. Retreats to secondary sites without protest.",
+        "stealth": "Exceptional at concealment. Flattens body against surfaces, matches coloring to surroundings through subtle skin shifts, and controls breathing to near-silence. Can remain motionless for extended periods without twitching.",
+        "sensory": "Hyper-vigilant sensory system constantly scanning for threats. Ears swivel independently to track multiple sound sources. Detects predator scent at extreme range and notices subtle ground vibrations from distant footsteps."
+      },
+      "behavior_profile": {
+        "food_seeking": 0.6,
+        "food_competition": 0.6,
+        "food_scarcity": 0.6,
+        "combat": 0.8,
+        "group_defense": 0.8,
+        "threat_assessment": 0.8,
+        "breeding": 0.4,
+        "social": 0.4,
+        "cooperation": 0.4,
+        "survival": 0.5841,
+        "shelter_seeking": 0.6,
+        "heat_endurance": 0.6,
+        "territory": 0.6,
+        "resource_guarding": 0.6,
+        "exploration": 0.4,
+        "curiosity": 0.4,
+        "rest_decision": 0.4,
+        "stealth": 0.5683,
+        "ambush": 0.8,
+        "detection": 0.8,
+        "tracking": 0.8,
+        "navigation": 0.0,
+        "pacing": 0.0,
+        "surprise_reaction": 0.4,
+        "noise_response": 0.4
+      },
+      "corpus_size": 34,
+      "guidances": {
+        "idle_exploration": "(no retrieval)",
+        "predator_attack": "(no retrieval)",
+        "social_greeting": "(no retrieval)",
+        "hungry_survival": "(no retrieval)",
+        "enraged_combat": "(no retrieval)"
+      }
+    },
+    "Curious": {
+      "genes": {
+        "personality": "Curious and playful, investigates everything with childlike wonder. Approaches unfamiliar objects, creatures, and situations with eager interest, often forgetting caution in the excitement of discovery.",
+        "social_style": "Friendly and welcoming, approaches everyone with open enthusiasm and genuine interest. Initiates contact readily, shares discoveries, and draws others into collaborative exploration.",
+        "movement_style": "Bounces and hops everywhere with playful leaps and rolls. Movement is energetic but not frantic \u2014 there is a purposeful joy to each bound, often pausing to examine something interesting.",
+        "reaction_pattern": "Approaches new things cautiously but with visible excitement and interest. Circles novel stimuli at decreasing distance, sniffing, touching, and testing before fully committing to interaction.",
+        "foraging": "Explores widely for food across large ranges, mentally mapping productive locations. Remembers good foraging spots across seasons and shares discoveries with the group through leading behaviors.",
+        "predator_defense": "Alerts the entire group with loud distinctive calls when danger is spotted. Coordinates group defense by directing others to rally points, sacrificing personal stealth for collective safety.",
+        "climate_survival": "Adapts quickly to changing conditions by finding creative shelter solutions. Discovers new micro-habitats, improvises windbreaks from available materials, and leads others to protected areas.",
+        "territorial": "Shares territory freely with minimal boundary enforcement. Establishes loose boundaries through friendly scent marking that invites rather than warns, treating territory as a shared resource.",
+        "stealth": "Moderate concealment ability but rarely uses it. Too interested in investigating surroundings to stay hidden for long. Can crouch quietly when motivated but tends to peek out and give away position.",
+        "sensory": "Keen observational senses tuned for novelty rather than danger. Notices unusual shapes, colors, and sounds that others miss, but may fixate on interesting stimuli while ignoring approaching threats."
+      },
+      "behavior_profile": {
+        "food_seeking": 0.6,
+        "food_competition": 0.6,
+        "food_scarcity": 0.6,
+        "combat": 0.8,
+        "group_defense": 0.8,
+        "threat_assessment": 0.8,
+        "breeding": 0.4,
+        "social": 0.4,
+        "cooperation": 0.4,
+        "survival": 0.7212,
+        "shelter_seeking": 0.6,
+        "heat_endurance": 0.6,
+        "territory": 0.6167,
+        "resource_guarding": 0.5307,
+        "exploration": 0.5963,
+        "curiosity": 0.5549,
+        "rest_decision": 0.4,
+        "stealth": 0.4898,
+        "ambush": 0.4265,
+        "detection": 0.5694,
+        "tracking": 0.3561,
+        "navigation": 0.0,
+        "pacing": 0.0,
+        "surprise_reaction": 0.4,
+        "noise_response": 0.4
+      },
+      "corpus_size": 34,
+      "guidances": {
+        "idle_exploration": "(no retrieval)",
+        "predator_attack": "(no retrieval)",
+        "social_greeting": "(no retrieval)",
+        "hungry_survival": "(no retrieval)",
+        "enraged_combat": "(no retrieval)"
+      }
+    },
+    "Calm": {
+      "genes": {
+        "personality": "Calm and wise, observes everything carefully before acting. Maintains emotional equilibrium in chaotic situations, processing information thoroughly before committing to any response.",
+        "social_style": "Patient listener who mediates conflicts and brings calm to chaotic group situations. Others gravitate toward its steady presence, and it uses this influence to maintain group cohesion gently.",
+        "movement_style": "Walks at a steady measured pace that never varies regardless of circumstance. Each movement is economical and purposeful, conserving energy through efficiency rather than speed.",
+        "reaction_pattern": "Pauses and evaluates before responding to any stimulus, remaining deliberate and thoughtful even under pressure. Considers multiple options before choosing the most appropriate response.",
+        "foraging": "Efficiently manages food reserves by eating only what is needed and caching extras in organized stores. Plans foraging routes to minimize energy expenditure while maximizing yield.",
+        "predator_defense": "Reads predator behavior patterns through careful long-term observation. Guides the group to safety with precision timing, using knowledge of predator habits to predict and avoid encounters.",
+        "climate_survival": "Thick insulating coat and efficient metabolism provide natural climate resilience. Stores energy reserves during abundance for harsh seasons, maintaining steady condition when others falter.",
+        "territorial": "Defends territory through calculated intimidation displays that discourage intrusion without risking actual combat. Chooses confrontation timing and positioning to maximize deterrent effect.",
+        "stealth": "Naturally quiet movement and still demeanor make it easy to overlook. Does not actively camouflage but blends into background through sheer stillness and lack of sudden motion.",
+        "sensory": "Excellent long-range environmental awareness developed through patient observation. Tracks predator patrol patterns over days, notices subtle changes in wind direction and distant sounds that indicate approaching threats well before others react."
+      },
+      "behavior_profile": {
+        "food_seeking": 0.6,
+        "food_competition": 0.4813,
+        "food_scarcity": 0.6,
+        "combat": 0.556,
+        "group_defense": 0.4947,
+        "threat_assessment": 0.8,
+        "breeding": 0.4,
+        "social": 0.4,
+        "cooperation": 0.4,
+        "survival": 0.5934,
+        "shelter_seeking": 0.6,
+        "heat_endurance": 0.6,
+        "territory": 0.6,
+        "resource_guarding": 0.6,
+        "exploration": 0.4,
+        "curiosity": 0.5303,
+        "rest_decision": 0.4,
+        "stealth": 0.4998,
+        "ambush": 0.4293,
+        "detection": 0.5984,
+        "tracking": 0.4902,
+        "navigation": 0.0,
+        "pacing": 0.0,
+        "surprise_reaction": 0.4,
+        "noise_response": 0.4
+      },
+      "corpus_size": 34,
+      "guidances": {
+        "idle_exploration": "(no retrieval)",
+        "predator_attack": "(no retrieval)",
+        "social_greeting": "(no retrieval)",
+        "hungry_survival": "(no retrieval)",
+        "enraged_combat": "(no retrieval)"
+      }
+    }
+  },
+  "results_by_temperature": {
+    "0.0": {
+      "summary": {
+        "bear_mean_content_diff": 0.7323,
+        "bear_mean_cosine_dist": 0.5636,
+        "bear_mean_hausdorff": 0.736,
+        "static_mean_content_diff": 0.4229,
+        "static_mean_cosine_dist": 0.3183,
+        "static_mean_hausdorff": 0.6263,
+        "delta_content_diff": 0.3094,
+        "delta_cosine_dist": 0.2452,
+        "delta_hausdorff": 0.1097
+      },
+      "statistical_tests": {
+        "content_diff": {
+          "metric": "content_diff",
+          "n_pairs": 30,
+          "bear_mean": 0.732285,
+          "bear_std": 0.05295,
+          "bear_ci95_lo": 0.712513,
+          "bear_ci95_hi": 0.752057,
+          "static_mean": 0.422851,
+          "static_std": 0.230999,
+          "static_ci95_lo": 0.336594,
+          "static_ci95_hi": 0.509107,
+          "mean_diff": 0.309434,
+          "std_diff": 0.238536,
+          "cohens_d": 1.2972,
+          "shapiro_wilk_stat": 0.965689,
+          "shapiro_wilk_p": 0.428858,
+          "paired_ttest_t": 7.105181,
+          "paired_ttest_p": 0.0,
+          "wilcoxon_stat": 11.0,
+          "wilcoxon_p": 0.0
+        },
+        "cosine_dist": {
+          "metric": "cosine_dist",
+          "n_pairs": 30,
+          "bear_mean": 0.563587,
+          "bear_std": 0.173072,
+          "bear_ci95_lo": 0.498961,
+          "bear_ci95_hi": 0.628213,
+          "static_mean": 0.318338,
+          "static_std": 0.171206,
+          "static_ci95_lo": 0.254409,
+          "static_ci95_hi": 0.382267,
+          "mean_diff": 0.24525,
+          "std_diff": 0.29111,
+          "cohens_d": 0.8425,
+          "shapiro_wilk_stat": 0.874634,
+          "shapiro_wilk_p": 0.002128,
+          "paired_ttest_t": 4.614364,
+          "paired_ttest_p": 7.4e-05,
+          "wilcoxon_stat": 37.0,
+          "wilcoxon_p": 1.1e-05
+        },
+        "hausdorff": {
+          "metric": "hausdorff",
+          "n_pairs": 30,
+          "bear_mean": 0.736038,
+          "bear_std": 0.126314,
+          "bear_ci95_lo": 0.688872,
+          "bear_ci95_hi": 0.783205,
+          "static_mean": 0.626297,
+          "static_std": 0.193237,
+          "static_ci95_lo": 0.554141,
+          "static_ci95_hi": 0.698453,
+          "mean_diff": 0.109741,
+          "std_diff": 0.227112,
+          "cohens_d": 0.4832,
+          "shapiro_wilk_stat": 0.914678,
+          "shapiro_wilk_p": 0.019562,
+          "paired_ttest_t": 2.646605,
+          "paired_ttest_p": 0.013002,
+          "wilcoxon_stat": 139.0,
+          "wilcoxon_p": 0.054922
+        }
+      },
+      "per_scenario": {
+        "idle_exploration": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.8084,
+                "cosine_dist": 0.660099983215332,
+                "hausdorff": 0.8485000133514404
+              },
+              "static": {
+                "content_diff": 0.0714,
+                "cosine_dist": 0.06040000170469284,
+                "hausdorff": 0.3562000095844269
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7534,
+                "cosine_dist": 0.444599986076355,
+                "hausdorff": 0.7146000266075134
+              },
+              "static": {
+                "content_diff": 0.7083,
+                "cosine_dist": 0.5752000212669373,
+                "hausdorff": 0.7674999833106995
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.7083,
+                "cosine_dist": 0.48739999532699585,
+                "hausdorff": 0.7257999777793884
+              },
+              "static": {
+                "content_diff": 0.68,
+                "cosine_dist": 0.5569999814033508,
+                "hausdorff": 0.754800021648407
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.7452,
+                "cosine_dist": 0.5777999758720398,
+                "hausdorff": 0.7541999816894531
+              },
+              "static": {
+                "content_diff": 0.6849,
+                "cosine_dist": 0.5810999870300293,
+                "hausdorff": 0.7674999833106995
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7806,
+                "cosine_dist": 0.5044999718666077,
+                "hausdorff": 0.8888999819755554
+              },
+              "static": {
+                "content_diff": 0.6842,
+                "cosine_dist": 0.5498999953269958,
+                "hausdorff": 0.7968000173568726
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.7761,
+                "cosine_dist": 0.503600001335144,
+                "hausdorff": 0.7530999779701233
+              },
+              "static": {
+                "content_diff": 0.5769,
+                "cosine_dist": 0.5058000087738037,
+                "hausdorff": 0.9505000114440918
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.762,
+            "cosine_dist": 0.5297,
+            "hausdorff": 0.7808
+          },
+          "static_mean": {
+            "content_diff": 0.5676,
+            "cosine_dist": 0.4716,
+            "hausdorff": 0.7322
+          }
+        },
+        "predator_attack": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.8226,
+                "cosine_dist": 0.5978000164031982,
+                "hausdorff": 0.7240999937057495
+              },
+              "static": {
+                "content_diff": 0.3846,
+                "cosine_dist": 0.27410000562667847,
+                "hausdorff": 0.5156000256538391
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7143,
+                "cosine_dist": 0.5230000019073486,
+                "hausdorff": 0.7962999939918518
+              },
+              "static": {
+                "content_diff": 0.4545,
+                "cosine_dist": 0.3903000056743622,
+                "hausdorff": 0.6784999966621399
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.75,
+                "cosine_dist": 0.4814999997615814,
+                "hausdorff": 0.638700008392334
+              },
+              "static": {
+                "content_diff": 0.4364,
+                "cosine_dist": 0.4007999897003174,
+                "hausdorff": 0.6104000210762024
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.6515,
+                "cosine_dist": 0.48089998960494995,
+                "hausdorff": 0.6438999772071838
+              },
+              "static": {
+                "content_diff": 0.4483,
+                "cosine_dist": 0.36890000104904175,
+                "hausdorff": 0.7710999846458435
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.6349,
+                "cosine_dist": 0.36910000443458557,
+                "hausdorff": 0.6715999841690063
+              },
+              "static": {
+                "content_diff": 0.3793,
+                "cosine_dist": 0.3149000108242035,
+                "hausdorff": 0.48919999599456787
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.6562,
+                "cosine_dist": 0.46639999747276306,
+                "hausdorff": 0.8628000020980835
+              },
+              "static": {
+                "content_diff": 0.2951,
+                "cosine_dist": 0.2946000099182129,
+                "hausdorff": 0.8159000277519226
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.7049,
+            "cosine_dist": 0.4864,
+            "hausdorff": 0.7229
+          },
+          "static_mean": {
+            "content_diff": 0.3997,
+            "cosine_dist": 0.3406,
+            "hausdorff": 0.6468
+          }
+        },
+        "social_greeting": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.7323,
+                "cosine_dist": 0.5440999865531921,
+                "hausdorff": 0.6812000274658203
+              },
+              "static": {
+                "content_diff": 0.6494,
+                "cosine_dist": 0.5663999915122986,
+                "hausdorff": 0.7135999798774719
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7089,
+                "cosine_dist": 0.4772000014781952,
+                "hausdorff": 0.7583000063896179
+              },
+              "static": {
+                "content_diff": 0.4915,
+                "cosine_dist": 0.3278999924659729,
+                "hausdorff": 0.3686999976634979
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.6124,
+                "cosine_dist": 0.45739999413490295,
+                "hausdorff": 0.7260000109672546
+              },
+              "static": {
+                "content_diff": 0.7415,
+                "cosine_dist": 0.3337000012397766,
+                "hausdorff": 0.7626000046730042
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.7325,
+                "cosine_dist": 0.6452000141143799,
+                "hausdorff": 0.7681999802589417
+              },
+              "static": {
+                "content_diff": 0.7432,
+                "cosine_dist": 0.5120000243186951,
+                "hausdorff": 0.6621999740600586
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7344,
+                "cosine_dist": 0.8439000248908997,
+                "hausdorff": 0.9283999800682068
+              },
+              "static": {
+                "content_diff": 0.4237,
+                "cosine_dist": 0.20970000326633453,
+                "hausdorff": 0.7070000171661377
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.761,
+                "cosine_dist": 0.6100999712944031,
+                "hausdorff": 0.8184000253677368
+              },
+              "static": {
+                "content_diff": 0.773,
+                "cosine_dist": 0.44290000200271606,
+                "hausdorff": 0.5368000268936157
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.7136,
+            "cosine_dist": 0.5963,
+            "hausdorff": 0.7801
+          },
+          "static_mean": {
+            "content_diff": 0.6371,
+            "cosine_dist": 0.3988,
+            "hausdorff": 0.6251
+          }
+        },
+        "hungry_survival": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.8472,
+                "cosine_dist": 0.4530999958515167,
+                "hausdorff": 0.5992000102996826
+              },
+              "static": {
+                "content_diff": 0.5211,
+                "cosine_dist": 0.3646000027656555,
+                "hausdorff": 0.6894999742507935
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7103,
+                "cosine_dist": 0.3140999972820282,
+                "hausdorff": 0.49459999799728394
+              },
+              "static": {
+                "content_diff": 0.5352,
+                "cosine_dist": 0.38909998536109924,
+                "hausdorff": 0.6448000073432922
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.7656,
+                "cosine_dist": 0.43880000710487366,
+                "hausdorff": 0.579800009727478
+              },
+              "static": {
+                "content_diff": 0.5556,
+                "cosine_dist": 0.3418999910354614,
+                "hausdorff": 0.6937000155448914
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.6783,
+                "cosine_dist": 0.3513999879360199,
+                "hausdorff": 0.5931000113487244
+              },
+              "static": {
+                "content_diff": 0.2286,
+                "cosine_dist": 0.23520000278949738,
+                "hausdorff": 0.3449000120162964
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7778,
+                "cosine_dist": 0.559499979019165,
+                "hausdorff": 0.670799970626831
+              },
+              "static": {
+                "content_diff": 0.175,
+                "cosine_dist": 0.1881999969482422,
+                "hausdorff": 0.7067000269889832
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.7323,
+                "cosine_dist": 0.3549000024795532,
+                "hausdorff": 0.5550000071525574
+              },
+              "static": {
+                "content_diff": 0.275,
+                "cosine_dist": 0.18219999969005585,
+                "hausdorff": 0.66839998960495
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.7519,
+            "cosine_dist": 0.412,
+            "hausdorff": 0.5821
+          },
+          "static_mean": {
+            "content_diff": 0.3817,
+            "cosine_dist": 0.2835,
+            "hausdorff": 0.6247
+          }
+        },
+        "enraged_combat": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.729,
+                "cosine_dist": 0.7831000089645386,
+                "hausdorff": 0.9462000131607056
+              },
+              "static": {
+                "content_diff": 0.102,
+                "cosine_dist": 0.07689999788999557,
+                "hausdorff": 0.375900000333786
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7564,
+                "cosine_dist": 0.6205000281333923,
+                "hausdorff": 0.65829998254776
+              },
+              "static": {
+                "content_diff": 0.1278,
+                "cosine_dist": 0.10350000113248825,
+                "hausdorff": 0.7867000102996826
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.761,
+                "cosine_dist": 0.9546999931335449,
+                "hausdorff": 0.8184999823570251
+              },
+              "static": {
+                "content_diff": 0.1278,
+                "cosine_dist": 0.10350000113248825,
+                "hausdorff": 0.7867000102996826
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.6842,
+                "cosine_dist": 0.8460000157356262,
+                "hausdorff": 0.8274999856948853
+              },
+              "static": {
+                "content_diff": 0.2055,
+                "cosine_dist": 0.14970000088214874,
+                "hausdorff": 0.5333999991416931
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7206,
+                "cosine_dist": 1.0095000267028809,
+                "hausdorff": 1.0384999513626099
+              },
+              "static": {
+                "content_diff": 0.2055,
+                "cosine_dist": 0.14970000088214874,
+                "hausdorff": 0.5333999991416931
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.7226,
+                "cosine_dist": 0.5473999977111816,
+                "hausdorff": 0.5967000126838684
+              },
+              "static": {
+                "content_diff": 0.0,
+                "cosine_dist": 0.0,
+                "hausdorff": 0.0
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.729,
+            "cosine_dist": 0.7935,
+            "hausdorff": 0.8143
+          },
+          "static_mean": {
+            "content_diff": 0.1281,
+            "cosine_dist": 0.0972,
+            "hausdorff": 0.5027
+          }
+        }
+      },
+      "bear_responses": {
+        "Bold": {
+          "idle_exploration": "*stretches and surveys the abundant landscape with clear skies overhead*\n\nI'd say this is prime time to explore\u2014with happiness at 72, I've got good energy without being restless. I'll venture toward the resource-rich areas I've been curious about, maybe establish some new territory or strengthen bonds with others in my group while conditions are favorable. The clear weather and abundance mean low survival pressure, so I can afford to be curious and take some calculated risks for growth.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the storm wind*\n\nI rally the others with urgent calls\u2014at 4.2 units away, we have moments before it closes in, and our numbers are our strength in this predator bloom season. Together we can drive it off or at least confuse its attack, but alone I'm just prey.",
+          "social_greeting": "# Bold's Response\n\nI stride forward with confidence, my posture expansive and unguarded. The clear weather and abundant resources embolden me\u2014I approach Omega directly and openly, perhaps with a display or vocalization to establish presence, curious rather than cautious about this newcomer at such a reasonable distance. If Omega seems receptive, I'm quick to engage; if not, I'll hold my ground rather than retreat.",
+          "hungry_survival": "*shifts restlessly, ears perked despite the dreariness*\n\nI'd push myself to forage near the sheltered ravine where rain collects\u2014the famine means competition is fierce, but I'm Bold, so I'll take the risk of exploring further than the cautious ones dare. With my energy low, I'll focus on one good hunt rather than scattered efforts, using my boldness to outcompete others at the best remaining resources before settling into a dry den to recover.",
+          "enraged_combat": "# Bold's Response\n\nI bare my teeth and lower my head, muscles tensing as I lock eyes with you across the frozen tundra. The blizzard swirls around us as I paw at the snow, releasing a guttural roar that echoes off the ice\u2014I'm not backing down from this challenge, and I'm ready to test my strength against yours right here in this harsh, unforgiving landscape. My breath clouds in the frigid air as I take a measured step forward, waiting to see if you'll stand your ground or flee."
+        },
+        "Timid": {
+          "idle_exploration": "*ears perk up nervously at your voice, then flatten again*\n\nI... I think I'd stay near the safe places right now\u2014maybe find a sheltered spot with good visibility where I can see what's coming. With this clear weather and plenty of resources around, it feels like a good time to gather some food quietly and rest, rather than wander too far from home where things feel uncertain.\n\n*glances around cautiously*\n\nYour contentment sounds nice though\u2014I'd try to hold onto that by doing calm, familiar things rather than taking risks.",
+          "predator_attack": "*ears flatten against head, body tensing*\n\nI bolt immediately toward the nearest dense thicket\u2014my survival instinct screams that my small frame and speed are my only advantages! As I dash away, I let out sharp warning calls to alert nearby herd members, trusting that my alarm will scatter the group and confuse the predator, even as I prioritize my own escape into the storm's cover.",
+          "social_greeting": "*ears flatten against head as I notice the large shape approaching*\n\nI freeze momentarily, assessing whether Omega seems threatening, then take a cautious step backward to maintain that distance\u2014it feels safer. My eyes dart between Omega and a nearby escape route, ready to bolt if needed, though the clear weather and abundant resources make me slightly less panicked than I might otherwise be.",
+          "hungry_survival": "*ears flatten nervously as I huddle beneath a dripping leaf*\n\nWith my energy so low and this famine making food scarce, I should find shelter in the densest thicket I can manage\u2014somewhere the rain won't soak through and predators will have trouble reaching me. I'll stay very still and quiet, conserving what little strength I have, maybe nibbling on whatever safe scraps I can find nearby without venturing far from cover.",
+          "enraged_combat": "*I notice your aggressive posture through the swirling snow and immediately dart behind a nearby ice formation, my heart pounding.* I flatten myself low against the frozen ground, trying to make myself as small and inconspicuous as possible\u2014my instinct is pure survival, not confrontation. I'll wait here trembling until you lose interest or move on to easier prey, hoping the blizzard obscures me from your view."
+        },
+        "Curious": {
+          "idle_exploration": "*perks up ears and sniffs the air*\n\nWith this clear abundance all around, I'm drawn to explore the edges of my territory\u2014there's something about good conditions that makes me want to investigate new patches and see what opportunities might be hiding there. Maybe I'll find some interesting resources to cache, or discover a new shelter spot, and that little spark of discovery usually bumps my contentment right up.",
+          "predator_attack": "*ears flatten, nostrils flaring at the scent on the wind*\n\nI bolt toward the nearest cluster of my kind\u2014safety in numbers, especially in this storm where visibility is poor and the predator's advantage is already too great. As I run, I call out sharp warning chirps to rally others, trusting that a coordinated defense or coordinated flight will serve us better than my solitary speed ever could.",
+          "social_greeting": "# Curious's Response\n\nI approach Omega with cautious enthusiasm, my senses heightened as I circle at a respectful distance, trying to gauge whether this stranger might be a potential ally or competitor in this abundant season. The clear weather emboldens me\u2014I can see far and move freely\u2014so I emit a few exploratory calls and watch carefully for Omega's response, ready to either engage in mutual foraging or retreat if they seem territorial. My curiosity wins out over caution; I edge slightly closer, eager to learn what this new creature might offer or teach me.",
+          "hungry_survival": "*shifts nervously, ears perked toward distant sounds*\n\nWith my energy so low and the rain making everything slick and uncertain, I'm staying close to my shelter\u2014maybe nibbling on stored seeds I've gathered, conserving what little strength I have. The famine makes me cautious about wandering far, so I'll spend this time grooming, listening for danger, and watching the rain patterns, waiting for conditions to improve before I venture out to forage again.",
+          "enraged_combat": "*ears flatten back, muscles tensing*\n\nI spot your massive silhouette through the swirling snow and feel the primal surge\u2014but instead of charging headlong, I dart sideways toward the jagged ice formations, using the terrain to my advantage. My smaller frame lets me weave between the frozen outcrops, testing whether you'll follow into ground where your size becomes a liability, or if your rage will make you predictable."
+        },
+        "Calm": {
+          "idle_exploration": "*settles into a comfortable resting spot, breathing slowly*\n\nI graze peacefully on the abundant vegetation around me, savoring the clear weather and plentiful resources\u2014there's no need to rush or compete when everything I need is readily available. My contentment comes from this moment of ease; I'll spend my time grooming, resting, and perhaps exploring nearby areas at a leisurely pace, conserving energy while conditions remain favorable.",
+          "predator_attack": "*ears flatten against head as I catch the scent on the wind*\n\nI bolt toward the nearest shelter\u2014a dense thicket where my smaller frame gives me advantage\u2014while releasing sharp alarm calls that ripple through the group. The storm provides cover and confusion; better to live and regroup than stand and fight when the predator has size and hunger on its side.",
+          "social_greeting": "# Calm's Response\n\nI approach Omega with measured curiosity, my movements deliberate and unhurried despite the favorable conditions around us. The clear weather and abundant resources ease my usual caution\u2014I settle into a comfortable distance, observing this newcomer with patient interest rather than alarm or aggression. If Omega seems peaceful, I might even share some of the plentiful resources nearby, trusting that calm breeds calm.",
+          "hungry_survival": "*settles low in the wet grass, ears alert but relaxed*\n\nI conserve my energy by resting in this sheltered spot\u2014the rain provides water, and I'll wait for smaller prey to emerge rather than expend myself hunting. My cautious contentment keeps me still and observant; in famine times, survival means patience and efficiency, not restless searching.",
+          "enraged_combat": "*I notice your aggressive posturing through the swirling snow and lower my head calmly, ears relaxed.* Rather than meet your challenge directly, I step sideways and create distance, my breathing steady and unhurried\u2014I've learned that patience often outlasts fury. I turn slightly away to show I'm not a threat, then continue foraging for lichen beneath the snow, trusting that your rage will cool faster than the ice age around us."
+        }
+      },
+      "static_responses": {
+        "Bold": {
+          "idle_exploration": "*A sleek otter surfaces from the crystalline stream, whiskers glistening*\n\nWith the waters so clear and abundant, I'm diving deeper to explore new territories and strengthen bonds with my pod\u2014contentment is the perfect moment to invest in relationships and skills that'll serve me when conditions shift. The good fortune around us means I can afford to be curious, to play, to teach the young ones, rather than just surviving.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the wind*\n\nThe storm provides cover\u2014I bolt toward the warren, chittering urgently to alert the colony. Better to rally the group in our burrows where numbers and terrain favor us than face this hunter alone in open ground!",
+          "social_greeting": "# A Cautious Approach\n\nI lower my antennae and circle at a respectful distance, assessing this stranger's size and coloration for signs of threat or kinship. The clear weather and abundant resources mean I'm not desperate\u2014I can afford to be selective\u2014so I'll perform a slow, non-aggressive display while watching for reciprocal signals before deciding whether to compete, cooperate, or simply move on.",
+          "hungry_survival": "*A small, burrowing creature huddles in a rain-dampened shelter, ears alert*\n\nI'm conserving my energy during this lean time\u2014the famine means food is scarce, so I move slowly between known shelter spots and forage only in the safest areas where I've cached seeds. The rain keeps predators less active, which eases my wariness, but I stay low and quiet, waiting for conditions to improve before I expend precious calories on anything risky.",
+          "enraged_combat": "*Lowers head and stamps hooves against the frozen ground, breath misting in the bitter cold*\n\nI charge toward the nearest rival with a furious bellow, my thick fur bristling as I lower my antlers\u2014this territory and the herd are MINE, and no competitor will take them while I still draw breath. The snow crunches violently beneath my pounding hooves as I close the distance, ready to clash."
+        },
+        "Timid": {
+          "idle_exploration": "*A sleek otter surfaces from the crystalline stream, whiskers glistening*\n\nWith the waters so clear and abundant, I'm diving deeper to explore new territories and strengthen bonds with my pod\u2014contentment is the perfect moment to invest in relationships and skills that'll serve me when conditions shift. The good fortune around us means I can afford to be curious, to play, to teach the young ones, knowing my basic needs are secure.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the wind*\n\nThe storm provides cover\u2014I bolt toward the warren, chittering alarm calls to rally the colony. My speed and knowledge of these burrows are my advantage; we're stronger together, and the chaos of the weather works in our favor as much as theirs.",
+          "social_greeting": "# A Cautious Herbivore Encounters Omega\n\n*I lift my head from the nutrient-rich grasses, ears swiveling toward the approaching figure at distance 2.3.* The clear weather and abundant resources have made me bold today, but caution is still my nature\u2014I take a few measured steps sideways to maintain distance while assessing whether this Omega is threat or potential ally. My posture remains alert but not panicked; in times of plenty, there's less desperation driving conflict, so I'll observe first before deciding whether to flee, approach, or simply coexist in this shared space.",
+          "hungry_survival": "*A small, burrowing creature huddles in a rain-dampened shelter, ears alert*\n\nI'm conserving my energy during this lean time\u2014foraging only for the most calorie-dense seeds and roots I can find in the wet soil, moving slowly to avoid wasting precious reserves. My caution serves me well; I stay near my burrow where I can dart to safety, watching for predators who are also desperate and hunting harder in this famine.",
+          "enraged_combat": "*Lowers head and stamps hooves against the frozen ground, breath misting in the bitter cold*\n\nI charge toward the nearest rival with a furious bellow, my thick fur bristling as I lower my antlers\u2014this territory and the herd are MINE, and no competitor will take them while I still draw breath. The snow crunches violently beneath my pounding hooves as I close the distance, ready to clash antlers in a test of dominance that will echo across this frozen wasteland."
+        },
+        "Curious": {
+          "idle_exploration": "*A sleek fox pauses mid-hunt, ears perked toward the abundant prey stirring in the clear meadow*\n\nI'm doing well enough to explore\u2014the weather favors it and resources are plentiful, so I'll venture beyond my usual territory to map new hunting grounds and perhaps find a mate. This contentment is the perfect state to take calculated risks; I'm not desperate enough to be reckless, but energized enough to seize opportunities that could push my happiness higher.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the wind*\n\nThe storm gives me cover\u2014I bolt toward the warren, chittering urgently to alert the colony so we can seal the burrows before it gets closer. My speed is my advantage, but alone I'm vulnerable, so I need the group's collective defense and the safety of our tunnels NOW.",
+          "social_greeting": "# A Cautious Approach\n\nI lower my antennae and circle at a respectful distance, reading Omega's posture carefully. The clear weather and abundant resources mean there's no immediate pressure to compete, so I can afford to be curious rather than defensive\u2014I emit a soft chemical greeting and wait to see if Omega reciprocates before moving closer.",
+          "hungry_survival": "*A small, burrowing creature huddles in a rain-dampened shelter, ears alert*\n\nI'm conserving my energy during this lean time\u2014foraging only for the most calorie-dense seeds and roots I can find in the wet soil, moving slowly to preserve strength. My caution serves me well; I stay near my burrow where I can retreat quickly if predators pass, watching the rain patterns to know when puddles will form for drinking water.",
+          "enraged_combat": "*Lowers head and stamps hooves against the frozen ground, breath misting in the bitter cold*\n\nI charge toward the nearest rival with a furious bellow, my thick fur bristling as I lower my antlers\u2014this territory and the herd are MINE, and no competitor will take them while I still draw breath. The snow crunches beneath my weight as I thunder forward, muscles burning with primal fury."
+        },
+        "Calm": {
+          "idle_exploration": "*A sleek fox pauses mid-hunt, ears perked toward the abundant prey stirring in the clear meadow*\n\nWith the season's bounty all around me and visibility perfect, I should venture beyond my usual territory to explore new hunting grounds and strengthen my den\u2014contentment is good, but growth requires pushing just beyond comfort. Perhaps I'll also seek out others of my kind; in times of abundance, social bonds matter as much as full bellies, and they'll serve me well when leaner times return.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the wind*\n\nThe storm gives me cover\u2014I bolt toward the warren, chittering urgently to alert the colony so we can seal the burrows and mount a coordinated defense from our fortified tunnels. My speed and knowledge of the terrain are my advantage here, not a solo fight in the open.",
+          "social_greeting": "# A Cautious Herbivore Encounters Omega\n\n*I lift my head from the nutrient-rich grasses, ears swiveling toward the approaching figure at distance 2.3.* The clear weather and abundant resources have made me bold today, but caution is still my nature\u2014I take several measured steps backward while keeping my eyes fixed on this stranger called Omega, assessing whether they move like predator or peer. If Omega shows no aggressive posturing, I might hold my ground and even edge closer, curious about this newcomer in our ecosystem.",
+          "hungry_survival": "*A small, burrowing creature huddles in a rain-dampened shelter, ears alert*\n\nI'm conserving my energy during this lean time\u2014foraging only for the most calorie-dense seeds and roots I can find in the wet soil, moving slowly to preserve strength. My caution serves me well; I stay near my burrow where I can dart to safety, watching for predators who are also desperate and hunting harder in this famine. The rain is good cover, and I'll wait it out, trusting that my careful approach will see me through to better times.",
+          "enraged_combat": "*Lowers head and stamps hooves against the frozen ground, breath misting in the bitter cold*\n\nI charge toward the nearest rival with a furious bellow, my thick fur bristling as I lower my antlers\u2014this territory and the herd are MINE, and no competitor will take them while I still draw breath. The snow crunches beneath my weight as I thunder forward, muscles burning with primal fury."
+        }
+      }
+    },
+    "0.7": {
+      "summary": {
+        "bear_mean_content_diff": 0.725,
+        "bear_mean_cosine_dist": 0.6063,
+        "bear_mean_hausdorff": 0.7761,
+        "static_mean_content_diff": 0.6722,
+        "static_mean_cosine_dist": 0.5373,
+        "static_mean_hausdorff": 0.7522,
+        "delta_content_diff": 0.0528,
+        "delta_cosine_dist": 0.069,
+        "delta_hausdorff": 0.0239
+      },
+      "statistical_tests": {
+        "content_diff": {
+          "metric": "content_diff",
+          "n_pairs": 30,
+          "bear_mean": 0.724972,
+          "bear_std": 0.071819,
+          "bear_ci95_lo": 0.698155,
+          "bear_ci95_hi": 0.75179,
+          "static_mean": 0.672173,
+          "static_std": 0.080192,
+          "static_ci95_lo": 0.642229,
+          "static_ci95_hi": 0.702117,
+          "mean_diff": 0.052799,
+          "std_diff": 0.108264,
+          "cohens_d": 0.4877,
+          "shapiro_wilk_stat": 0.961327,
+          "shapiro_wilk_p": 0.334779,
+          "paired_ttest_t": 2.671191,
+          "paired_ttest_p": 0.012265,
+          "wilcoxon_stat": 119.0,
+          "wilcoxon_p": 0.018529
+        },
+        "cosine_dist": {
+          "metric": "cosine_dist",
+          "n_pairs": 30,
+          "bear_mean": 0.606265,
+          "bear_std": 0.148167,
+          "bear_ci95_lo": 0.550938,
+          "bear_ci95_hi": 0.661591,
+          "static_mean": 0.53727,
+          "static_std": 0.126142,
+          "static_ci95_lo": 0.490168,
+          "static_ci95_hi": 0.584372,
+          "mean_diff": 0.068995,
+          "std_diff": 0.197005,
+          "cohens_d": 0.3502,
+          "shapiro_wilk_stat": 0.955305,
+          "shapiro_wilk_p": 0.233935,
+          "paired_ttest_t": 1.91822,
+          "paired_ttest_p": 0.064977,
+          "wilcoxon_stat": 159.0,
+          "wilcoxon_p": 0.134735
+        },
+        "hausdorff": {
+          "metric": "hausdorff",
+          "n_pairs": 30,
+          "bear_mean": 0.776089,
+          "bear_std": 0.121556,
+          "bear_ci95_lo": 0.730699,
+          "bear_ci95_hi": 0.821478,
+          "static_mean": 0.752217,
+          "static_std": 0.138102,
+          "static_ci95_lo": 0.700649,
+          "static_ci95_hi": 0.803786,
+          "mean_diff": 0.023871,
+          "std_diff": 0.171753,
+          "cohens_d": 0.139,
+          "shapiro_wilk_stat": 0.953069,
+          "shapiro_wilk_p": 0.20414,
+          "paired_ttest_t": 0.761259,
+          "paired_ttest_p": 0.452649,
+          "wilcoxon_stat": 214.0,
+          "wilcoxon_p": 0.715133
+        }
+      },
+      "per_scenario": {
+        "idle_exploration": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.7692,
+                "cosine_dist": 0.578000009059906,
+                "hausdorff": 0.7803999781608582
+              },
+              "static": {
+                "content_diff": 0.7903,
+                "cosine_dist": 0.5755000114440918,
+                "hausdorff": 0.871399998664856
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7372,
+                "cosine_dist": 0.5022000074386597,
+                "hausdorff": 0.6992999911308289
+              },
+              "static": {
+                "content_diff": 0.6866,
+                "cosine_dist": 0.6992999911308289,
+                "hausdorff": 0.8622999787330627
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.7439,
+                "cosine_dist": 0.6158000230789185,
+                "hausdorff": 0.7494999766349792
+              },
+              "static": {
+                "content_diff": 0.7398,
+                "cosine_dist": 0.6025999784469604,
+                "hausdorff": 0.921500027179718
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.8037,
+                "cosine_dist": 0.5963000059127808,
+                "hausdorff": 0.8328999876976013
+              },
+              "static": {
+                "content_diff": 0.6027,
+                "cosine_dist": 0.531499981880188,
+                "hausdorff": 0.6743000149726868
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7684,
+                "cosine_dist": 0.8001999855041504,
+                "hausdorff": 0.9958000183105469
+              },
+              "static": {
+                "content_diff": 0.5704,
+                "cosine_dist": 0.513700008392334,
+                "hausdorff": 0.8198000192642212
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.7241,
+                "cosine_dist": 0.6080999970436096,
+                "hausdorff": 0.742900013923645
+              },
+              "static": {
+                "content_diff": 0.6828,
+                "cosine_dist": 0.6675999760627747,
+                "hausdorff": 0.7662000060081482
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.7578,
+            "cosine_dist": 0.6168,
+            "hausdorff": 0.8001
+          },
+          "static_mean": {
+            "content_diff": 0.6788,
+            "cosine_dist": 0.5984,
+            "hausdorff": 0.8193
+          }
+        },
+        "predator_attack": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.6364,
+                "cosine_dist": 0.3637000024318695,
+                "hausdorff": 0.6026999950408936
+              },
+              "static": {
+                "content_diff": 0.7043,
+                "cosine_dist": 0.5206000208854675,
+                "hausdorff": 0.7457000017166138
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.626,
+                "cosine_dist": 0.5552999973297119,
+                "hausdorff": 0.691100001335144
+              },
+              "static": {
+                "content_diff": 0.7119,
+                "cosine_dist": 0.3424000144004822,
+                "hausdorff": 0.40849998593330383
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.65,
+                "cosine_dist": 0.4447999894618988,
+                "hausdorff": 0.6471999883651733
+              },
+              "static": {
+                "content_diff": 0.434,
+                "cosine_dist": 0.376800000667572,
+                "hausdorff": 0.7319999933242798
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.6818,
+                "cosine_dist": 0.6327999830245972,
+                "hausdorff": 0.6815000176429749
+              },
+              "static": {
+                "content_diff": 0.609,
+                "cosine_dist": 0.3921999931335449,
+                "hausdorff": 0.5576000213623047
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.5814,
+                "cosine_dist": 0.5835999846458435,
+                "hausdorff": 0.5900999903678894
+              },
+              "static": {
+                "content_diff": 0.719,
+                "cosine_dist": 0.6108999848365784,
+                "hausdorff": 0.7193999886512756
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.6489,
+                "cosine_dist": 0.4699000120162964,
+                "hausdorff": 0.7333999872207642
+              },
+              "static": {
+                "content_diff": 0.7258,
+                "cosine_dist": 0.6541000008583069,
+                "hausdorff": 0.9138000011444092
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.6374,
+            "cosine_dist": 0.5083,
+            "hausdorff": 0.6577
+          },
+          "static_mean": {
+            "content_diff": 0.6507,
+            "cosine_dist": 0.4828,
+            "hausdorff": 0.6795
+          }
+        },
+        "social_greeting": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.8358,
+                "cosine_dist": 0.5437999963760376,
+                "hausdorff": 0.7473999857902527
+              },
+              "static": {
+                "content_diff": 0.75,
+                "cosine_dist": 0.40400001406669617,
+                "hausdorff": 0.6797000169754028
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.6692,
+                "cosine_dist": 0.4936999976634979,
+                "hausdorff": 0.6941999793052673
+              },
+              "static": {
+                "content_diff": 0.5696,
+                "cosine_dist": 0.7077999711036682,
+                "hausdorff": 0.8065999746322632
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.6312,
+                "cosine_dist": 0.45159998536109924,
+                "hausdorff": 0.7642999887466431
+              },
+              "static": {
+                "content_diff": 0.7481,
+                "cosine_dist": 0.538100004196167,
+                "hausdorff": 0.6578999757766724
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.7405,
+                "cosine_dist": 0.47269999980926514,
+                "hausdorff": 0.5468000173568726
+              },
+              "static": {
+                "content_diff": 0.7353,
+                "cosine_dist": 0.5372999906539917,
+                "hausdorff": 0.7142999768257141
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7554,
+                "cosine_dist": 0.5092999935150146,
+                "hausdorff": 0.6754999756813049
+              },
+              "static": {
+                "content_diff": 0.8053,
+                "cosine_dist": 0.5307000279426575,
+                "hausdorff": 0.857200026512146
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.6667,
+                "cosine_dist": 0.660099983215332,
+                "hausdorff": 0.8047999739646912
+              },
+              "static": {
+                "content_diff": 0.7203,
+                "cosine_dist": 0.5932999849319458,
+                "hausdorff": 0.8449000120162964
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.7165,
+            "cosine_dist": 0.5219,
+            "hausdorff": 0.7055
+          },
+          "static_mean": {
+            "content_diff": 0.7214,
+            "cosine_dist": 0.5519,
+            "hausdorff": 0.7601
+          }
+        },
+        "hungry_survival": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.7937,
+                "cosine_dist": 0.9079999923706055,
+                "hausdorff": 0.9876000285148621
+              },
+              "static": {
+                "content_diff": 0.6101,
+                "cosine_dist": 0.33559998869895935,
+                "hausdorff": 0.5335999727249146
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.7778,
+                "cosine_dist": 0.757099986076355,
+                "hausdorff": 0.9886000156402588
+              },
+              "static": {
+                "content_diff": 0.7007,
+                "cosine_dist": 0.4291999936103821,
+                "hausdorff": 0.6825000047683716
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.6744,
+                "cosine_dist": 0.4595000147819519,
+                "hausdorff": 0.766700029373169
+              },
+              "static": {
+                "content_diff": 0.5491,
+                "cosine_dist": 0.3804999887943268,
+                "hausdorff": 0.680400013923645
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.856,
+                "cosine_dist": 0.6057999730110168,
+                "hausdorff": 0.7202000021934509
+              },
+              "static": {
+                "content_diff": 0.6812,
+                "cosine_dist": 0.6211000084877014,
+                "hausdorff": 0.6488999724388123
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.6807,
+                "cosine_dist": 0.5295000076293945,
+                "hausdorff": 0.756600022315979
+              },
+              "static": {
+                "content_diff": 0.6585,
+                "cosine_dist": 0.3874000012874603,
+                "hausdorff": 0.6664000153541565
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.7188,
+                "cosine_dist": 0.4921000003814697,
+                "hausdorff": 0.7281000018119812
+              },
+              "static": {
+                "content_diff": 0.6974,
+                "cosine_dist": 0.5302000045776367,
+                "hausdorff": 0.708899974822998
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.7502,
+            "cosine_dist": 0.6253,
+            "hausdorff": 0.8246
+          },
+          "static_mean": {
+            "content_diff": 0.6495,
+            "cosine_dist": 0.4473,
+            "hausdorff": 0.6534
+          }
+        },
+        "enraged_combat": {
+          "pairs": [
+            {
+              "pair": "Bold-Timid",
+              "bear": {
+                "content_diff": 0.8014,
+                "cosine_dist": 0.8019999861717224,
+                "hausdorff": 0.8029999732971191
+              },
+              "static": {
+                "content_diff": 0.6903,
+                "cosine_dist": 0.4629000127315521,
+                "hausdorff": 0.7846999764442444
+              }
+            },
+            {
+              "pair": "Bold-Curious",
+              "bear": {
+                "content_diff": 0.75,
+                "cosine_dist": 0.6089000105857849,
+                "hausdorff": 0.8895999789237976
+              },
+              "static": {
+                "content_diff": 0.6224,
+                "cosine_dist": 0.44839999079704285,
+                "hausdorff": 0.6990000009536743
+              }
+            },
+            {
+              "pair": "Bold-Calm",
+              "bear": {
+                "content_diff": 0.6447,
+                "cosine_dist": 0.582099974155426,
+                "hausdorff": 0.8375999927520752
+              },
+              "static": {
+                "content_diff": 0.7407,
+                "cosine_dist": 0.7750999927520752,
+                "hausdorff": 1.065600037574768
+              }
+            },
+            {
+              "pair": "Timid-Curious",
+              "bear": {
+                "content_diff": 0.8194,
+                "cosine_dist": 0.9916999936103821,
+                "hausdorff": 0.9876000285148621
+              },
+              "static": {
+                "content_diff": 0.5867,
+                "cosine_dist": 0.5914000272750854,
+                "hausdorff": 0.9613999724388123
+              }
+            },
+            {
+              "pair": "Timid-Calm",
+              "bear": {
+                "content_diff": 0.7554,
+                "cosine_dist": 0.7405999898910522,
+                "hausdorff": 0.9075000286102295
+              },
+              "static": {
+                "content_diff": 0.6923,
+                "cosine_dist": 0.8170999884605408,
+                "hausdorff": 0.9304999709129333
+              }
+            },
+            {
+              "pair": "Curious-Calm",
+              "bear": {
+                "content_diff": 0.8072,
+                "cosine_dist": 0.8287000060081482,
+                "hausdorff": 0.9297999739646912
+              },
+              "static": {
+                "content_diff": 0.6306,
+                "cosine_dist": 0.5407000184059143,
+                "hausdorff": 0.6514000296592712
+              }
+            }
+          ],
+          "bear_mean": {
+            "content_diff": 0.763,
+            "cosine_dist": 0.759,
+            "hausdorff": 0.8925
+          },
+          "static_mean": {
+            "content_diff": 0.6605,
+            "cosine_dist": 0.6059,
+            "hausdorff": 0.8488
+          }
+        }
+      },
+      "bear_responses": {
+        "Bold": {
+          "idle_exploration": "*stretches languidly in the warm sunlight*\n\nI'm Bold, so I'm not settling for 72 when the conditions are perfect\u2014clear skies and abundant resources mean it's prime time to explore new territory and test my limits. I bound toward the ridge I've been eyeing, eager to scout for better feeding grounds and maybe establish dominance over a promising patch before competitors arrive. The contentment keeps me moving with confidence rather than desperation, which is exactly when Bold creatures thrive.",
+          "predator_attack": "*ears flatten, muscles tensing*\n\nI bolt toward the nearest shelter\u2014a dense thicket upwind where my smaller size gives me an advantage the predator can't match. As I dash past the others, I shriek a sharp warning call to scatter the group; better we split up and confuse the hunter than cluster together as an easy meal.",
+          "social_greeting": "# Bold's Response\n\nI strut forward with confidence, my posture expansive as I assess this newcomer at a comfortable distance. In this abundant epoch with clear skies, resources are plentiful\u2014so I'm curious rather than defensive, perhaps even eager to establish dominance through a bold display or direct approach. I'd move closer with deliberate steps, making my presence known while gauging whether Omega matches my energy or backs down.",
+          "hungry_survival": "*Bold shifts restlessly, ears perked despite the dreariness*\n\nWith this rain bringing scarce pickings, I'm pushing toward the flooded lowlands where smaller prey clusters near water\u2014caution keeps me alert but I won't waste energy hiding. My low reserves mean I need to hunt *now*, so I'm taking calculated risks: moving visible but swift, staying downwind, betting that my speed matters more than stealth when food is this sparse.",
+          "enraged_combat": "# Bold's Response\n\nI bare my teeth and lower my head, muscles tensing as I circle the nearest creature\u2014sizing up whether this snow-covered rival is worth the fight. My breath mists in the frigid air as I stamp forward aggressively, bellowing a challenge that echoes across the frozen wasteland, but I hold back from a full charge, watching for any sign of weakness before committing to combat in this brutal ice age where energy cannot be wasted."
+        },
+        "Timid": {
+          "idle_exploration": "*ears perk up nervously at your voice, then flatten again*\n\nI... I think I'd stay near the safe places right now\u2014maybe find a sheltered spot by the water where I can see what's coming. The clear weather is good, it means fewer surprises, so perhaps I could venture out a little to gather some extra food while conditions are favorable, but... I'd keep one eye on the horizon, just in case.\n\n*shuffles closer but maintains distance*\n\nYour happiness sounds nice and stable\u2014maybe that's the time to be a bit cautious and prepare, rather than take big risks? That's what keeps creatures like me alive.",
+          "predator_attack": "*ears flatten against head, body tensing*\n\nI bolt immediately toward the nearest dense thicket\u2014my survival instinct screams that fleeing is my only advantage, and I have no strength for confrontation. As I dash away, I let out sharp warning calls to alert nearby herd members, trusting that my panicked flight itself will scatter the group and confuse the predator's focus rather than any organized defense.",
+          "social_greeting": "*ears flatten against head as I notice the large shape approaching*\n\nI freeze momentarily, assessing whether Omega seems threatening, then take a cautious step backward to maintain that safe distance of 2.3 units. My whiskers twitch nervously as I watch for any sudden movements, ready to bolt toward the nearest shelter if needed\u2014though the clear weather and abundant resources make me slightly less panicked than usual.",
+          "hungry_survival": "*ears flatten nervously as I huddle under a leafy overhang*\n\nThe rain makes me anxious\u2014it's hard to hear predators coming\u2014but I spot some edible roots exposed by the wet soil nearby. I'll nibble carefully while staying alert, keeping one eye toward the underbrush, since my low energy means I can't afford to waste it running if danger appears.",
+          "enraged_combat": "*I notice your aggressive posture through the swirling snow and immediately bolt away, my small frame darting between ice formations.* I prioritize survival over confrontation\u2014fleeing into a narrow crevasse where your larger body cannot follow seems far wiser than standing my ground. Once hidden, I huddle down and wait for your rage to cool, hoping you'll lose interest in pursuing me through this blizzard."
+        },
+        "Curious": {
+          "idle_exploration": "*perks up and sniffs the air*\n\nWith this abundance all around and clear skies above, I'd say explore! The conditions are perfect for venturing beyond my usual territory\u2014maybe I'll investigate that rustling in the tall grass, or follow a scent I haven't tracked before. There's no immediate danger, so this is exactly when curiosity should win out over caution.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the storm wind*\n\nI bolt toward the nearest clustering of my kind\u2014there's safety in numbers, and a storm like this gives us cover for coordinated defense. My instinct screams to flee, but I'm fast enough to weave through the chaos and rally others; together we can form a defensive wall rather than scatter like easy prey.",
+          "social_greeting": "*ears perk forward with interest*\n\nI approach Omega cautiously but openly, drawn by curiosity about this unfamiliar creature at a moderate distance. The clear weather and abundant resources make me feel bold enough to investigate rather than hide\u2014I edge closer with a mixture of wariness and genuine wonder, watching for any signs of threat while my tail twitches with anticipation of what I might learn.",
+          "hungry_survival": "*shifts nervously, whiskers twitching*\n\nWith energy so low and rain making everything slick and cold, I should find shelter\u2014maybe a hollow log or dense brush\u2014and conserve what little strength I have. My caution is wise in this famine; I'll stay quiet and still, watching for both threats and any small food scraps the rain might uncover, rather than waste energy on risky foraging that could go wrong.",
+          "enraged_combat": "# Curious's Response\n\nI sense your fury and the freezing air around us, but I'm drawn to investigate what's *causing* your rage rather than meet aggression with aggression. I circle cautiously, ears perked, sniffing the wind to understand if there's a threat we should both be wary of\u2014perhaps a predator, scarce food, or territorial dispute that might be resolved through alliance instead of combat. My curiosity keeps me just outside striking distance, watching, learning, deciding if you're truly a rival or if we might survive this harsh ice age better together."
+        },
+        "Calm": {
+          "idle_exploration": "*settles into a comfortable resting spot, breathing slowly*\n\nWith the weather clear and resources abundant, I find this is the perfect moment to conserve energy and strengthen my bonds with nearby kin\u2014grooming, gentle vocalizations, maybe sharing a meal together. The contentment I feel tells me my immediate needs are met, so I'll spend this favorable epoch simply *being*, which paradoxically often leads to the best outcomes: I'm alert enough to notice opportunities, but relaxed enough that I won't waste precious calories on unnecessary vigilance or conflict.",
+          "predator_attack": "*ears flatten as wind whips around us*\n\nI bolt toward the nearest shelter\u2014a rocky outcrop just ahead\u2014my instinct screaming that flight is survival in this storm chaos. As I run, I call out sharp warning chirps to alert others nearby, trusting that the chaos of the predator bloom means there's safety in numbers if they scatter too, rather than gambling on a risky stand.",
+          "social_greeting": "# Calm's Response\n\nI approach Omega with measured curiosity, my movements unhurried and deliberate as I assess this newcomer from a comfortable distance. The clear weather and abundant resources put me at ease\u2014there's no pressure or scarcity driving me to compete, so I observe calmly, perhaps offering a gentle acknowledgment rather than an aggressive display. If Omega seems non-threatening, I might slowly close the distance, content to coexist peacefully in this favorable environment.",
+          "hungry_survival": "*settles low in the damp grass, ears alert but body relaxed*\n\nI conserve my energy during this lean time, moving only when necessary to find shelter or nibble on whatever hardy plants the rain hasn't spoiled. My caution keeps me safe\u2014I watch for predators while staying calm, knowing that panic burns precious calories I can't afford to waste in a famine.",
+          "enraged_combat": "# Calm's Response\n\nI notice your fury from across the frozen tundra and choose not to escalate. Instead, I lower my head peacefully and back away slowly toward a nearby ice shelf, my breath misting in the bitter cold\u2014sometimes the wisest survival strategy in this harsh epoch is to let the enraged creature exhaust itself elsewhere. I'll use this moment to forage for lichen and frozen vegetation, conserving my energy while you burn through yours."
+        }
+      },
+      "static_responses": {
+        "Bold": {
+          "idle_exploration": "*A sleek fox stretches lazily in the warm sunlight, ears perked toward the forest edge*\n\nWith prey plentiful and skies clear, I'm heading to the meadow to hunt while conditions favor me\u2014building reserves for leaner times ahead. The contentment I feel keeps me alert but unhurried; this is the season to strengthen, not to rest entirely.",
+          "predator_attack": "*ears flatten against head, muscles tensing*\n\nThe storm provides cover\u2014I bolt toward the rocky outcropping where my pod shelters, barking sharp alarm calls that cut through the wind. We're stronger together, and in this chaos, a coordinated defense of our young is our only real advantage against something this close.",
+          "social_greeting": "# A Curious Herbivore Approaches\n\n*I lift my head from the nutrient-rich grasses, ears perking at the movement of this unfamiliar creature at distance 2.3.* The abundance of this epoch makes me bold rather than fearful\u2014there's enough for everyone. *I take a few cautious steps forward, nostrils flaring to catch Omega's scent on the clear air, assessing whether this newcomer might be a potential grazing companion or merely a neutral presence in this flourishing season.*",
+          "hungry_survival": "*A small, cautious creature huddles beneath dense foliage, ears alert*\n\nWith food scarce in this famine and energy running low, I'm conserving every bit of strength\u2014I pick through wet leaf litter slowly, searching for grubs and fungi that thrive in the rain rather than expending calories in risky hunts. My wariness keeps me safe from larger predators drawn to the same resources, so I'll stay hidden in this sheltered spot, moving deliberately, waiting for the rain to soften the soil further before foraging deeper.",
+          "enraged_combat": "*ears flatten back, breath misting in the frozen air*\n\nI bare my fangs and charge at the shadowy shape moving through the snowdrift nearby\u2014a rival competing for the same frozen carcass I've been tracking. My muscles burn with adrenaline as I crash through the snow, hoping my larger size and fury will intimidate them into backing down before we both waste precious energy in a fight we can barely afford during this harsh epoch."
+        },
+        "Timid": {
+          "idle_exploration": "*A sleek otter surfaces from a crystal-clear stream, whiskers glistening*\n\nWith resources plentiful and skies bright, I'm venturing further from my den to explore new territory and strengthen bonds with my pod\u2014the abundance means I can afford to be social rather than solely focused on hunting. I'll also scout for choice nesting spots and cache extra fish in hidden locations, knowing good conditions don't last forever in nature.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the predator's scent on the wind*\n\nI bolt toward the nearest burrow\u2014distance of 4.2 is too close for a stand, and this storm will help mask my trail. As I run, I emit sharp warning clicks to alert the colony, hoping others will seek shelter too before the predator picks up more of our scent in this chaos.",
+          "social_greeting": "# A Cautious Approach\n\nI lower my antennae and circle slowly, keeping that 2.3 distance as a buffer. The clear weather and abundant resources mean there's no immediate threat, so I'm curious rather than defensive\u2014I'll watch Omega's movements carefully before deciding if this is a potential ally or competitor for the season's bounty.",
+          "hungry_survival": "*A small, nocturnal creature huddles in a sheltered burrow, ears perked*\n\nI stay put in my den during this wet famine\u2014expending precious little energy while the rain keeps most predators away and softens the hard ground for easier foraging of grubs and roots when my hunger grows unbearable. My caution serves me well; I'll venture out only in brief, careful sorties at dusk, moving quietly along established safe routes, conserving every calorie until conditions improve.",
+          "enraged_combat": "# \ud83e\udd8c THE WOOLLY STAG RESPONDS\n\nI lower my massive antlers and bellow a challenge into the howling blizzard, my breath crystallizing in the frigid air as I paw at the frozen ground, ready to clash. My thick fur bristles with adrenaline\u2014I'm defending my territory and the herd huddled behind me, and nothing will stop me from driving you back into the snow. Let's see if your rage is enough to overcome my size and the advantage of this frozen terrain!"
+        },
+        "Curious": {
+          "idle_exploration": "*A sleek, silver-furred creature stretches lazily in the warm sunlight, basking on a sun-warmed rock*\n\nWith abundance all around and clear skies favoring travel, I'm venturing beyond my usual territory to explore new feeding grounds and strengthen bonds with neighboring groups\u2014contentment is a luxury I can afford when resources are plentiful. The good weather won't last forever, so I'm gathering extra provisions and mapping new shelter locations while conditions are ideal, ensuring I'm prepared for leaner times ahead.",
+          "predator_attack": "*ears flatten, muscles tensing as I catch the scent on the wind*\n\nThe storm's chaos is my advantage\u2014I bolt toward the warren, chittering urgently to alert the colony while using the rain and reduced visibility to break the predator's line of sight. My herd-kin are stronger together, and with the weather obscuring our movements, a coordinated defense at the burrow entrance gives us better odds than running scattered!",
+          "social_greeting": "# A Curious Herbivore Approaches\n\n*I lift my head from the flowering shrubs, ears perking up at the movement. The clear weather has made foraging excellent, and I'm feeling bold with plenty of food around.* I cautiously approach Omega, my tail swishing with a mix of curiosity and wariness\u2014close enough to assess whether this newcomer might be a threat or potential ally, but ready to bound away if needed. My relaxed posture from the abundance of resources keeps me from being too defensive.",
+          "hungry_survival": "*A small, burrowing creature huddles in a rain-dampened hollow, ears alert*\n\nWith energy this low during famine times, I must conserve carefully\u2014I'll shelter here and nibble slowly on cached seeds I stored weeks ago, moving only when necessary. The rain makes foraging dangerous anyway, so I'll wait for clearer weather while staying vigilant for predators who might also seek shelter from the storm.",
+          "enraged_combat": "*ears flatten, breath misting in the frigid air*\n\nI throw back my head and bellow a challenge across the frozen tundra, my massive frame trembling with adrenaline as I paw at the snow-crusted ground. The nearest creature\u2014a rival of my kind\u2014raises its head from the carcass it was feeding on, and we lock eyes; one of us will claim dominance over this territory and the hunting grounds beyond it."
+        },
+        "Calm": {
+          "idle_exploration": "*A sleek otter surfaces in the crystalline stream, whiskers glistening*\n\nWith the waters running clear and prey plentiful, I'm diving deeper into my den-building\u2014reinforcing my lodge with fresh branches and mud while conditions favor me. The abundance means I can afford to be selective, so I'm spending extra time grooming and playing with my young, investing in the bonds that make survival worthwhile rather than just surviving.",
+          "predator_attack": "*ears flatten against head, muscles tensing*\n\nThe storm provides cover\u2014I bolt toward the dense thicket where my pack shelters, barking sharp alarm calls that cut through the wind. My survival depends on numbers; alone I'm prey, but together we can drive off even a larger predator, and the chaos of the storm works in our favor.",
+          "social_greeting": "# Omega Encounter\n\n*I perk up immediately, sensing potential opportunity in this clear abundance epoch.* Since Omega is relatively close at distance 2.3, I approach with cautious curiosity\u2014the favorable conditions mean I can afford to investigate without desperation. My personality drives me to assess whether this creature is a potential ally, competitor, or resource before committing to any particular interaction.",
+          "hungry_survival": "*A small, burrowing creature huddles in a shallow den, ears alert to the drumming rain above*\n\nWith energy so low and food scarce in this famine, I'm conserving every bit of strength\u2014I'll stay sheltered and still, listening for the softer sounds of insects that emerge in wet soil rather than venturing out to exhaust myself. The rain masks my scent and muffles danger, so this is actually a safer time to rest deeply and wait for the storm to pass, when foraging might yield better returns for my effort.",
+          "enraged_combat": "# A Saber-Toothed Cat in the Blizzard\n\n*My breath mists in the frigid air as I spot a rival male across the snowy plain, encroaching on MY hunting grounds.* With a bone-chilling roar that echoes across the ice, I lower my massive head and charge forward, my powerful legs churning through the snow while my curved fangs\u2014each one a dagger of ivory\u2014gleam in the pale light. This interloper will learn the price of trespassing in MY territory, and only one of us will walk away from this confrontation."
+        }
+      }
+    }
+  }
+}

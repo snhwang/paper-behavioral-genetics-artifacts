@@ -1,0 +1,1750 @@
+{
+  "config": {
+    "n_trials": 5,
+    "n_generations": 5,
+    "n_offspring_per_gen": 10,
+    "base_seed": 42,
+    "seeds": [
+      42,
+      1042,
+      2042,
+      3042,
+      4042
+    ],
+    "conditions": [
+      "haploid",
+      "diploid_dominant",
+      "diploid_codominant"
+    ],
+    "embedding_model": "BAAI/bge-base-en-v1.5",
+    "gene_categories": [
+      "personality",
+      "social_style",
+      "movement_style",
+      "reaction_pattern",
+      "foraging",
+      "predator_defense",
+      "climate_survival",
+      "territorial",
+      "stealth",
+      "sensory"
+    ]
+  },
+  "summary": {
+    "haploid": {
+      "genotype_diversity": [
+        0.3057,
+        0.2753,
+        0.2683,
+        0.229,
+        0.244
+      ],
+      "phenotype_diversity": [
+        0.0266,
+        0.0222,
+        0.0194,
+        0.0175,
+        0.0164
+      ],
+      "heterozygosity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "allele_retention": [
+        0.7472,
+        0.5944,
+        0.5778,
+        0.5083,
+        0.4944
+      ],
+      "inheritance_fidelity": [
+        0.8318,
+        0.8499,
+        0.8559,
+        0.879,
+        0.8705
+      ]
+    },
+    "diploid_dominant": {
+      "genotype_diversity": [
+        0.1751,
+        0.1105,
+        0.0654,
+        0.0321,
+        0.0239
+      ],
+      "phenotype_diversity": [
+        0.0245,
+        0.0233,
+        0.0119,
+        0.0065,
+        0.0049
+      ],
+      "heterozygosity": [
+        1.0,
+        0.94,
+        0.84,
+        0.86,
+        0.7
+      ],
+      "allele_retention": [
+        0.95,
+        0.925,
+        0.95,
+        0.925,
+        0.9
+      ],
+      "inheritance_fidelity": [
+        0.9101,
+        0.9438,
+        0.9647,
+        0.9839,
+        0.9878
+      ]
+    },
+    "diploid_codominant": {
+      "genotype_diversity": [
+        0.1743,
+        0.1102,
+        0.0653,
+        0.032,
+        0.0239
+      ],
+      "phenotype_diversity": [
+        0.014,
+        0.0085,
+        0.0063,
+        0.0059,
+        0.0028
+      ],
+      "heterozygosity": [
+        1.0,
+        0.94,
+        0.84,
+        0.86,
+        0.7
+      ],
+      "allele_retention": [
+        0.95,
+        0.925,
+        0.95,
+        0.925,
+        0.9
+      ],
+      "inheritance_fidelity": [
+        0.9106,
+        0.9439,
+        0.9648,
+        0.9839,
+        0.9879
+      ]
+    }
+  },
+  "summary_ci95": {
+    "haploid": {
+      "genotype_diversity": [
+        [
+          0.286153,
+          0.325287
+        ],
+        [
+          0.250229,
+          0.300371
+        ],
+        [
+          0.211737,
+          0.324903
+        ],
+        [
+          0.176163,
+          0.281917
+        ],
+        [
+          0.181738,
+          0.306222
+        ]
+      ],
+      "phenotype_diversity": [
+        [
+          0.023851,
+          0.029349
+        ],
+        [
+          0.01716,
+          0.02716
+        ],
+        [
+          0.015061,
+          0.023659
+        ],
+        [
+          0.01239,
+          0.02269
+        ],
+        [
+          0.012497,
+          0.020383
+        ]
+      ],
+      "heterozygosity": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "allele_retention": [
+        [
+          0.693499,
+          0.800901
+        ],
+        [
+          0.545059,
+          0.643821
+        ],
+        [
+          0.476759,
+          0.678801
+        ],
+        [
+          0.409576,
+          0.607104
+        ],
+        [
+          0.367932,
+          0.620948
+        ]
+      ],
+      "inheritance_fidelity": [
+        [
+          0.817751,
+          0.845849
+        ],
+        [
+          0.84035,
+          0.85937
+        ],
+        [
+          0.828716,
+          0.883164
+        ],
+        [
+          0.850223,
+          0.907857
+        ],
+        [
+          0.833286,
+          0.907634
+        ]
+      ]
+    },
+    "diploid_dominant": {
+      "genotype_diversity": [
+        [
+          0.161724,
+          0.188436
+        ],
+        [
+          0.098714,
+          0.122286
+        ],
+        [
+          0.049415,
+          0.081465
+        ],
+        [
+          0.018634,
+          0.045566
+        ],
+        [
+          0.011765,
+          0.036075
+        ]
+      ],
+      "phenotype_diversity": [
+        [
+          0.022342,
+          0.026698
+        ],
+        [
+          0.017796,
+          0.028724
+        ],
+        [
+          0.00828,
+          0.01548
+        ],
+        [
+          0.003422,
+          0.009538
+        ],
+        [
+          0.001728,
+          0.008072
+        ]
+      ],
+      "heterozygosity": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          0.871991,
+          1.008009
+        ],
+        [
+          0.771991,
+          0.908009
+        ],
+        [
+          0.748942,
+          0.971058
+        ],
+        [
+          0.575834,
+          0.824166
+        ]
+      ],
+      "allele_retention": [
+        [
+          0.864989,
+          1.035011
+        ],
+        [
+          0.839989,
+          1.010011
+        ],
+        [
+          0.864989,
+          1.035011
+        ],
+        [
+          0.786178,
+          1.063822
+        ],
+        [
+          0.729978,
+          1.070022
+        ]
+      ],
+      "inheritance_fidelity": [
+        [
+          0.904243,
+          0.915957
+        ],
+        [
+          0.938,
+          0.94952
+        ],
+        [
+          0.958155,
+          0.971285
+        ],
+        [
+          0.978695,
+          0.989105
+        ],
+        [
+          0.98112,
+          0.99456
+        ]
+      ]
+    },
+    "diploid_codominant": {
+      "genotype_diversity": [
+        [
+          0.161027,
+          0.187533
+        ],
+        [
+          0.098401,
+          0.121919
+        ],
+        [
+          0.049286,
+          0.081274
+        ],
+        [
+          0.018615,
+          0.045465
+        ],
+        [
+          0.011782,
+          0.036018
+        ]
+      ],
+      "phenotype_diversity": [
+        [
+          0.009656,
+          0.018304
+        ],
+        [
+          0.007031,
+          0.009929
+        ],
+        [
+          0.002027,
+          0.010533
+        ],
+        [
+          0.002075,
+          0.009805
+        ],
+        [
+          -0.000283,
+          0.005803
+        ]
+      ],
+      "heterozygosity": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          0.871991,
+          1.008009
+        ],
+        [
+          0.771991,
+          0.908009
+        ],
+        [
+          0.748942,
+          0.971058
+        ],
+        [
+          0.575834,
+          0.824166
+        ]
+      ],
+      "allele_retention": [
+        [
+          0.864989,
+          1.035011
+        ],
+        [
+          0.839989,
+          1.010011
+        ],
+        [
+          0.864989,
+          1.035011
+        ],
+        [
+          0.786178,
+          1.063822
+        ],
+        [
+          0.729978,
+          1.070022
+        ]
+      ],
+      "inheritance_fidelity": [
+        [
+          0.904726,
+          0.916514
+        ],
+        [
+          0.938229,
+          0.949651
+        ],
+        [
+          0.958202,
+          0.971358
+        ],
+        [
+          0.978751,
+          0.989089
+        ],
+        [
+          0.9811,
+          0.99462
+        ]
+      ]
+    }
+  },
+  "statistical_tests": [
+    {
+      "metric": "genotype_diversity",
+      "group_a": "haploid",
+      "group_b": "diploid_dominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.24398,
+      "mean_b": 0.02392,
+      "std_a": 0.050128,
+      "std_b": 0.009789,
+      "ci95_a": [
+        0.181738,
+        0.306222
+      ],
+      "ci95_b": [
+        0.011765,
+        0.036075
+      ],
+      "shapiro_a": {
+        "W": 0.955432,
+        "p": 0.775873
+      },
+      "shapiro_b": {
+        "W": 0.933307,
+        "p": 0.619091
+      },
+      "welch_t": 9.634231,
+      "welch_p": 0.000451,
+      "mann_whitney_U": 25.0,
+      "mann_whitney_p": 0.007937,
+      "cohens_d": 6.093222
+    },
+    {
+      "metric": "phenotype_diversity",
+      "group_a": "haploid",
+      "group_b": "diploid_dominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.01644,
+      "mean_b": 0.0049,
+      "std_a": 0.003175,
+      "std_b": 0.002554,
+      "ci95_a": [
+        0.012497,
+        0.020383
+      ],
+      "ci95_b": [
+        0.001728,
+        0.008072
+      ],
+      "shapiro_a": {
+        "W": 0.886637,
+        "p": 0.340477
+      },
+      "shapiro_b": {
+        "W": 0.977316,
+        "p": 0.919776
+      },
+      "welch_t": 6.331872,
+      "welch_p": 0.000272,
+      "mann_whitney_U": 25.0,
+      "mann_whitney_p": 0.007937,
+      "cohens_d": 4.004628
+    },
+    {
+      "metric": "allele_retention",
+      "group_a": "haploid",
+      "group_b": "diploid_dominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.49444,
+      "mean_b": 0.9,
+      "std_a": 0.101886,
+      "std_b": 0.136931,
+      "ci95_a": [
+        0.367932,
+        0.620948
+      ],
+      "ci95_b": [
+        0.729978,
+        1.070022
+      ],
+      "shapiro_a": {
+        "W": 0.944685,
+        "p": 0.699219
+      },
+      "shapiro_b": {
+        "W": 0.684029,
+        "p": 0.00647
+      },
+      "welch_t": -5.313295,
+      "welch_p": 0.000929,
+      "mann_whitney_U": 0.0,
+      "mann_whitney_p": 0.010909,
+      "cohens_d": -3.360423
+    },
+    {
+      "metric": "heterozygosity",
+      "group_a": "haploid",
+      "group_b": "diploid_dominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.0,
+      "mean_b": 0.7,
+      "std_a": 0.0,
+      "std_b": 0.1,
+      "ci95_a": [
+        0.0,
+        0.0
+      ],
+      "ci95_b": [
+        0.575834,
+        0.824166
+      ],
+      "shapiro_a": {
+        "W": 1.0,
+        "p": 1.0
+      },
+      "shapiro_b": {
+        "W": 0.820835,
+        "p": 0.11851
+      },
+      "welch_t": -15.652476,
+      "welch_p": 9.7e-05,
+      "mann_whitney_U": 0.0,
+      "mann_whitney_p": 0.007089,
+      "cohens_d": -9.899495
+    },
+    {
+      "metric": "genotype_diversity",
+      "group_a": "haploid",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.24398,
+      "mean_b": 0.0239,
+      "std_a": 0.050128,
+      "std_b": 0.00976,
+      "ci95_a": [
+        0.181738,
+        0.306222
+      ],
+      "ci95_b": [
+        0.011782,
+        0.036018
+      ],
+      "shapiro_a": {
+        "W": 0.955432,
+        "p": 0.775873
+      },
+      "shapiro_b": {
+        "W": 0.932374,
+        "p": 0.612645
+      },
+      "welch_t": 9.636172,
+      "welch_p": 0.000451,
+      "mann_whitney_U": 25.0,
+      "mann_whitney_p": 0.007937,
+      "cohens_d": 6.09445
+    },
+    {
+      "metric": "phenotype_diversity",
+      "group_a": "haploid",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.01644,
+      "mean_b": 0.00276,
+      "std_a": 0.003175,
+      "std_b": 0.002451,
+      "ci95_a": [
+        0.012497,
+        0.020383
+      ],
+      "ci95_b": [
+        -0.000283,
+        0.005803
+      ],
+      "shapiro_a": {
+        "W": 0.886637,
+        "p": 0.340477
+      },
+      "shapiro_b": {
+        "W": 0.919202,
+        "p": 0.524804
+      },
+      "welch_t": 7.625698,
+      "welch_p": 8.6e-05,
+      "mann_whitney_U": 25.0,
+      "mann_whitney_p": 0.011925,
+      "cohens_d": 4.822915
+    },
+    {
+      "metric": "allele_retention",
+      "group_a": "haploid",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.49444,
+      "mean_b": 0.9,
+      "std_a": 0.101886,
+      "std_b": 0.136931,
+      "ci95_a": [
+        0.367932,
+        0.620948
+      ],
+      "ci95_b": [
+        0.729978,
+        1.070022
+      ],
+      "shapiro_a": {
+        "W": 0.944685,
+        "p": 0.699219
+      },
+      "shapiro_b": {
+        "W": 0.684029,
+        "p": 0.00647
+      },
+      "welch_t": -5.313295,
+      "welch_p": 0.000929,
+      "mann_whitney_U": 0.0,
+      "mann_whitney_p": 0.010909,
+      "cohens_d": -3.360423
+    },
+    {
+      "metric": "heterozygosity",
+      "group_a": "haploid",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.0,
+      "mean_b": 0.7,
+      "std_a": 0.0,
+      "std_b": 0.1,
+      "ci95_a": [
+        0.0,
+        0.0
+      ],
+      "ci95_b": [
+        0.575834,
+        0.824166
+      ],
+      "shapiro_a": {
+        "W": 1.0,
+        "p": 1.0
+      },
+      "shapiro_b": {
+        "W": 0.820835,
+        "p": 0.11851
+      },
+      "welch_t": -15.652476,
+      "welch_p": 9.7e-05,
+      "mann_whitney_U": 0.0,
+      "mann_whitney_p": 0.007089,
+      "cohens_d": -9.899495
+    },
+    {
+      "metric": "genotype_diversity",
+      "group_a": "diploid_dominant",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.02392,
+      "mean_b": 0.0239,
+      "std_a": 0.009789,
+      "std_b": 0.00976,
+      "ci95_a": [
+        0.011765,
+        0.036075
+      ],
+      "ci95_b": [
+        0.011782,
+        0.036018
+      ],
+      "shapiro_a": {
+        "W": 0.933307,
+        "p": 0.619091
+      },
+      "shapiro_b": {
+        "W": 0.932374,
+        "p": 0.612645
+      },
+      "welch_t": 0.003235,
+      "welch_p": 0.997498,
+      "mann_whitney_U": 13.0,
+      "mann_whitney_p": 1.0,
+      "cohens_d": 0.002046
+    },
+    {
+      "metric": "phenotype_diversity",
+      "group_a": "diploid_dominant",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.0049,
+      "mean_b": 0.00276,
+      "std_a": 0.002554,
+      "std_b": 0.002451,
+      "ci95_a": [
+        0.001728,
+        0.008072
+      ],
+      "ci95_b": [
+        -0.000283,
+        0.005803
+      ],
+      "shapiro_a": {
+        "W": 0.977316,
+        "p": 0.919776
+      },
+      "shapiro_b": {
+        "W": 0.919202,
+        "p": 0.524804
+      },
+      "welch_t": 1.351672,
+      "welch_p": 0.213515,
+      "mann_whitney_U": 18.5,
+      "mann_whitney_p": 0.247706,
+      "cohens_d": 0.854872
+    },
+    {
+      "metric": "allele_retention",
+      "group_a": "diploid_dominant",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.9,
+      "mean_b": 0.9,
+      "std_a": 0.136931,
+      "std_b": 0.136931,
+      "ci95_a": [
+        0.729978,
+        1.070022
+      ],
+      "ci95_b": [
+        0.729978,
+        1.070022
+      ],
+      "shapiro_a": {
+        "W": 0.684029,
+        "p": 0.00647
+      },
+      "shapiro_b": {
+        "W": 0.684029,
+        "p": 0.00647
+      },
+      "welch_t": 0.0,
+      "welch_p": 1.0,
+      "mann_whitney_U": 12.5,
+      "mann_whitney_p": 1.0,
+      "cohens_d": 0.0
+    },
+    {
+      "metric": "heterozygosity",
+      "group_a": "diploid_dominant",
+      "group_b": "diploid_codominant",
+      "n_a": 5,
+      "n_b": 5,
+      "mean_a": 0.7,
+      "mean_b": 0.7,
+      "std_a": 0.1,
+      "std_b": 0.1,
+      "ci95_a": [
+        0.575834,
+        0.824166
+      ],
+      "ci95_b": [
+        0.575834,
+        0.824166
+      ],
+      "shapiro_a": {
+        "W": 0.820835,
+        "p": 0.11851
+      },
+      "shapiro_b": {
+        "W": 0.820835,
+        "p": 0.11851
+      },
+      "welch_t": 0.0,
+      "welch_p": 1.0,
+      "mann_whitney_U": 12.5,
+      "mann_whitney_p": 1.0,
+      "cohens_d": 0.0
+    }
+  ],
+  "raw_final_generation": {
+    "haploid": {
+      "genotype_diversity": [
+        0.1878,
+        0.23,
+        0.2205,
+        0.2611,
+        0.3205
+      ],
+      "phenotype_diversity": [
+        0.0138,
+        0.0157,
+        0.0193,
+        0.0202,
+        0.0132
+      ],
+      "allele_retention": [
+        0.375,
+        0.4722,
+        0.5139,
+        0.4583,
+        0.6528
+      ],
+      "heterozygosity": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "diploid_dominant": {
+      "genotype_diversity": [
+        0.0114,
+        0.0279,
+        0.0355,
+        0.0164,
+        0.0284
+      ],
+      "phenotype_diversity": [
+        0.0081,
+        0.0045,
+        0.0042,
+        0.0013,
+        0.0064
+      ],
+      "allele_retention": [
+        0.75,
+        1.0,
+        1.0,
+        0.75,
+        1.0
+      ],
+      "heterozygosity": [
+        0.7,
+        0.8,
+        0.6,
+        0.8,
+        0.6
+      ]
+    },
+    "diploid_codominant": {
+      "genotype_diversity": [
+        0.0114,
+        0.0279,
+        0.0354,
+        0.0164,
+        0.0284
+      ],
+      "phenotype_diversity": [
+        0.0064,
+        0.004,
+        0.0016,
+        0.0002,
+        0.0016
+      ],
+      "allele_retention": [
+        0.75,
+        1.0,
+        1.0,
+        0.75,
+        1.0
+      ],
+      "heterozygosity": [
+        0.7,
+        0.8,
+        0.6,
+        0.8,
+        0.6
+      ]
+    }
+  },
+  "per_trial": {
+    "haploid": [
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2902,
+          "phenotype_diversity": 0.0302,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.8414,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2452,
+          "phenotype_diversity": 0.0205,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5694,
+          "inheritance_fidelity": 0.8619,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2031,
+          "phenotype_diversity": 0.0165,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5,
+          "inheritance_fidelity": 0.8865,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1698,
+          "phenotype_diversity": 0.0139,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.4028,
+          "inheritance_fidelity": 0.9089,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1878,
+          "phenotype_diversity": 0.0138,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.375,
+          "inheritance_fidelity": 0.9051,
+          "mean_corpus_size": 35.0
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2899,
+          "phenotype_diversity": 0.0268,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.7222,
+          "inheritance_fidelity": 0.8371,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3008,
+          "phenotype_diversity": 0.0284,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5972,
+          "inheritance_fidelity": 0.8407,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2702,
+          "phenotype_diversity": 0.0174,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5,
+          "inheritance_fidelity": 0.8462,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2309,
+          "phenotype_diversity": 0.0246,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5,
+          "inheritance_fidelity": 0.8825,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.23,
+          "phenotype_diversity": 0.0157,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.4722,
+          "inheritance_fidelity": 0.8831,
+          "mean_corpus_size": 35.0
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3118,
+          "phenotype_diversity": 0.0264,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.8194,
+          "inheritance_fidelity": 0.8362,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2703,
+          "phenotype_diversity": 0.0238,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.6389,
+          "inheritance_fidelity": 0.8498,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2475,
+          "phenotype_diversity": 0.0217,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.6389,
+          "inheritance_fidelity": 0.8707,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2103,
+          "phenotype_diversity": 0.0154,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5556,
+          "inheritance_fidelity": 0.8921,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2205,
+          "phenotype_diversity": 0.0193,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5139,
+          "inheritance_fidelity": 0.8804,
+          "mean_corpus_size": 35.0
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3269,
+          "phenotype_diversity": 0.025,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.7083,
+          "inheritance_fidelity": 0.8125,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2788,
+          "phenotype_diversity": 0.0198,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5417,
+          "inheritance_fidelity": 0.8494,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3165,
+          "phenotype_diversity": 0.0243,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.5694,
+          "inheritance_fidelity": 0.8335,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2514,
+          "phenotype_diversity": 0.0173,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.4722,
+          "inheritance_fidelity": 0.8574,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2611,
+          "phenotype_diversity": 0.0202,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.4583,
+          "inheritance_fidelity": 0.8575,
+          "mean_corpus_size": 35.0
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3098,
+          "phenotype_diversity": 0.0246,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.7361,
+          "inheritance_fidelity": 0.8318,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2814,
+          "phenotype_diversity": 0.0183,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.625,
+          "inheritance_fidelity": 0.8475,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3043,
+          "phenotype_diversity": 0.0169,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.6806,
+          "inheritance_fidelity": 0.8428,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.2828,
+          "phenotype_diversity": 0.0165,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.6111,
+          "inheritance_fidelity": 0.8543,
+          "mean_corpus_size": 35.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.3205,
+          "phenotype_diversity": 0.0132,
+          "heterozygosity": 0.0,
+          "allele_retention": 0.6528,
+          "inheritance_fidelity": 0.8262,
+          "mean_corpus_size": 35.0
+        }
+      ]
+    ],
+    "diploid_dominant": [
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1821,
+          "phenotype_diversity": 0.0249,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9092,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1097,
+          "phenotype_diversity": 0.0252,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9426,
+          "mean_corpus_size": 113.2
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0477,
+          "phenotype_diversity": 0.0142,
+          "heterozygosity": 0.8,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.964,
+          "mean_corpus_size": 188.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.014,
+          "phenotype_diversity": 0.0064,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.9906,
+          "mean_corpus_size": 307.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0114,
+          "phenotype_diversity": 0.0081,
+          "heterozygosity": 0.7,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.9947,
+          "mean_corpus_size": 514.4
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1579,
+          "phenotype_diversity": 0.0272,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9165,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1003,
+          "phenotype_diversity": 0.0181,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9511,
+          "mean_corpus_size": 123.4
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0705,
+          "phenotype_diversity": 0.0146,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9634,
+          "mean_corpus_size": 205.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0358,
+          "phenotype_diversity": 0.0035,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9833,
+          "mean_corpus_size": 351.2
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0279,
+          "phenotype_diversity": 0.0045,
+          "heterozygosity": 0.8,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9873,
+          "mean_corpus_size": 558.6
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1818,
+          "phenotype_diversity": 0.0239,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9124,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1207,
+          "phenotype_diversity": 0.0202,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9384,
+          "mean_corpus_size": 116.6
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0817,
+          "phenotype_diversity": 0.0107,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9579,
+          "mean_corpus_size": 177.8
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.043,
+          "phenotype_diversity": 0.0084,
+          "heterozygosity": 0.7,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.979,
+          "mean_corpus_size": 317.2
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0355,
+          "phenotype_diversity": 0.0042,
+          "heterozygosity": 0.6,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9802,
+          "mean_corpus_size": 473.6
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1826,
+          "phenotype_diversity": 0.0242,
+          "heterozygosity": 1.0,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9038,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1196,
+          "phenotype_diversity": 0.0294,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9424,
+          "mean_corpus_size": 113.2
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0584,
+          "phenotype_diversity": 0.0075,
+          "heterozygosity": 0.8,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9726,
+          "mean_corpus_size": 191.4
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0324,
+          "phenotype_diversity": 0.0047,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9837,
+          "mean_corpus_size": 293.4
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0164,
+          "phenotype_diversity": 0.0013,
+          "heterozygosity": 0.8,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.9908,
+          "mean_corpus_size": 500.8
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.171,
+          "phenotype_diversity": 0.0224,
+          "heterozygosity": 1.0,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9086,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1022,
+          "phenotype_diversity": 0.0234,
+          "heterozygosity": 1.0,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9443,
+          "mean_corpus_size": 116.6
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0689,
+          "phenotype_diversity": 0.0124,
+          "heterozygosity": 0.8,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9657,
+          "mean_corpus_size": 188.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0353,
+          "phenotype_diversity": 0.0094,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9829,
+          "mean_corpus_size": 317.2
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0284,
+          "phenotype_diversity": 0.0064,
+          "heterozygosity": 0.6,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9862,
+          "mean_corpus_size": 466.8
+        }
+      ]
+    ],
+    "diploid_codominant": [
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1813,
+          "phenotype_diversity": 0.0155,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9095,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1093,
+          "phenotype_diversity": 0.0093,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9428,
+          "mean_corpus_size": 113.2
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0476,
+          "phenotype_diversity": 0.01,
+          "heterozygosity": 0.8,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.964,
+          "mean_corpus_size": 188.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.014,
+          "phenotype_diversity": 0.0088,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.9906,
+          "mean_corpus_size": 307.0
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0114,
+          "phenotype_diversity": 0.0064,
+          "heterozygosity": 0.7,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.9948,
+          "mean_corpus_size": 514.4
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1572,
+          "phenotype_diversity": 0.01,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9171,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1,
+          "phenotype_diversity": 0.0083,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9512,
+          "mean_corpus_size": 123.4
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0704,
+          "phenotype_diversity": 0.0083,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9634,
+          "mean_corpus_size": 205.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0358,
+          "phenotype_diversity": 0.0038,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9833,
+          "mean_corpus_size": 351.2
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0279,
+          "phenotype_diversity": 0.004,
+          "heterozygosity": 0.8,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9873,
+          "mean_corpus_size": 558.6
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1809,
+          "phenotype_diversity": 0.0164,
+          "heterozygosity": 1.0,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9129,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1204,
+          "phenotype_diversity": 0.0099,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9386,
+          "mean_corpus_size": 116.6
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0815,
+          "phenotype_diversity": 0.0061,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.958,
+          "mean_corpus_size": 177.8
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0429,
+          "phenotype_diversity": 0.0072,
+          "heterozygosity": 0.7,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9791,
+          "mean_corpus_size": 317.2
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0354,
+          "phenotype_diversity": 0.0016,
+          "heterozygosity": 0.6,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9802,
+          "mean_corpus_size": 473.6
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1817,
+          "phenotype_diversity": 0.0175,
+          "heterozygosity": 1.0,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9043,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1192,
+          "phenotype_diversity": 0.008,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9426,
+          "mean_corpus_size": 113.2
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0582,
+          "phenotype_diversity": 0.0009,
+          "heterozygosity": 0.8,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9727,
+          "mean_corpus_size": 191.4
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0323,
+          "phenotype_diversity": 0.0016,
+          "heterozygosity": 0.9,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9837,
+          "mean_corpus_size": 293.4
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0164,
+          "phenotype_diversity": 0.0002,
+          "heterozygosity": 0.8,
+          "allele_retention": 0.75,
+          "inheritance_fidelity": 0.9908,
+          "mean_corpus_size": 500.8
+        }
+      ],
+      [
+        {
+          "generation": 1,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1703,
+          "phenotype_diversity": 0.0105,
+          "heterozygosity": 1.0,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9093,
+          "mean_corpus_size": 69.0
+        },
+        {
+          "generation": 2,
+          "n_offspring": 10,
+          "genotype_diversity": 0.1019,
+          "phenotype_diversity": 0.0069,
+          "heterozygosity": 1.0,
+          "allele_retention": 0.875,
+          "inheritance_fidelity": 0.9445,
+          "mean_corpus_size": 116.6
+        },
+        {
+          "generation": 3,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0687,
+          "phenotype_diversity": 0.0061,
+          "heterozygosity": 0.8,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9658,
+          "mean_corpus_size": 188.0
+        },
+        {
+          "generation": 4,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0352,
+          "phenotype_diversity": 0.0083,
+          "heterozygosity": 0.9,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9829,
+          "mean_corpus_size": 317.2
+        },
+        {
+          "generation": 5,
+          "n_offspring": 10,
+          "genotype_diversity": 0.0284,
+          "phenotype_diversity": 0.0016,
+          "heterozygosity": 0.6,
+          "allele_retention": 1.0,
+          "inheritance_fidelity": 0.9862,
+          "mean_corpus_size": 466.8
+        }
+      ]
+    ]
+  }
+}
