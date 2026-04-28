@@ -1,5 +1,10 @@
 # Behavioral Genetics — Paper Artifacts
 
+**Provisional Patent Pending (filed April 15, 2026)** | Copyright (c) 2026 The Pennsylvania State University. All rights reserved.
+Inventor: Scott N. Hwang
+
+Licensed under the Open Core Ventures Source Available License (OCVSAL) v1.0. See [LICENSE](LICENSE). Production use requires a commercial agreement. For commercial licensing, contact the Penn State Office of Technology Transfer at ottinfo@psu.edu.
+
 Evaluation scripts, simulation module, and result files for the behavioral-genetics
 paper (preprint link TBD; will point to arXiv or equivalent once posted, and to
 the journal DOI if/when accepted). Uses the BEAR library at

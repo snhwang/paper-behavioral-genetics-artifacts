@@ -198,9 +198,17 @@ _shared_config: Config | None = None
 
 
 def get_embedder() -> Embedder:
+    """Return the shared embedder.
+
+    Model defaults to BGE-base-v1.5 (local). Override with ``BEAR_EMBEDDING_MODEL``
+    — e.g. ``BEAR_EMBEDDING_MODEL=openai:text-embedding-3-small`` to use the
+    OpenAI cloud API (requires ``OPENAI_API_KEY``). Useful on CPU-only hosts
+    like Replit where local BGE inference is too slow.
+    """
     global _shared_embedder
     if _shared_embedder is None:
-        _shared_embedder = Embedder(model_name="BAAI/bge-base-en-v1.5")
+        model = os.environ.get("BEAR_EMBEDDING_MODEL", "BAAI/bge-base-en-v1.5")
+        _shared_embedder = Embedder(model_name=model)
     return _shared_embedder
 
 
