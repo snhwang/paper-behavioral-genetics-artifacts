@@ -35,7 +35,7 @@ from bear.retriever import Embedder, Retriever
 from bear.models import Dominance, GeneLocus, LocusRegistry
 from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed, express
 
-from evolutionary_ecosystem.server.gene_engine import (
+from examples.evolutionary_ecosystem.server.gene_engine import (
     GENE_CATEGORIES,
     AppearanceParams,
     BehaviorProfile,
@@ -50,7 +50,7 @@ from evolutionary_ecosystem.server.gene_engine import (
     extract_stats,
     _FALLBACK_GENES,
 )
-from evolutionary_ecosystem.server.sim import (
+from examples.evolutionary_ecosystem.server.sim import (
     Creature,
     FoodItem,
     Predator,
@@ -62,12 +62,12 @@ from evolutionary_ecosystem.server.sim import (
     MAX_POPULATION,
     PREDATOR_SPAWN_INTERVAL,
 )
-from evolutionary_ecosystem.server.epochs import (
+from examples.evolutionary_ecosystem.server.epochs import (
     Epoch,
     EPOCHS,
     EPOCH_DURATION_TICKS,
 )
-from evolutionary_ecosystem.server.stats import PopulationStats, PopulationTracker
+from examples.evolutionary_ecosystem.server.stats import PopulationStats, PopulationTracker
 
 # ---------------------------------------------------------------------------
 # Predefined gene banks (diverse, hand-crafted for evaluation)
@@ -198,17 +198,9 @@ _shared_config: Config | None = None
 
 
 def get_embedder() -> Embedder:
-    """Return the shared embedder.
-
-    Model defaults to BGE-base-v1.5 (local). Override with ``BEAR_EMBEDDING_MODEL``
-    — e.g. ``BEAR_EMBEDDING_MODEL=openai:text-embedding-3-small`` to use the
-    OpenAI cloud API (requires ``OPENAI_API_KEY``). Useful on CPU-only hosts
-    like Replit where local BGE inference is too slow.
-    """
     global _shared_embedder
     if _shared_embedder is None:
-        model = os.environ.get("BEAR_EMBEDDING_MODEL", "BAAI/bge-base-en-v1.5")
-        _shared_embedder = Embedder(model_name=model)
+        _shared_embedder = Embedder(model_name="BAAI/bge-base-en-v1.5")
     return _shared_embedder
 
 
@@ -245,7 +237,10 @@ def make_creature(
     appearance = extract_appearance(genes, embedder)
     skills = extract_skills(genes, embedder)
     stats = extract_stats(genes, embedder)
-    corpus = build_corpus(name, genes)
+    # Founder dominance scores: per-(creature, gene_category) Uniform(0,1).
+    from examples.evolutionary_ecosystem.server.gene_engine import random_founder_dominances
+    dominances = random_founder_dominances(rng)
+    corpus = build_corpus(name, genes, dominances=dominances)
     behavior = compute_behavior_profile(corpus, config, shared_embedder=embedder)
     retriever = Retriever(corpus, config=config)
     retriever._embedder = embedder
@@ -255,7 +250,7 @@ def make_creature(
     y = spawn_y if spawn_y is not None else rng.uniform(1.0, WORLD_H - 1.0)
 
     # Use patched lifespan values if available
-    from evolutionary_ecosystem.server import sim as sim_mod
+    from examples.evolutionary_ecosystem.server import sim as sim_mod
     min_age = getattr(sim_mod, 'MAX_AGE_MIN', 90.0)
     max_age_val = getattr(sim_mod, 'MAX_AGE_MAX', 150.0)
 
@@ -495,7 +490,7 @@ def patch_sim_for_eval():
     fast-path-only mode, we need more generous parameters to sustain
     populations across 20+ generations.
     """
-    from evolutionary_ecosystem.server import sim as sim_mod
+    from examples.evolutionary_ecosystem.server import sim as sim_mod
 
     # Use the same defaults as the interactive sim — they produce stable populations.
     # Only override what's needed for headless eval mode.
@@ -506,7 +501,7 @@ def patch_sim_for_eval():
     sim_mod.BREED_DISTANCE = 3.5           # wider breed range (no brain-driven approach behavior)
     sim_mod.PREDATOR_SPAWN_INTERVAL = 999999.0  # effectively disabled — predation adds noise, not signal
 
-    from evolutionary_ecosystem.server import epochs as epochs_mod
+    from examples.evolutionary_ecosystem.server import epochs as epochs_mod
     epochs_mod.WEATHER_DAMAGE = 0.05       # mild weather
     for ep in epochs_mod.EPOCHS:
         ep.weather_severity = min(ep.weather_severity, 0.25)
@@ -615,7 +610,7 @@ def run_simulation(
     # uniform 0.3 (neutral/random) so tick() has no behavioral guidance.
     bear_off = getattr(world, 'bear_disabled', False)
     if bear_off:
-        from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
+        from examples.evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
         for c in world.creatures.values():
             c.behavior_profile = NullBehaviorProfile()
 
@@ -654,7 +649,7 @@ def run_simulation(
 
                 # In BEAR-Off mode, replace child's profile with null
                 if bear_off:
-                    from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
+                    from examples.evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
                     child.behavior_profile = NullBehaviorProfile()
 
                 if on_birth:

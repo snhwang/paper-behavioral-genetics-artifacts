@@ -716,7 +716,11 @@ _CORPUS_TEMPLATES: dict[str, list[tuple[list[str], str]]] = {
 }
 
 
-def build_corpus(name: str, genes: dict[str, str]) -> Corpus:
+def build_corpus(
+    name: str,
+    genes: dict[str, str],
+    dominances: dict[str, float] | None = None,
+) -> Corpus:
     """Build BEAR Corpus with situational instructions per gene category.
 
     Each template entry is either:
@@ -724,6 +728,12 @@ def build_corpus(name: str, genes: dict[str, str]) -> Corpus:
         (scope_tags, content_template, required_tags)
     When required_tags is provided, ALL listed tags must be present in the
     retrieval context for the instruction to be retrieved (AND logic).
+
+    *dominances* maps gene category -> per-allele dominance score (0.0..1.0,
+    higher is more dominant). Used by ``express()`` for DOMINANT loci to
+    decide which allele wins in a heterozygote pairing. If None, all
+    instructions get a default score of 1.0 (which makes legacy untagged
+    corpora behave as homozygous-equivalent under the score-max rule).
     """
     corpus = Corpus()
     for cat in BEHAVIOR_CATEGORIES:
@@ -731,6 +741,7 @@ def build_corpus(name: str, genes: dict[str, str]) -> Corpus:
         if not text:
             continue
         templates = _CORPUS_TEMPLATES.get(cat, [])
+        score = (dominances or {}).get(cat, 1.0)
         for idx, entry in enumerate(templates):
             scope_tags = entry[0]
             content_template = entry[1]
@@ -744,9 +755,50 @@ def build_corpus(name: str, genes: dict[str, str]) -> Corpus:
                 scope    = ScopeCondition(tags=scope_tags, required_tags=req_tags),
                 tags     = [name, cat, f"cat:{cat}"] + scope_tags,
                 metadata = {"gene_category": cat, "situation_idx": idx,
-                            "prompt": prompt},
+                            "prompt": prompt, "dominance": score},
             ))
     return corpus
+
+
+def random_founder_dominances(
+    rng: random.Random,
+    categories: list[str] | None = None,
+) -> dict[str, float]:
+    """Draw per-category dominance scores for a founder NPC.
+
+    Founders sample uniformly from [0, 1]: roughly half are dominant-leaning,
+    half recessive-leaning at any given locus. This produces biologically
+    realistic gen-0 populations where archetype alleles aren't all clustered
+    at the top of the dominance hierarchy.
+    """
+    cats = categories if categories is not None else GENE_CATEGORIES
+    return {cat: rng.random() for cat in cats}
+
+
+def random_mutation_dominance(
+    rng: random.Random,
+    *,
+    alpha: float = 1.0,
+    beta: float = 4.0,
+) -> float:
+    """Draw a dominance score for a newly-mutated allele.
+
+    Defaults to ``Beta(1, 4)``: heavily biased recessive (mean ~0.2,
+    most mass below 0.4), modeling the biological observation that most
+    de novo mutations are recessive deleterious. Tunable via *alpha*
+    and *beta*; ``alpha=beta=1`` recovers a uniform distribution.
+    """
+    return rng.betavariate(alpha, beta)
+
+
+def random_drift_dominance(rng: random.Random) -> float:
+    """Draw a dominance score for a drift (fully novel) allele.
+
+    Drift produces content unrelated to any parent allele. Such variants
+    are biologically the most often recessive; we sample from
+    ``Beta(1, 6)`` (mean ~0.14, strongly skewed toward 0).
+    """
+    return rng.betavariate(1.0, 6.0)
 
 
 # ---------------------------------------------------------------------------
@@ -896,7 +948,7 @@ def _get_gene_bank() -> list[dict[str, str]]:
     global _GENE_BANK
     if not _GENE_BANK:
         try:
-            from evolutionary_ecosystem.eval.harness import GENE_BANK
+            from examples.evolutionary_ecosystem.eval.harness import GENE_BANK
             _GENE_BANK = list(GENE_BANK)
             logger.info("Gene bank loaded: %d archetypes", len(_GENE_BANK))
         except Exception as e:
@@ -1084,6 +1136,95 @@ def _make_locus_registry(ploidy: str) -> LocusRegistry:
     ])
 
 
+async def _mutate_corpus(
+    corpus: Corpus,
+    locus_key: str,
+    mutation_rate: float,
+    llm: LLM,
+    rng: random.Random,
+) -> Corpus:
+    """Apply per-locus mutations to a (possibly diploid) corpus.
+
+    For each locus, with probability *mutation_rate*, mutate one randomly
+    chosen allele. All instructions sharing the same (locus, allele)
+    receive the same mutated content so the diploid genotype stays
+    self-consistent across template variants. Mutated alleles also receive
+    a fresh dominance score (Beta-distributed, recessive-biased), so
+    novel alleles enter the gene pool more often as recessive carriers
+    than as dominant variants.
+    """
+    by_pair: dict[tuple[str, str | None], list[Instruction]] = {}
+    other: list[Instruction] = []
+    for inst in corpus:
+        loc = inst.metadata.get(locus_key)
+        if loc is None:
+            other.append(inst)
+            continue
+        allele = inst.metadata.get("allele")
+        by_pair.setdefault((loc, allele), []).append(inst)
+
+    by_locus: dict[str, dict[str | None, list[Instruction]]] = {}
+    for (loc, allele), insts in by_pair.items():
+        by_locus.setdefault(loc, {})[allele] = insts
+
+    mutated_text: dict[tuple[str, str | None], tuple[str, float]] = {}
+    for loc, allele_map in by_locus.items():
+        if rng.random() >= mutation_rate:
+            continue
+        chosen_allele = rng.choice(list(allele_map.keys()))
+        seed_content = allele_map[chosen_allele][0].content
+        if rng.random() < 0.3:
+            new_text = await drift_gene(llm, loc)
+            new_dominance = random_drift_dominance(rng)
+        else:
+            new_text = await mutate_gene(llm, loc, seed_content)
+            new_dominance = random_mutation_dominance(rng)
+        mutated_text[(loc, chosen_allele)] = (new_text, new_dominance)
+
+    out = Corpus()
+    for inst in other:
+        out.add(inst)
+    for (loc, allele), insts in by_pair.items():
+        update = mutated_text.get((loc, allele))
+        if update is None:
+            for inst in insts:
+                out.add(inst)
+        else:
+            new_text, new_dominance = update
+            for inst in insts:
+                out.add(inst.model_copy(update={
+                    "content": new_text,
+                    "metadata": {**inst.metadata, "dominance": new_dominance},
+                }))
+    return out
+
+
+def _extract_genes_dict(
+    corpus: Corpus,
+    is_diploid: bool,
+    registry: LocusRegistry,
+    locus_key: str = "gene_category",
+) -> dict[str, str]:
+    """Derive a haploid-view ``dict[locus -> text]`` summary from a corpus.
+
+    For diploid corpora, uses the expressed phenotype (so dominance rules
+    are honored). For haploid corpora, reads directly from the corpus.
+    The corpus remains the genotype source of truth — this dict is only
+    for prompt construction, appearance/skill extraction, and logging.
+    """
+    if is_diploid:
+        insts_iter: list[Instruction] = list(express(corpus, registry, locus_key=locus_key))
+    else:
+        insts_iter = list(corpus)
+
+    out: dict[str, str] = {}
+    for inst in insts_iter:
+        cat = inst.metadata.get(locus_key)
+        if cat and cat not in out:
+            out[cat] = inst.content
+    return out
+
+
 async def breed_offspring(
     request: BreedRequest,
     llm: LLM,
@@ -1091,16 +1232,31 @@ async def breed_offspring(
     rng: random.Random,
     bear_config: Config | None = None,
 ) -> BreedResult:
-    """Full breeding pipeline supporting three recombination methods and ploidy modes."""
+    """Full breeding pipeline supporting three recombination methods and ploidy modes.
+
+    Diploid inheritance (locus or splice recombination):
+      1. Meiosis + fertilisation: bear.evolution.breed() segregates one
+         allele per parent per locus and pairs the two gametes, producing
+         a diploid child corpus with allele "a" from parent A's drawn
+         allele and allele "b" from parent B's.
+      2. Mutation: applied per (locus, allele) on the bred corpus.
+         Mutated alleles receive a Beta-distributed (recessive-biased)
+         dominance score so novel alleles enter the gene pool mostly as
+         recessive carriers.
+      3. The corpus is the genotype source of truth; child_genes is a
+         haploid-view summary derived from the expressed phenotype.
+    """
     recomb = request.recombination
     ploidy = request.ploidy
     is_diploid = ploidy.startswith("diploid")
     registry = _make_locus_registry(ploidy)
 
-    # --- Step 1: Recombination (produce child_genes dict) ---
-
     if recomb == "blend":
-        # LLM-mediated blending: merge both parents' alleles into new text
+        # LLM-mediated blending: produces one new text per locus, then
+        # rebuild a (haploid-shaped) corpus. Diploid + blend is treated as
+        # homozygous — both alleles would carry the same blended text, so
+        # we just emit a single-allele corpus and let express() pass it
+        # through unchanged.
         child_genes: dict[str, str] = {}
         blend_tasks = []
         blend_cats = []
@@ -1121,17 +1277,27 @@ async def breed_offspring(
             for cat, result in zip(blend_cats, blend_results):
                 child_genes[cat] = result
 
+        for cat in GENE_CATEGORIES:
+            if rng.random() < request.mutation_rate:
+                if rng.random() < 0.3:
+                    child_genes[cat] = await drift_gene(llm, cat)
+                else:
+                    child_genes[cat] = await mutate_gene(llm, cat, child_genes.get(cat, ""))
+
+        corpus = build_corpus(request.child_name, child_genes)
+
     else:
-        # Locus-based or splice: use bear.evolution.breed
+        # Locus-based or splice: use bear.evolution.breed. Bear handles
+        # meiosis internally for diploid parents (segregates one allele
+        # per parent per locus before pairing), so we just pass the
+        # parent corpora through.
         if recomb == "splice":
-            # Splice: legacy per-instruction crossover (no locus grouping)
             config = BreedingConfig(
                 crossover_rate=0.5,
                 seed=rng.randint(0, 2**31),
                 scope_to_child=False,
             )
         else:
-            # Locus-based: per-category selection with registry
             config = BreedingConfig(
                 crossover_rate=0.5,
                 locus_key="gene_category",
@@ -1149,37 +1315,20 @@ async def breed_offspring(
             config=config,
         )
 
-        # Extract gene text from the bred corpus
-        child_genes = {}
-        for inst in breed_result.child:
-            cat = inst.metadata.get("gene_category")
-            if cat and cat not in child_genes:
-                child_genes[cat] = inst.content
-        # Fill in any missing categories
+        # Trust bear's bred corpus and mutate it per (locus, allele).
+        corpus = await _mutate_corpus(
+            breed_result.child, "gene_category",
+            request.mutation_rate, llm, rng,
+        )
+
+        # Derive haploid-view child_genes from the expressed phenotype
+        # (used for prompts, appearance/skill/stat extraction, logging).
+        child_genes = _extract_genes_dict(corpus, is_diploid, registry)
         for cat in GENE_CATEGORIES:
             if cat not in child_genes:
                 child_genes[cat] = (request.parent_a_genes.get(cat)
                                     or request.parent_b_genes.get(cat)
                                     or _FALLBACK_GENES.get(cat, ""))
-
-    # --- Step 2: Mutations (apply to all methods) ---
-    for cat in GENE_CATEGORIES:
-        if rng.random() < request.mutation_rate:
-            if rng.random() < 0.3:
-                child_genes[cat] = await drift_gene(llm, cat)
-            else:
-                child_genes[cat] = await mutate_gene(llm, cat, child_genes.get(cat, ""))
-
-    # --- Step 3: Build corpus ---
-    # For diploid: build corpus with both parents' alleles at each locus
-    if is_diploid and recomb != "blend":
-        corpus = _build_diploid_corpus(
-            request.child_name, child_genes,
-            request.parent_a_genes, request.parent_b_genes,
-            registry,
-        )
-    else:
-        corpus = build_corpus(request.child_name, child_genes)
 
     # --- Step 4: Appearance, skills, stats, behavior ---
     total   = request.parent_a_fitness + request.parent_b_fitness

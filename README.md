@@ -8,7 +8,7 @@ Licensed under the Open Core Ventures Source Available License (OCVSAL) v1.0. Se
 Evaluation scripts, simulation module, and result files for the behavioral-genetics
 paper (preprint link TBD; will point to arXiv or equivalent once posted, and to
 the journal DOI if/when accepted). Uses the BEAR library at
-[snhwang/bear](https://github.com/snhwang/bear), pinned to `v0.1.5`.
+[snhwang/bear](https://github.com/snhwang/bear), pinned to `v0.1.6`.
 
 ## Layout
 
@@ -39,12 +39,12 @@ evolutionary_ecosystem/
 results/                    # 63 paper-canonical result files
 SIM_LOGS.md                 # Zenodo pointer for 13 simulation logs (~266 MB)
 run_evals.sh                # runner for §11.10–§11.19
-requirements.txt            # bear@v0.1.5 + numerics + FastAPI for live-sim runs
+requirements.txt            # bear@v0.1.6 + numerics + FastAPI for live-sim runs
 ```
 
 The artifacts repo is **self-contained**: `run.py`, `server/app.py`, and
 `server/brain.py` are vendored from `bear/examples/evolutionary_ecosystem/`
-(at the same v0.1.5 tag pinned in `requirements.txt`) so the live-sim
+(at the same v0.1.6 tag pinned in `requirements.txt`) so the live-sim
 evals (e.g. eval9b) and direct invocations of `run.py` work without
 needing a separate bear checkout. The FastAPI / uvicorn / websockets
 deps required by the live sim are listed in `requirements.txt`. If you
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ./run_evals.sh --all            # Part B: add LLM-mediated evals (needs Anthropic or local LLM)
 ```
 
-Part A is deterministic against the frozen bear `v0.1.5` and should reproduce
+Part A is deterministic against the frozen bear `v0.1.6` and should reproduce
 the paper's numbers closely. Part B involves LLM sampling and will diverge
 on each run; the committed `results/` files are the paper's reported runs.
 
@@ -74,6 +74,6 @@ independent analysis.
 
 ## Bear version
 
-Pinned to bear `v0.1.5` (commit `21773c2`). Bumping bear will likely change
+Pinned to bear `v0.1.6` (commit `7d4e1c6`). Bumping bear will likely change
 numeric results; update the pin in `requirements.txt` and re-run the full
 suite before comparing to older results.

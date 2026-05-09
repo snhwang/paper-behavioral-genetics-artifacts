@@ -100,7 +100,13 @@ async def _make_creature(
     appearance = extract_appearance(genes, embedder)
     skills     = extract_skills(genes, embedder)
     stats      = extract_stats(genes, embedder)
-    corpus     = build_corpus(name, genes)
+    # Founder dominance scores: per-(creature, gene_category) Uniform(0,1)
+    # so gen-0 NPCs span the dominance hierarchy rather than all clustering
+    # at the top. Mutations in subsequent generations sample from a
+    # recessive-biased Beta distribution.
+    from server.gene_engine import random_founder_dominances
+    dominances = random_founder_dominances(rng)
+    corpus     = build_corpus(name, genes, dominances=dominances)
     behavior   = compute_behavior_profile(corpus, bear_config, shared_embedder=embedder)
 
     x = spawn_x if spawn_x is not None else rng.uniform(1.0, WORLD_W - 1.0)
