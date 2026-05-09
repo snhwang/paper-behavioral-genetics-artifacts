@@ -3,7 +3,7 @@
 # then after `uv pip install -r requirements.txt` run:
 #   uv pip install -e /mnt/c/Users/Scott/Documents/Work/bear-public-prep   # WSL
 #   uv pip install -e C:/Users/Scott/Documents/Work/bear-public-prep       # Windows
-bear @ git+https://github.com/snhwang/bear.git@v0.1.6
+bear @ git+https://github.com/snhwang/bear.git@v0.1.7
 scipy
 numpy
 matplotlib

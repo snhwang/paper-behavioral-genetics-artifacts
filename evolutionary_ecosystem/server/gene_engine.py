@@ -9,7 +9,7 @@ Provides:
 - SkillSet + extract_skills() for movement abilities
 - EntityStats + extract_stats() for survival stats
 - BehaviorProfile + compute_behavior_profile() for BEAR-driven decisions
-- Async breeding pipeline with LLM blending/mutation/drift
+- Async breeding pipeline with LLM blending, point mutation, and spontaneous mutation
 """
 
 from __future__ import annotations
@@ -791,12 +791,13 @@ def random_mutation_dominance(
     return rng.betavariate(alpha, beta)
 
 
-def random_drift_dominance(rng: random.Random) -> float:
-    """Draw a dominance score for a drift (fully novel) allele.
+def random_spontaneous_dominance(rng: random.Random) -> float:
+    """Draw a dominance score for a spontaneously-generated (fully novel) allele.
 
-    Drift produces content unrelated to any parent allele. Such variants
-    are biologically the most often recessive; we sample from
-    ``Beta(1, 6)`` (mean ~0.14, strongly skewed toward 0).
+    Spontaneous alleles produce content unrelated to any parent allele
+    — equivalent to a mutation event large enough to be functionally a
+    new variant. Such variants are biologically the most often recessive;
+    we sample from ``Beta(1, 6)`` (mean ~0.14, strongly skewed toward 0).
     """
     return rng.betavariate(1.0, 6.0)
 
@@ -842,7 +843,7 @@ Keep it to 1-3 sentences.
 
 Output ONLY the trait text, nothing else."""
 
-_DRIFT_PROMPT = """\
+_SPONTANEOUS_PROMPT = """\
 Generate a completely new {category} trait for an NPC creature.
 Make it creative, unusual, and specific. Avoid generic descriptions.
 
@@ -1068,10 +1069,18 @@ async def mutate_gene(llm: LLM, category: str, content: str) -> str:
     return result if result else content
 
 
-async def drift_gene(llm: LLM, category: str) -> str:
+async def spontaneous_gene(llm: LLM, category: str) -> str:
+    """Generate a spontaneous (wholly novel) allele text from scratch.
+
+    Unlike ``mutate_gene`` which produces a variation of an existing parent
+    allele, ``spontaneous_gene`` invokes the LLM with no parent content,
+    producing a gene text that has no lineage relationship to any existing
+    allele in the population. Used to model rare spontaneous mutation
+    events that introduce genuinely novel content into the gene pool.
+    """
     resp = await llm.generate(
         system=_SYSTEM,
-        user=_DRIFT_PROMPT.format(category=category),
+        user=_SPONTANEOUS_PROMPT.format(category=category),
         temperature=1.0,
         max_tokens=512,
     )
@@ -1174,8 +1183,8 @@ async def _mutate_corpus(
         chosen_allele = rng.choice(list(allele_map.keys()))
         seed_content = allele_map[chosen_allele][0].content
         if rng.random() < 0.3:
-            new_text = await drift_gene(llm, loc)
-            new_dominance = random_drift_dominance(rng)
+            new_text = await spontaneous_gene(llm, loc)
+            new_dominance = random_spontaneous_dominance(rng)
         else:
             new_text = await mutate_gene(llm, loc, seed_content)
             new_dominance = random_mutation_dominance(rng)
@@ -1280,7 +1289,7 @@ async def breed_offspring(
         for cat in GENE_CATEGORIES:
             if rng.random() < request.mutation_rate:
                 if rng.random() < 0.3:
-                    child_genes[cat] = await drift_gene(llm, cat)
+                    child_genes[cat] = await spontaneous_gene(llm, cat)
                 else:
                     child_genes[cat] = await mutate_gene(llm, cat, child_genes.get(cat, ""))
 
