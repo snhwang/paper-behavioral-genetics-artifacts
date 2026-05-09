@@ -33,7 +33,43 @@ from scipy import stats
 _HERE  = Path(__file__).resolve().parent
 _ECO   = _HERE.parent
 _ROOT  = _ECO.parent.parent
-_RUNPY = _ECO / "run.py"
+
+
+def _resolve_runpy(cli_override: str | None) -> Path:
+    """Locate the live-sim run.py.
+
+    The artifacts repo intentionally omits run.py / app.py / brain.py
+    (they live in the bear repo). Search these candidates in order:
+
+    1. Explicit ``--run-py`` argument (a path).
+    2. ``BEAR_RUN_PY`` environment variable.
+    3. ``BEAR_REPO`` env var, expanded to ``<BEAR_REPO>/examples/evolutionary_ecosystem/run.py``.
+    4. ``<artifacts>/evolutionary_ecosystem/run.py`` (works only if you've
+       copied run.py here yourself).
+
+    Raises FileNotFoundError with a helpful message if none exist.
+    """
+    import os
+    candidates: list[Path] = []
+    if cli_override:
+        candidates.append(Path(cli_override).expanduser().resolve())
+    if os.environ.get("BEAR_RUN_PY"):
+        candidates.append(Path(os.environ["BEAR_RUN_PY"]).expanduser().resolve())
+    if os.environ.get("BEAR_REPO"):
+        candidates.append(
+            (Path(os.environ["BEAR_REPO"]).expanduser() / "examples/evolutionary_ecosystem/run.py").resolve()
+        )
+    candidates.append((_ECO / "run.py").resolve())
+
+    for p in candidates:
+        if p.exists():
+            return p
+    raise FileNotFoundError(
+        "Could not locate run.py for the live evolutionary_ecosystem sim.\n"
+        "Pass --run-py /path/to/bear/examples/evolutionary_ecosystem/run.py,\n"
+        "or set BEAR_REPO=/path/to/bear (or BEAR_RUN_PY directly).\n"
+        f"Searched: {[str(p) for p in candidates]}"
+    )
 
 RESULTS_PATH = _HERE / "results" / "eval9b_results.json"
 
@@ -48,12 +84,12 @@ EVAL2B_RESULTS = Path(__file__).resolve().parent / "results" / "eval2b_results.j
 
 
 def run_single(seed: int, ploidy: str, base_url: str, model: str,
-               n_ticks: int, n_creatures: int) -> dict:
+               n_ticks: int, n_creatures: int, run_py: Path) -> dict:
     out_file = _HERE / "results" / f"_eval9b_tmp_{seed}_{ploidy}.json"
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
     cmd = [
-        sys.executable, str(_RUNPY.resolve()),
+        sys.executable, str(run_py),
         "--seed",         str(seed),
         "--ticks",        str(n_ticks),
         "--creatures",    str(n_creatures),
@@ -109,7 +145,14 @@ def main():
     parser.add_argument("--creatures", type=int, default=12)
     parser.add_argument("--seeds",     type=int, nargs="+", default=None)
     parser.add_argument("--output",    default=None)
+    parser.add_argument("--run-py",    default=None, dest="run_py",
+                        help="Path to the bear repo's evolutionary_ecosystem/run.py "
+                             "(needed because the artifacts repo intentionally omits "
+                             "the live-sim entry points). Falls back to BEAR_RUN_PY or "
+                             "BEAR_REPO env vars if not set.")
     args = parser.parse_args()
+
+    run_py = _resolve_runpy(args.run_py)
 
     seeds = args.seeds if args.seeds else [BASE_SEED + i * 100 for i in range(args.trials)]
     args.trials = len(seeds)
@@ -120,6 +163,7 @@ def main():
     print(f"Ticks: {args.ticks}  Creatures: {args.creatures}  Trials: {args.trials}")
     print(f"Seeds: {seeds}")
     print(f"LLM: {args.base_url} / {args.model}")
+    print(f"run.py: {run_py}")
     print()
 
     # Load haploid baseline from eval2b BEAR On results
@@ -139,7 +183,7 @@ def main():
     for i, seed in enumerate(seeds):
         print(f"--- Trial {i+1}/{args.trials} (seed={seed}) ---")
         for cond in CONDITIONS:
-            r = run_single(seed, cond, args.base_url, args.model, args.ticks, args.creatures)
+            r = run_single(seed, cond, args.base_url, args.model, args.ticks, args.creatures, run_py)
             if r:
                 r["ploidy"] = cond
                 all_trials[cond].append(r)
