@@ -8,7 +8,7 @@ Licensed under the Open Core Ventures Source Available License (OCVSAL) v1.0. Se
 Evaluation scripts, simulation module, and result files for the behavioral-genetics
 paper (preprint link TBD; will point to arXiv or equivalent once posted, and to
 the journal DOI if/when accepted). Uses the BEAR library at
-[snhwang/bear](https://github.com/snhwang/bear), pinned to `v0.1.4`.
+[snhwang/bear](https://github.com/snhwang/bear), pinned to `v0.1.5`.
 
 ## Layout
 
@@ -39,7 +39,7 @@ evolutionary_ecosystem/
 results/                    # 63 paper-canonical result files
 SIM_LOGS.md                 # Zenodo pointer for 13 simulation logs (~266 MB)
 run_evals.sh                # runner for §11.10–§11.19
-requirements.txt            # bear@v0.1.4 + scipy/numpy/python-dotenv/openai/PyYAML
+requirements.txt            # bear@v0.1.5 + scipy/numpy/python-dotenv/openai/PyYAML
 ```
 
 The live-demo webserver pieces (`server/app.py`, `server/brain.py`) and their
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 ./run_evals.sh --all            # Part B: add LLM-mediated evals (needs Anthropic or local LLM)
 ```
 
-Part A is deterministic against the frozen bear `v0.1.4` and should reproduce
+Part A is deterministic against the frozen bear `v0.1.5` and should reproduce
 the paper's numbers closely. Part B involves LLM sampling and will diverge
 on each run; the committed `results/` files are the paper's reported runs.
 
@@ -70,6 +70,6 @@ independent analysis.
 
 ## Bear version
 
-Pinned to bear `v0.1.4` (commit `b7d3130`). Bumping bear will likely change
+Pinned to bear `v0.1.5` (commit `21773c2`). Bumping bear will likely change
 numeric results; update the pin in `requirements.txt` and re-run the full
 suite before comparing to older results.
