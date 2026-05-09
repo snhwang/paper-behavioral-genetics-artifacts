@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evolutionary Ecosystem — BEAR Demo</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- Left panel: creature cards -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h2>Evolutionary Ecosystem</h2>
+        <p class="subtitle">Dual-Path Behavioral RAG Demo</p>
+      </div>
+
+      <!-- Epoch / Weather badge -->
+      <div class="epoch-badge">
+        <span id="epoch-name">—</span>
+        <span id="weather-icon" class="weather-tag">mild</span>
+      </div>
+
+      <div class="controls">
+        <button id="btn-pause">Pause</button>
+        <button id="btn-bear" class="bear-on" title="Toggle BEAR retrieval on/off">Disable BEAR</button>
+        <button id="btn-names" class="names-off" title="Show/hide name labels">Names Off</button>
+        <label class="slider-label">
+          Speed
+          <input id="speed-slider" type="range" min="0.25" max="3" step="0.25" value="1" />
+        </label>
+      </div>
+
+      <div class="hud">
+        <span>Creatures: <strong id="hud-count">—</strong></span>
+        <span id="hud-paused" class="status running">Running</span>
+        <span id="hud-bear" class="bear-badge bear-on-badge">BEAR: ACTIVE</span>
+        <span id="status" class="status disconnected">Connecting</span>
+      </div>
+
+      <!-- Population stats -->
+      <div class="pop-stats-panel">
+        <div class="pop-stat-row">
+          <span class="pop-stat-label">Births</span>
+          <span id="pop-births" class="pop-stat-value">0</span>
+        </div>
+        <div class="pop-stat-row">
+          <span class="pop-stat-label">Deaths</span>
+          <span id="pop-deaths" class="pop-stat-value">0</span>
+        </div>
+        <div class="pop-stat-row">
+          <span class="pop-stat-label">Avg Gen</span>
+          <span id="pop-avg-gen" class="pop-stat-value">0</span>
+        </div>
+        <div class="pop-stat-row">
+          <span class="pop-stat-label">Tick</span>
+          <span id="pop-tick" class="pop-stat-value">0</span>
+        </div>
+      </div>
+
+      <!-- Breeding mode -->
+      <details class="tuning-panel" open>
+        <summary>Genetics</summary>
+        <div class="tune-grid">
+          <label>Recombination
+            <select id="sel-recombination">
+              <option value="locus" selected>Mendelian (select one allele)</option>
+              <option value="blend">LLM Synthesis (novel allele per locus)</option>
+              <option value="splice">Text Splicing (legacy)</option>
+            </select>
+          </label>
+          <label>Ploidy
+            <select id="sel-ploidy">
+              <option value="haploid" selected>Haploid (single allele)</option>
+              <option value="diploid_dominant">Diploid — Dominant</option>
+              <option value="diploid_codominant">Diploid — Co-dominant</option>
+            </select>
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" id="chk-auto-breed" />
+            Autonomous Breeding (bypass BEAR)
+          </label>
+          <label class="toggle-label">
+            <input type="checkbox" id="chk-auto-regulate" />
+            Auto-Regulate Population
+          </label>
+          <div id="auto-regulate-target-row" style="display:none; margin-left:1.2em; margin-top:0.3em;">
+            <span class="tune-label">Target Pop</span>
+            <input type="range" id="auto-regulate-target" min="5" max="45" step="1" value="20" style="width:100px;" />
+            <span id="auto-regulate-target-val">20</span>
+          </div>
+        </div>
+      </details>
+
+      <button id="btn-restart" class="btn-restart">Restart Simulation</button>
+
+      <!-- Tuning amplifiers -->
+      <details class="tuning-panel">
+        <summary>Environment Amplifiers</summary>
+        <div class="tune-grid">
+          <div class="tune-row"><span class="tune-label">Food</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="food" /><span class="tune-val" data-for="food">1.0×</span></div>
+          <div class="tune-row"><span class="tune-label">Metabolism</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="metabolism" /><span class="tune-val" data-for="metabolism">1.0×</span></div>
+          <div class="tune-row"><span class="tune-label">Predator</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="predator" /><span class="tune-val" data-for="predator">1.0×</span></div>
+          <div class="tune-row"><span class="tune-label">Aggression</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="aggression" /><span class="tune-val" data-for="aggression">1.0×</span></div>
+          <div class="tune-row"><span class="tune-label">Breeding</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="breeding" /><span class="tune-val" data-for="breeding">1.0×</span></div>
+          <div class="tune-row"><span class="tune-label">Weather</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="weather" /><span class="tune-val" data-for="weather">1.0×</span></div>
+          <div class="tune-row"><span class="tune-label">Herding</span><input type="range" min="0" max="3" step="0.1" value="1" data-param="herding" /><span class="tune-val" data-for="herding">1.0×</span></div>
+        </div>
+      </details>
+
+      <!-- Simulation parameters -->
+      <details class="tuning-panel">
+        <summary>Population Dynamics</summary>
+        <div class="tune-grid">
+          <div class="tune-row"><span class="tune-label">Breed Dist</span><input type="range" min="0.5" max="5" step="0.5" value="2.5" data-simparam="breed_distance" /><span class="tune-val" data-for-sim="breed_distance">2.5</span></div>
+          <div class="tune-row"><span class="tune-label">Breed CD</span><input type="range" min="10" max="120" step="5" value="30" data-simparam="breed_cooldown" /><span class="tune-val" data-for-sim="breed_cooldown">30s</span></div>
+          <div class="tune-row"><span class="tune-label">Breed Happy</span><input type="range" min="10" max="90" step="5" value="45" data-simparam="breed_happiness" /><span class="tune-val" data-for-sim="breed_happiness">45</span></div>
+          <div class="tune-row"><span class="tune-label">Food Rate</span><input type="range" min="0.05" max="1" step="0.05" value="0.25" data-simparam="food_spawn_rate" /><span class="tune-val" data-for-sim="food_spawn_rate">0.25</span></div>
+          <div class="tune-row"><span class="tune-label">Max Food</span><input type="range" min="10" max="200" step="10" value="50" data-simparam="max_food" /><span class="tune-val" data-for-sim="max_food">50</span></div>
+          <div class="tune-row"><span class="tune-label">Predator Interval</span><input type="range" min="30" max="300" step="10" value="150" data-simparam="predator_interval" /><span class="tune-val" data-for-sim="predator_interval">150s</span></div>
+          <div class="tune-row"><span class="tune-label">Predator Dmg</span><input type="range" min="2" max="30" step="2" value="10" data-simparam="predator_damage" /><span class="tune-val" data-for-sim="predator_damage">10</span></div>
+          <div class="tune-row"><span class="tune-label">Metabolism</span><input type="range" min="0.005" max="0.05" step="0.001" value="0.012" data-simparam="metabolism" /><span class="tune-val" data-for-sim="metabolism">0.012</span></div>
+        </div>
+      </details>
+
+      <div id="creature-list"></div>
+
+      <div class="legend">
+        <div class="legend-row"><span class="dot roll"></span> Rolling</div>
+        <div class="legend-row"><span class="dot circle"></span> Tight circles</div>
+        <div class="legend-row"><span class="dot bounce"></span> Bounce gait</div>
+        <div class="legend-row"><span class="dot sneak"></span> Sneaking</div>
+        <div class="legend-row breed-row">Breed-ready when flashing</div>
+      </div>
+    </aside>
+
+    <!-- Center: Three.js canvas -->
+    <main id="canvas-container">
+      <div id="thought-overlay"></div>
+    </main>
+
+    <!-- Right panel: BEAR trace + stats + conversation log -->
+    <aside id="bear-panel">
+
+      <div class="panel-section" id="bear-trace-section">
+        <h3>BEAR Retrieval Trace</h3>
+        <p class="panel-hint">Click a creature card to pin its trace</p>
+        <div id="bear-trace">
+          <div class="trace-empty">No creature selected</div>
+        </div>
+      </div>
+
+      <!-- Per-creature behavior profile -->
+      <div class="panel-section" id="behavior-section" style="display:none">
+        <h3>Behavior Profile</h3>
+        <p class="panel-hint">BEAR retrieval strength per situation</p>
+        <div id="behavior-profile"></div>
+      </div>
+
+      <!-- Family tree -->
+      <div class="panel-section" id="family-section" style="display:none">
+        <h3>Family Tree</h3>
+        <div id="family-tree"></div>
+      </div>
+
+      <!-- Population behavior -->
+      <div class="panel-section">
+        <h3>Population Behavior <span class="bear-inline-badge">BEAR</span></h3>
+        <p class="panel-hint">Avg retrieval strength per situation</p>
+        <div id="pop-behavior-panel">
+          <div class="trace-empty">No behavior data yet</div>
+        </div>
+      </div>
+
+      <!-- Divergence panel -->
+      <div class="panel-section">
+        <h3>Gene Retrieval <span class="bear-inline-badge">BEAR</span></h3>
+        <p class="panel-hint">Which gene was retrieved for each creature's last decision</p>
+        <div id="divergence-panel">
+          <div class="trace-empty">Waiting for retrievals</div>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <h3>Conversation Log</h3>
+        <div id="conv-log"></div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
