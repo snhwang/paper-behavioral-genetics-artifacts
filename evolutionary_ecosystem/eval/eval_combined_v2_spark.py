@@ -11,7 +11,7 @@ Usage:
         examples/evolutionary_ecosystem/eval/eval_combined_v2_spark.py
 
     # Or from within a Spark session:
-    python -m examples.evolutionary_ecosystem.eval.eval_combined_v2_spark
+    python -m evolutionary_ecosystem.eval.eval_combined_v2_spark
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ from pathlib import Path
 _HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(_HERE.parent.parent.parent))
 
-from examples.evolutionary_ecosystem.eval.eval_combined_v2 import (
+from evolutionary_ecosystem.eval.eval_combined_v2 import (
     BASE_SEED,
     N_TRIALS,
     OUT_DIR,
@@ -34,7 +34,7 @@ from examples.evolutionary_ecosystem.eval.eval_combined_v2 import (
     compute_eval4,
     run_epoch_trial,
 )
-from examples.evolutionary_ecosystem.server.epochs import EPOCHS
+from evolutionary_ecosystem.server.epochs import EPOCHS
 
 
 def run_trial_task(args: tuple) -> tuple[dict, list[dict]]:

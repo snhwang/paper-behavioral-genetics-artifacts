@@ -374,7 +374,7 @@ async def _save_sim_log() -> None:
     """Save all collected sim data to log file."""
     if not world:
         return
-    from examples.evolutionary_ecosystem.eval.harness import gene_diversity_mean
+    from evolutionary_ecosystem.eval.harness import gene_diversity_mean
     creatures = list(world.creatures.values())
     log = {
         "metadata": {
@@ -416,7 +416,7 @@ async def _auto_save(w) -> None:
     """Periodic auto-save during live sim — survives crashes."""
     from pathlib import Path
     try:
-        from examples.evolutionary_ecosystem.eval.harness import gene_diversity_mean
+        from evolutionary_ecosystem.eval.harness import gene_diversity_mean
         creatures = list(w.creatures.values())
         log = {
             "tick":         w.tick_count,
@@ -971,8 +971,8 @@ async def _run_headless(args: argparse.Namespace) -> None:
     """Run the full sim headlessly for N ticks and write a results JSON."""
     import json, time as _time
     from pathlib import Path
-    from examples.evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
-    from examples.evolutionary_ecosystem.eval.harness import gene_diversity_mean
+    from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
+    from evolutionary_ecosystem.eval.harness import gene_diversity_mean
 
     rng_h = random.Random(args.seed)
     bear_cfg = Config(
@@ -1124,7 +1124,7 @@ async def _run_headless(args: argparse.Namespace) -> None:
 
     creatures = list(w.creatures.values())
     # Per-gene diversity for detailed analysis
-    from examples.evolutionary_ecosystem.eval.harness import compute_per_gene_diversity, compute_hausdorff_diversity
+    from evolutionary_ecosystem.eval.harness import compute_per_gene_diversity, compute_hausdorff_diversity
     per_gene = compute_per_gene_diversity(creatures) if creatures else {}
     hausdorff = compute_hausdorff_diversity(creatures) if len(creatures) >= 2 else {}
     hausdorff_mean = float(sum(hausdorff.values()) / len(hausdorff)) if hausdorff else 0.0
@@ -1165,7 +1165,7 @@ async def _run_headless(args: argparse.Namespace) -> None:
 async def _headless_populate(world, brain, n, rng, bear_cfg, embedder, bear_disabled, llm=None):
     """Populate world using LLM gene generation — same as live sim."""
     import random as _random
-    from examples.evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile, generate_npc_genes, generate_creature_name
+    from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile, generate_npc_genes, generate_creature_name
     print(f"Creating {n} creatures via LLM (same as live sim)...")
 
     async def _gen_and_make(i):

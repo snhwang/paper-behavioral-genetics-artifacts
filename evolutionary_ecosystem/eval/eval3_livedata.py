@@ -33,7 +33,7 @@ from bear import Config, Corpus, EmbeddingBackend
 from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed
 from bear.models import Dominance
 
-from examples.evolutionary_ecosystem.eval.harness import (
+from evolutionary_ecosystem.eval.harness import (
     GENE_BANK,
     SITUATION_NAMES,
     _NAMES,
@@ -46,7 +46,7 @@ from examples.evolutionary_ecosystem.eval.harness import (
     profile_to_vector,
     run_simulation,
 )
-from examples.evolutionary_ecosystem.server.gene_engine import (
+from evolutionary_ecosystem.server.gene_engine import (
     BehaviorProfile,
     GENE_CATEGORIES,
     SituationResult,

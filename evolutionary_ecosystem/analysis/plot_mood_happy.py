@@ -10,7 +10,7 @@ from scipy.ndimage import uniform_filter1d
 from scipy import stats
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 SIMS = [
     ("sim_log_mendelian_haploid.json",  "Mendelian haploid",   "#20808D"),

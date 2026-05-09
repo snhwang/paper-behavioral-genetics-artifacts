@@ -11,8 +11,8 @@ from scipy import stats
 from pathlib import Path
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.eval.harness import get_embedder
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+from evolutionary_ecosystem.eval.harness import get_embedder
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 FILES = [
     ("sim_log_mendelian_haploid.json",      "Mendelian haploid"),

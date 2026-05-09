@@ -9,7 +9,7 @@ from scipy import stats
 from pathlib import Path
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 OUT_DIR = Path(".")
 

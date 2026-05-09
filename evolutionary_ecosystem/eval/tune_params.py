@@ -39,9 +39,9 @@ params = {
 def run_trial(params, seed):
     """Run one trial, return stats dict."""
     # Must re-import to reset module state
-    from examples.evolutionary_ecosystem.server import sim as sim_mod
-    from examples.evolutionary_ecosystem.server import epochs as epochs_mod
-    from examples.evolutionary_ecosystem.eval.harness import (
+    from evolutionary_ecosystem.server import sim as sim_mod
+    from evolutionary_ecosystem.server import epochs as epochs_mod
+    from evolutionary_ecosystem.eval.harness import (
         make_world, run_simulation, PopulationTracker, GENE_BANK,
     )
 

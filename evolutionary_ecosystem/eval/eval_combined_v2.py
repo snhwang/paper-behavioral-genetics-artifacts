@@ -13,7 +13,7 @@ Improvements over original:
     and eval4_v2_results.json
 
 Usage:
-    python -m examples.evolutionary_ecosystem.eval.eval_combined_v2
+    python -m evolutionary_ecosystem.eval.eval_combined_v2
 """
 from __future__ import annotations
 import argparse
@@ -36,7 +36,7 @@ from bear import Config, Corpus, EmbeddingBackend
 from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed
 from bear.models import Dominance, GeneLocus, LocusRegistry
 
-from examples.evolutionary_ecosystem.eval.harness import (
+from evolutionary_ecosystem.eval.harness import (
     SITUATION_NAMES,
     cosine_similarity,
     get_embedder,
@@ -48,14 +48,14 @@ from examples.evolutionary_ecosystem.eval.harness import (
     PopulationTracker,
     GENE_CATEGORIES,
 )
-from examples.evolutionary_ecosystem.server.gene_engine import (
+from evolutionary_ecosystem.server.gene_engine import (
     BehaviorProfile,
     SituationResult,
     compute_behavior_profile,
     build_corpus,
 )
-from examples.evolutionary_ecosystem.server.epochs import EPOCHS
-from examples.evolutionary_ecosystem.server import sim as sim_mod
+from evolutionary_ecosystem.server.epochs import EPOCHS
+from evolutionary_ecosystem.server import sim as sim_mod
 
 OUT_DIR = Path(__file__).resolve().parent / "results"
 

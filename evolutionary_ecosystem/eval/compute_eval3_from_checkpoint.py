@@ -2,7 +2,7 @@
 """Compute eval 3 stats from an existing checkpoint file.
 
 Usage:
-    python -m examples.evolutionary_ecosystem.eval.compute_eval3_from_checkpoint \
+    python -m evolutionary_ecosystem.eval.compute_eval3_from_checkpoint \
         --checkpoint results/eval_combined_v2_checkpoint_famine.json \
         --output results/eval3_v2_results_famine.json
 """
@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
-from examples.evolutionary_ecosystem.eval.eval_combined_v2 import (
+from evolutionary_ecosystem.eval.eval_combined_v2 import (
     compute_eval3, _birth_from_dict
 )
 

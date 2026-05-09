@@ -20,7 +20,7 @@ Two parts:
     breeding doesn't destabilize the population. Same metrics as original.
 
 Usage:
-    python -m examples.evolutionary_ecosystem.eval.eval5b_v2 \
+    python -m evolutionary_ecosystem.eval.eval5b_v2 \
         --base-url http://192.168.1.175:11434/v1 \
         --model gemma4:e2b
 """
@@ -47,7 +47,7 @@ from bear.llm import LLM
 from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed
 from bear.models import Dominance, GeneLocus, LocusRegistry
 
-from examples.evolutionary_ecosystem.eval.harness import (
+from evolutionary_ecosystem.eval.harness import (
     GENE_BANK,
     SITUATION_NAMES,
     GENE_CATEGORIES,
@@ -64,7 +64,7 @@ from examples.evolutionary_ecosystem.eval.harness import (
     run_simulation,
     build_corpus,
 )
-from examples.evolutionary_ecosystem.server.gene_engine import (
+from evolutionary_ecosystem.server.gene_engine import (
     BehaviorProfile,
     SituationResult,
     BreedRequest,
@@ -379,8 +379,8 @@ def run_part_b_llm(seed: int, llm: LLM) -> dict:
     rng = random.Random(seed)
     world = make_world(n_creatures=N_CREATURES, rng=rng)
 
-    from examples.evolutionary_ecosystem.server.sim import tick
-    from examples.evolutionary_ecosystem.server.sim import WORLD_W, WORLD_H
+    from evolutionary_ecosystem.server.sim import tick
+    from evolutionary_ecosystem.server.sim import WORLD_W, WORLD_H
     import math
 
     tracker = PopulationTracker(history_length=N_TICKS_B // 100 + 100)
@@ -427,10 +427,10 @@ def run_part_b_llm(seed: int, llm: LLM) -> dict:
                 try:
                     result = asyncio.run(
                         breed_offspring(request, llm, get_embedder(), rng, BEAR_CONFIG))
-                    import examples.evolutionary_ecosystem.server.sim as sim_mod2
+                    import evolutionary_ecosystem.server.sim as sim_mod2
                     min_age = getattr(sim_mod2, 'MAX_AGE_MIN', 300.0)
                     max_age = getattr(sim_mod2, 'MAX_AGE_MAX', 500.0)
-                    from examples.evolutionary_ecosystem.server.sim import Creature
+                    from evolutionary_ecosystem.server.sim import Creature
                     child = Creature(
                         id=result.child_id, name=result.child_name,
                         x=result.spawn_x, y=result.spawn_y,

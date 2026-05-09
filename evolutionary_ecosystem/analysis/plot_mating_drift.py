@@ -13,9 +13,9 @@ import matplotlib.ticker as ticker
 from pathlib import Path
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.eval.harness import get_embedder
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
-import examples.evolutionary_ecosystem.eval.harness as harness
+from evolutionary_ecosystem.eval.harness import get_embedder
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+import evolutionary_ecosystem.eval.harness as harness
 
 # Archetype list is a module-level list of dicts
 ARCHETYPES = [x for x in dir(harness) if not x.startswith('_')]

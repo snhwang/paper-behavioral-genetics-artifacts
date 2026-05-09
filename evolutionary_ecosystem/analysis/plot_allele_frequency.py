@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.eval.harness import get_embedder, GENE_BANK
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+from evolutionary_ecosystem.eval.harness import get_embedder, GENE_BANK
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 ARCHETYPE_NAMES = ["Aggressive", "Timid", "Curious", "Calm",
                    "Energetic", "Nurturing", "Cunning", "Moody"]

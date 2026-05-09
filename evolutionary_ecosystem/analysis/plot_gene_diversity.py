@@ -9,8 +9,8 @@ from pathlib import Path
 from itertools import combinations
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.eval.harness import get_embedder
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+from evolutionary_ecosystem.eval.harness import get_embedder
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 GENE = "climate_survival"
 N_WINDOWS = 4

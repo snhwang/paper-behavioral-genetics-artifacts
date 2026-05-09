@@ -35,7 +35,7 @@ from bear.retriever import Embedder, Retriever
 from bear.models import Dominance, GeneLocus, LocusRegistry
 from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed, express
 
-from examples.evolutionary_ecosystem.server.gene_engine import (
+from evolutionary_ecosystem.server.gene_engine import (
     GENE_CATEGORIES,
     AppearanceParams,
     BehaviorProfile,
@@ -50,7 +50,7 @@ from examples.evolutionary_ecosystem.server.gene_engine import (
     extract_stats,
     _FALLBACK_GENES,
 )
-from examples.evolutionary_ecosystem.server.sim import (
+from evolutionary_ecosystem.server.sim import (
     Creature,
     FoodItem,
     Predator,
@@ -62,12 +62,12 @@ from examples.evolutionary_ecosystem.server.sim import (
     MAX_POPULATION,
     PREDATOR_SPAWN_INTERVAL,
 )
-from examples.evolutionary_ecosystem.server.epochs import (
+from evolutionary_ecosystem.server.epochs import (
     Epoch,
     EPOCHS,
     EPOCH_DURATION_TICKS,
 )
-from examples.evolutionary_ecosystem.server.stats import PopulationStats, PopulationTracker
+from evolutionary_ecosystem.server.stats import PopulationStats, PopulationTracker
 
 # ---------------------------------------------------------------------------
 # Predefined gene banks (diverse, hand-crafted for evaluation)
@@ -238,7 +238,7 @@ def make_creature(
     skills = extract_skills(genes, embedder)
     stats = extract_stats(genes, embedder)
     # Founder dominance scores: per-(creature, gene_category) Uniform(0,1).
-    from examples.evolutionary_ecosystem.server.gene_engine import random_founder_dominances
+    from evolutionary_ecosystem.server.gene_engine import random_founder_dominances
     dominances = random_founder_dominances(rng)
     corpus = build_corpus(name, genes, dominances=dominances)
     behavior = compute_behavior_profile(corpus, config, shared_embedder=embedder)
@@ -250,7 +250,7 @@ def make_creature(
     y = spawn_y if spawn_y is not None else rng.uniform(1.0, WORLD_H - 1.0)
 
     # Use patched lifespan values if available
-    from examples.evolutionary_ecosystem.server import sim as sim_mod
+    from evolutionary_ecosystem.server import sim as sim_mod
     min_age = getattr(sim_mod, 'MAX_AGE_MIN', 90.0)
     max_age_val = getattr(sim_mod, 'MAX_AGE_MAX', 150.0)
 
@@ -490,7 +490,7 @@ def patch_sim_for_eval():
     fast-path-only mode, we need more generous parameters to sustain
     populations across 20+ generations.
     """
-    from examples.evolutionary_ecosystem.server import sim as sim_mod
+    from evolutionary_ecosystem.server import sim as sim_mod
 
     # Use the same defaults as the interactive sim — they produce stable populations.
     # Only override what's needed for headless eval mode.
@@ -501,7 +501,7 @@ def patch_sim_for_eval():
     sim_mod.BREED_DISTANCE = 3.5           # wider breed range (no brain-driven approach behavior)
     sim_mod.PREDATOR_SPAWN_INTERVAL = 999999.0  # effectively disabled — predation adds noise, not signal
 
-    from examples.evolutionary_ecosystem.server import epochs as epochs_mod
+    from evolutionary_ecosystem.server import epochs as epochs_mod
     epochs_mod.WEATHER_DAMAGE = 0.05       # mild weather
     for ep in epochs_mod.EPOCHS:
         ep.weather_severity = min(ep.weather_severity, 0.25)
@@ -610,7 +610,7 @@ def run_simulation(
     # uniform 0.3 (neutral/random) so tick() has no behavioral guidance.
     bear_off = getattr(world, 'bear_disabled', False)
     if bear_off:
-        from examples.evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
+        from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
         for c in world.creatures.values():
             c.behavior_profile = NullBehaviorProfile()
 
@@ -649,7 +649,7 @@ def run_simulation(
 
                 # In BEAR-Off mode, replace child's profile with null
                 if bear_off:
-                    from examples.evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
+                    from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
                     child.behavior_profile = NullBehaviorProfile()
 
                 if on_birth:

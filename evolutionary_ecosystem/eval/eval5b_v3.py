@@ -14,7 +14,7 @@ Diversity measured at:
 Uses same seeds and tick count as eval_combined_v2 for comparability.
 
 Usage:
-    python -m examples.evolutionary_ecosystem.eval.eval5b_v3 \
+    python -m evolutionary_ecosystem.eval.eval5b_v3 \
         --base-url http://localhost:8355/v1 \
         --model gemma-4-e2b
 """
@@ -37,7 +37,7 @@ from bear import Config, EmbeddingBackend
 from bear.config import LLMBackend
 from bear.llm import LLM
 
-from examples.evolutionary_ecosystem.eval.harness import (
+from evolutionary_ecosystem.eval.harness import (
     GENE_CATEGORIES,
     SITUATION_NAMES,
     cosine_similarity,
@@ -50,7 +50,7 @@ from examples.evolutionary_ecosystem.eval.harness import (
     profile_to_vector,
     run_simulation,
 )
-from examples.evolutionary_ecosystem.eval.eval_combined_v2 import (
+from evolutionary_ecosystem.eval.eval_combined_v2 import (
     batch_build_retrievers,
     make_locus_registry,
     make_breed_fn,
@@ -165,7 +165,7 @@ def run_locus_trial(seed: int) -> dict:
 
 def run_locus_diploid_trial(seed: int) -> dict:
     """Run locus diploid trial — fast, no LLM."""
-    from examples.evolutionary_ecosystem.eval.eval_combined_v2 import make_breed_fn
+    from evolutionary_ecosystem.eval.eval_combined_v2 import make_breed_fn
     from bear.models import Dominance, GeneLocus, LocusRegistry
 
     rng = random.Random(seed)
@@ -183,8 +183,8 @@ def run_locus_diploid_trial(seed: int) -> dict:
     name_to_c = {c.name: c for c in world.creatures.values()}
 
     from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed
-    from examples.evolutionary_ecosystem.server.gene_engine import build_corpus
-    from examples.evolutionary_ecosystem.eval.eval_combined_v2 import midparent_profile, BirthRecord, BEAR_CONFIG, SNAPSHOT_INT
+    from evolutionary_ecosystem.server.gene_engine import build_corpus
+    from evolutionary_ecosystem.eval.eval_combined_v2 import midparent_profile, BirthRecord, BEAR_CONFIG, SNAPSHOT_INT
 
     def breed_fn(pa, pb, child_id, child_name, rng_arg):
         config = BreedingConfig(
@@ -200,7 +200,7 @@ def run_locus_diploid_trial(seed: int) -> dict:
             pb.corpus or build_corpus(pb.name, pb.genes),
             child_name, pa.name, pb.name, config=config,
         )
-        from examples.evolutionary_ecosystem.eval.harness import make_creature
+        from evolutionary_ecosystem.eval.harness import make_creature
         bred_genes = {inst.metadata.get("gene_category"): inst.content
                       for inst in result.child.instructions
                       if inst.metadata.get("gene_category")}
@@ -235,7 +235,7 @@ def run_locus_diploid_trial(seed: int) -> dict:
 def run_blend_trial(seed: int, ploidy: str, llm: LLM) -> dict:
     """Run one blend trial using app.py headless via subprocess."""
     import asyncio
-    from examples.evolutionary_ecosystem.server.gene_engine import (
+    from evolutionary_ecosystem.server.gene_engine import (
         breed_offspring, BreedRequest, build_corpus
     )
 
@@ -273,7 +273,7 @@ def run_blend_trial(seed: int, ploidy: str, llm: LLM) -> dict:
             result = asyncio.run(
                 breed_offspring(request, llm, embedder,
                                 rng_arg, BEAR_CONFIG))
-            from examples.evolutionary_ecosystem.eval.harness import make_creature
+            from evolutionary_ecosystem.eval.harness import make_creature
             child = make_creature(
                 child_id, result.genes, child_name, rng_arg,
                 generation=result.generation,
@@ -287,7 +287,7 @@ def run_blend_trial(seed: int, ploidy: str, llm: LLM) -> dict:
         except Exception as e:
             print(f"    breed failed: {e}")
             # Fall back to locus
-            from examples.evolutionary_ecosystem.eval.eval_combined_v2 import make_breed_fn
+            from evolutionary_ecosystem.eval.eval_combined_v2 import make_breed_fn
             locus_fn = make_breed_fn(make_locus_registry(), [], name_to_c)
             return locus_fn(pa, pb, child_id, child_name, rng_arg)
 

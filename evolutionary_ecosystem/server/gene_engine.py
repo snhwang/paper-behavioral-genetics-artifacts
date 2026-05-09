@@ -949,7 +949,7 @@ def _get_gene_bank() -> list[dict[str, str]]:
     global _GENE_BANK
     if not _GENE_BANK:
         try:
-            from examples.evolutionary_ecosystem.eval.harness import GENE_BANK
+            from evolutionary_ecosystem.eval.harness import GENE_BANK
             _GENE_BANK = list(GENE_BANK)
             logger.info("Gene bank loaded: %d archetypes", len(_GENE_BANK))
         except Exception as e:

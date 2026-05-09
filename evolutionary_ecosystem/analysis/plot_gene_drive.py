@@ -10,8 +10,8 @@ from pathlib import Path
 from scipy.ndimage import uniform_filter1d
 
 sys.path.insert(0, str(Path(".")))
-from examples.evolutionary_ecosystem.eval.harness import get_embedder
-from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
+from evolutionary_ecosystem.eval.harness import get_embedder
+from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 # ---------------------------------------------------------------------------
 # Situation queries — one representative per gene category
