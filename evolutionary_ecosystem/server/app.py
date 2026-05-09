@@ -21,11 +21,22 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 
 _HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(_HERE.parent.parent.parent))
+# Locate the repo root by walking up looking for a parent that contains
+# the package we need to import. Two layouts are supported:
+#   - bear-style: <root>/examples/evolutionary_ecosystem/server/app.py
+#   - artifacts-style: <root>/evolutionary_ecosystem/server/app.py
+_ROOT = None
+for _candidate in (_HERE.parent.parent, _HERE.parent.parent.parent):
+    if (_candidate / "evolutionary_ecosystem").is_dir() or (_candidate / "examples").is_dir():
+        _ROOT = _candidate
+        break
+if _ROOT is None:
+    _ROOT = _HERE.parent.parent.parent
+sys.path.insert(0, str(_ROOT))
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(_HERE.parent.parent.parent / ".env")
+    load_dotenv(_ROOT / ".env")
 except ImportError:
     pass
 
