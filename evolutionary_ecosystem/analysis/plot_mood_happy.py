@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Plot [!mood(happy)] tag frequency over births for Mendelian and Diploid."""
 
-import json
 import re
 import sys
 import numpy as np
@@ -9,6 +8,9 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.ndimage import uniform_filter1d
 from scipy import stats
+
+sys.path.insert(0, str(Path(".")))
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 SIMS = [
     ("sim_log_mendelian_haploid.json",  "Mendelian haploid",   "#20808D"),
@@ -28,9 +30,7 @@ def main():
     fig, ax = plt.subplots(figsize=(8, 4.5))
 
     for fname, label, color in SIMS:
-        path = Path("/home/user/workspace/bear_repo") / fname
-        with open(path) as f:
-            data = json.load(f)
+        data = load_sim_log(fname)
         blog = [e for e in data.get("birth_log", [])
                 if e.get("child_genes", {}).get("mating")]
         n = len(blog)

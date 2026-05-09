@@ -2,15 +2,15 @@
 """Plot pairwise cosine distance distributions for climate_survival gene
 across 4 time windows for Mendelian haploid and Diploid codominant sims."""
 
-import json
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 from itertools import combinations
 
-sys.path.insert(0, str(Path("/home/user/workspace/bear_repo")))
+sys.path.insert(0, str(Path(".")))
 from examples.evolutionary_ecosystem.eval.harness import get_embedder
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 GENE = "climate_survival"
 N_WINDOWS = 4
@@ -40,9 +40,7 @@ def main():
     fig, axes = plt.subplots(2, N_WINDOWS, figsize=(14, 7), sharey="row")
 
     for row, (fname, label, color) in enumerate(sims):
-        path = Path("/home/user/workspace/bear_repo") / fname
-        with open(path) as f:
-            data = json.load(f)
+        data = load_sim_log(fname)
         blog = [e for e in data.get("birth_log", [])
                 if e.get("child_genes", {}).get(GENE)]
         n = len(blog)

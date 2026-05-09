@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Generate figures for action log analysis results."""
 
-import json
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from scipy import stats
 from pathlib import Path
+
+sys.path.insert(0, str(Path(".")))
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 OUT_DIR = Path(".")
 
@@ -21,10 +24,8 @@ def prop_ci95(k, n):
     return p, 1.96 * np.sqrt(p*(1-p)/n)
 
 print("Loading data...")
-with open("sim_log_mendelian_haploid_action.json") as f:
-    hap = json.load(f)
-with open("sim_log_diploid_codominant_action.json") as f:
-    dip = json.load(f)
+hap = load_sim_log("sim_log_mendelian_haploid_action.json")
+dip = load_sim_log("sim_log_diploid_codominant_action.json")
 
 dlog_h = hap.get("death_log", [])
 dlog_d = dip.get("death_log", [])

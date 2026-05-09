@@ -3,7 +3,6 @@
 For each birth, extract which action tags are present in the child's mating gene
 and plot their frequency over time."""
 
-import json
 import re
 import sys
 import numpy as np
@@ -11,7 +10,8 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.ndimage import uniform_filter1d
 
-sys.path.insert(0, str(Path("/home/user/workspace/bear_repo")))
+sys.path.insert(0, str(Path(".")))
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 SIMS = [
     ("sim_log_mendelian_haploid.json",       "Mendelian haploid",    "#20808D"),
@@ -52,12 +52,11 @@ def main():
     fig, axes = plt.subplots(1, len(SIMS), figsize=(16, 4.5), sharey=True)
 
     for ax, (fname, label, _) in zip(axes, SIMS):
-        path = Path("/home/user/workspace/bear_repo") / fname
-        if not path.exists():
+        try:
+            data = load_sim_log(fname)
+        except FileNotFoundError:
             ax.set_visible(False)
             continue
-        with open(path) as f:
-            data = json.load(f)
         blog = [e for e in data.get("birth_log", [])
                 if e.get("child_genes", {}).get("mating")]
         n = len(blog)
@@ -99,12 +98,11 @@ def main():
     count_labels = ["0 tags", "1 tag", "2 tags", "3 tags", "4 tags"]
 
     for ax, (fname, label, _) in zip(axes2, SIMS):
-        path = Path("/home/user/workspace/bear_repo") / fname
-        if not path.exists():
+        try:
+            data = load_sim_log(fname)
+        except FileNotFoundError:
             ax.set_visible(False)
             continue
-        with open(path) as f:
-            data = json.load(f)
         blog = [e for e in data.get("birth_log", [])
                 if e.get("child_genes", {}).get("mating")]
         n = len(blog)

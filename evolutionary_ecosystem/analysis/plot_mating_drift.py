@@ -6,15 +6,15 @@ the mean of the founding population's mating genes (generation 0),
 showing directional drift away from the baseline.
 """
 
-import json
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from pathlib import Path
 
-sys.path.insert(0, str(Path("/home/user/workspace/bear_repo")))
+sys.path.insert(0, str(Path(".")))
 from examples.evolutionary_ecosystem.eval.harness import get_embedder
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 import examples.evolutionary_ecosystem.eval.harness as harness
 
 # Archetype list is a module-level list of dicts
@@ -25,7 +25,7 @@ import inspect
 src = inspect.getsource(harness)
 # Just grab mating texts from birth log generation 0 entries as the baseline
 
-LOG_FILE = "/home/user/workspace/bear_repo/sim_log_llm_synthesis_abundance.json"
+LOG_FILE = "sim_log_llm_synthesis_abundance.json"
 OUT_FILE = "mating_drift.png"
 
 def cosine(a, b):
@@ -33,8 +33,7 @@ def cosine(a, b):
     return float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b) + 1e-10))
 
 def main():
-    with open(LOG_FILE) as f:
-        data = json.load(f)
+    data = load_sim_log(LOG_FILE)
 
     blog = data.get("birth_log", [])
     print(f"Loaded {len(blog)} births")

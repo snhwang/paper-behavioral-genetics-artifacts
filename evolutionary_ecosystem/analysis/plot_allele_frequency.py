@@ -2,7 +2,6 @@
 """Track allele frequency over time by assigning each creature's gene
 to its nearest founding archetype, then plotting frequency over births."""
 
-import json
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(".")))
 from examples.evolutionary_ecosystem.eval.harness import get_embedder, GENE_BANK
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 ARCHETYPE_NAMES = ["Aggressive", "Timid", "Curious", "Calm",
                    "Energetic", "Nurturing", "Cunning", "Moody"]
@@ -44,9 +44,7 @@ def main():
         fig, axes = plt.subplots(1, len(SIMS), figsize=(14, 5), sharey=True)
 
         for ax, (fname, label) in zip(axes, SIMS):
-            path = Path(".") / fname
-            with open(path) as f:
-                data = json.load(f)
+            data = load_sim_log(fname)
             blog = [e for e in data.get("birth_log", [])
                     if e.get("child_genes", {}).get(gene_cat)]
             n = len(blog)

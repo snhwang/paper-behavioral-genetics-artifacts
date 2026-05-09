@@ -5,7 +5,6 @@ Outputs PGC d, GE d, p-values, and N for each breeding mode.
 Run from repo root: python examples/evolutionary_ecosystem/analysis/compute_inheritance_stats.py
 """
 
-import json
 import sys
 import numpy as np
 from scipy import stats
@@ -13,6 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(".")))
 from examples.evolutionary_ecosystem.eval.harness import get_embedder
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 FILES = [
     ("sim_log_mendelian_haploid.json",      "Mendelian haploid"),
@@ -33,13 +33,11 @@ def main():
     print("-" * 90)
 
     for fname, label in FILES:
-        path = Path(fname)
-        if not path.exists():
-            print(f"{label:<25} FILE NOT FOUND: {fname}")
+        try:
+            data = load_sim_log(fname)
+        except FileNotFoundError:
+            print(f"{label:<25} FILE NOT FOUND: {fname} (and no chunks)")
             continue
-
-        with open(path) as f:
-            data = json.load(f)
 
         blog = [e for e in data.get("birth_log", [])
                 if e.get("pa_genes") and e.get("pb_genes") and e.get("child_genes")]

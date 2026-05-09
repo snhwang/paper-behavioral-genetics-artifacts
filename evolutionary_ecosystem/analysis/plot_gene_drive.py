@@ -2,7 +2,6 @@
 """Plot BEAR retrieval strength (bear_strength) for all behavioral dimensions
 over births/generations for Mendelian haploid, Diploid codominant, and LLM blend sims."""
 
-import json
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,6 +11,7 @@ from scipy.ndimage import uniform_filter1d
 
 sys.path.insert(0, str(Path(".")))
 from examples.evolutionary_ecosystem.eval.harness import get_embedder
+from examples.evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log
 
 # ---------------------------------------------------------------------------
 # Situation queries — one representative per gene category
@@ -80,12 +80,11 @@ def main():
     # Load all sim data
     sim_data = []
     for fname, label, color in SIMS:
-        path = Path(".") / fname
-        if not path.exists():
+        try:
+            data = load_sim_log(fname)
+        except FileNotFoundError:
             print(f"  Missing: {fname}")
             continue
-        with open(path) as f:
-            data = json.load(f)
         blog = [e for e in data.get("birth_log", []) if e.get("child_genes")]
         print(f"  {label}: {len(blog)} births")
         sim_data.append((blog, label, color))
