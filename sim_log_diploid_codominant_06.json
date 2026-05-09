@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "seed": 42,
+    "epoch": null,
+    "n_ticks": 100000,
+    "n_creatures": 30,
+    "recombination": "locus",
+    "chunk_index": 6,
+    "chunk_size": 20000
+  },
+  "final": {
+    "population": 48,
+    "total_births": 1258,
+    "total_deaths": 1240,
+    "max_generation": 96,
+    "gene_diversity": 0.6296,
+    "avg_behavior": {
+      "food_seeking": 0.1656,
+      "combat": 0.4224,
+      "survival": 0.4481,
+      "stealth": 0.4514,
+      "breeding": 0.4046
+    }
+  },
+  "birth_log": [],
+  "death_log": [],
+  "action_log": [],
+  "snapshots": [],
+  "epoch_snapshots": [
+    {
+      "tick": 3000,
+      "epoch": "ice_age",
+      "population": 50,
+      "births": 34,
+      "avg_behavior": {
+        "food_seeking": 0.1584,
+        "combat": 0.4592,
+        "survival": 0.4382,
+        "stealth": 0.3633,
+        "breeding": 0.4069
+      }
+    },
+    {
+      "tick": 6000,
+      "epoch": "predator_bloom",
+      "population": 50,
+      "births": 79,
+      "avg_behavior": {
+        "food_seeking": 0.1889,
+        "combat": 0.495,
+        "survival": 0.4537,
+        "stealth": 0.3763,
+        "breeding": 0.4262
+      }
+    },
+    {
+      "tick": 9000,
+      "epoch": "expansion",
+      "population": 50,
+      "births": 123,
+      "avg_behavior": {
+        "food_seeking": 0.1735,
+        "combat": 0.4914,
+        "survival": 0.4881,
+        "stealth": 0.3737,
+        "breeding": 0.4346
+      }
+    },
+    {
+      "tick": 12000,
+      "epoch": "famine",
+      "population": 50,
+      "births": 158,
+      "avg_behavior": {
+        "food_seeking": 0.1854,
+        "combat": 0.4851,
+        "survival": 0.5183,
+        "stealth": 0.3873,
+        "breeding": 0.4628
+      }
+    },
+    {
+      "tick": 15000,
+      "epoch": "abundance",
+      "population": 47,
+      "births": 196,
+      "avg_behavior": {
+        "food_seeking": 0.187,
+        "combat": 0.4692,
+        "survival": 0.5299,
+        "stealth": 0.412,
+        "breeding": 0.4593
+      }
+    },
+    {
+      "tick": 18000,
+      "epoch": "ice_age",
+      "population": 48,
+      "births": 230,
+      "avg_behavior": {
+        "food_seeking": 0.1787,
+        "combat": 0.4781,
+        "survival": 0.5071,
+        "stealth": 0.4141,
+        "breeding": 0.4469
+      }
+    },
+    {
+      "tick": 21000,
+      "epoch": "predator_bloom",
+      "population": 50,
+      "births": 270,
+      "avg_behavior": {
+        "food_seeking": 0.1802,
+        "combat": 0.4837,
+        "survival": 0.5404,
+        "stealth": 0.4136,
+        "breeding": 0.4361
+      }
+    },
+    {
+      "tick": 24000,
+      "epoch": "expansion",
+      "population": 50,
+      "births": 306,
+      "avg_behavior": {
+        "food_seeking": 0.1889,
+        "combat": 0.5013,
+        "survival": 0.4945,
+        "stealth": 0.3986,
+        "breeding": 0.4344
+      }
+    },
+    {
+      "tick": 27000,
+      "epoch": "famine",
+      "population": 46,
+      "births": 342,
+      "avg_behavior": {
+        "food_seeking": 0.2061,
+        "combat": 0.4971,
+        "survival": 0.4856,
+        "stealth": 0.3976,
+        "breeding": 0.4283
+      }
+    },
+    {
+      "tick": 30000,
+      "epoch": "abundance",
+      "population": 48,
+      "births": 382,
+      "avg_behavior": {
+        "food_seeking": 0.1711,
+        "combat": 0.5005,
+        "survival": 0.519,
+        "stealth": 0.3923,
+        "breeding": 0.4208
+      }
+    },
+    {
+      "tick": 33000,
+      "epoch": "ice_age",
+      "population": 49,
+      "births": 420,
+      "avg_behavior": {
+        "food_seeking": 0.1979,
+        "combat": 0.4964,
+        "survival": 0.5309,
+        "stealth": 0.4089,
+        "breeding": 0.4221
+      }
+    },
+    {
+      "tick": 36000,
+      "epoch": "predator_bloom",
+      "population": 50,
+      "births": 457,
+      "avg_behavior": {
+        "food_seeking": 0.1925,
+        "combat": 0.488,
+        "survival": 0.5308,
+        "stealth": 0.3984,
+        "breeding": 0.4232
+      }
+    },
+    {
+      "tick": 39000,
+      "epoch": "expansion",
+      "population": 49,
+      "births": 491,
+      "avg_behavior": {
+        "food_seeking": 0.1831,
+        "combat": 0.4644,
+        "survival": 0.5428,
+        "stealth": 0.3856,
+        "breeding": 0.4141
+      }
+    },
+    {
+      "tick": 42000,
+      "epoch": "famine",
+      "population": 50,
+      "births": 533,
+      "avg_behavior": {
+        "food_seeking": 0.1715,
+        "combat": 0.4772,
+        "survival": 0.5229,
+        "stealth": 0.4148,
+        "breeding": 0.4343
+      }
+    },
+    {
+      "tick": 45000,
+      "epoch": "abundance",
+      "population": 50,
+      "births": 571,
+      "avg_behavior": {
+        "food_seeking": 0.1313,
+        "combat": 0.4707,
+        "survival": 0.521,
+        "stealth": 0.4256,
+        "breeding": 0.4181
+      }
+    },
+    {
+      "tick": 48000,
+      "epoch": "ice_age",
+      "population": 47,
+      "births": 604,
+      "avg_behavior": {
+        "food_seeking": 0.1393,
+        "combat": 0.4526,
+        "survival": 0.523,
+        "stealth": 0.4414,
+        "breeding": 0.4256
+      }
+    },
+    {
+      "tick": 51000,
+      "epoch": "predator_bloom",
+      "population": 50,
+      "births": 643,
+      "avg_behavior": {
+        "food_seeking": 0.1293,
+        "combat": 0.4268,
+        "survival": 0.5195,
+        "stealth": 0.4517,
+        "breeding": 0.445
+      }
+    },
+    {
+      "tick": 54000,
+      "epoch": "expansion",
+      "population": 49,
+      "births": 684,
+      "avg_behavior": {
+        "food_seeking": 0.1241,
+        "combat": 0.4242,
+        "survival": 0.494,
+        "stealth": 0.4349,
+        "breeding": 0.4431
+      }
+    },
+    {
+      "tick": 57000,
+      "epoch": "famine",
+      "population": 49,
+      "births": 720,
+      "avg_behavior": {
+        "food_seeking": 0.1498,
+        "combat": 0.4202,
+        "survival": 0.4858,
+        "stealth": 0.4349,
+        "breeding": 0.459
+      }
+    },
+    {
+      "tick": 60000,
+      "epoch": "abundance",
+      "population": 48,
+      "births": 753,
+      "avg_behavior": {
+        "food_seeking": 0.1549,
+        "combat": 0.4568,
+        "survival": 0.4915,
+        "stealth": 0.4366,
+        "breeding": 0.4362
+      }
+    },
+    {
+      "tick": 63000,
+      "epoch": "ice_age",
+      "population": 50,
+      "births": 796,
+      "avg_behavior": {
+        "food_seeking": 0.1656,
+        "combat": 0.4648,
+        "survival": 0.4826,
+        "stealth": 0.4173,
+        "breeding": 0.4388
+      }
+    },
+    {
+      "tick": 66000,
+      "epoch": "predator_bloom",
+      "population": 50,
+      "births": 828,
+      "avg_behavior": {
+        "food_seeking": 0.1702,
+        "combat": 0.4634,
+        "survival": 0.4507,
+        "stealth": 0.4176,
+        "breeding": 0.4168
+      }
+    },
+    {
+      "tick": 69000,
+      "epoch": "expansion",
+      "population": 47,
+      "births": 864,
+      "avg_behavior": {
+        "food_seeking": 0.1553,
+        "combat": 0.4713,
+        "survival": 0.4328,
+        "stealth": 0.4082,
+        "breeding": 0.4004
+      }
+    },
+    {
+      "tick": 72000,
+      "epoch": "famine",
+      "population": 49,
+      "births": 903,
+      "avg_behavior": {
+        "food_seeking": 0.1498,
+        "combat": 0.4597,
+        "survival": 0.4443,
+        "stealth": 0.4206,
+        "breeding": 0.4152
+      }
+    },
+    {
+      "tick": 75000,
+      "epoch": "abundance",
+      "population": 49,
+      "births": 945,
+      "avg_behavior": {
+        "food_seeking": 0.1541,
+        "combat": 0.4428,
+        "survival": 0.4537,
+        "stealth": 0.4539,
+        "breeding": 0.4007
+      }
+    },
+    {
+      "tick": 78000,
+      "epoch": "ice_age",
+      "population": 50,
+      "births": 976,
+      "avg_behavior": {
+        "food_seeking": 0.1383,
+        "combat": 0.4422,
+        "survival": 0.4939,
+        "stealth": 0.4618,
+        "breeding": 0.4017
+      }
+    },
+    {
+      "tick": 81000,
+      "epoch": "predator_bloom",
+      "population": 50,
+      "births": 1017,
+      "avg_behavior": {
+        "food_seeking": 0.1602,
+        "combat": 0.4274,
+        "survival": 0.4657,
+        "stealth": 0.4412,
+        "breeding": 0.4272
+      }
+    },
+    {
+      "tick": 84000,
+      "epoch": "expansion",
+      "population": 46,
+      "births": 1055,
+      "avg_behavior": {
+        "food_seeking": 0.1582,
+        "combat": 0.3808,
+        "survival": 0.429,
+        "stealth": 0.4437,
+        "breeding": 0.4315
+      }
+    },
+    {
+      "tick": 87000,
+      "epoch": "famine",
+      "population": 48,
+      "births": 1085,
+      "avg_behavior": {
+        "food_seeking": 0.1698,
+        "combat": 0.3826,
+        "survival": 0.4056,
+        "stealth": 0.4415,
+        "breeding": 0.4303
+      }
+    },
+    {
+      "tick": 90000,
+      "epoch": "abundance",
+      "population": 50,
+      "births": 1131,
+      "avg_behavior": {
+        "food_seeking": 0.1434,
+        "combat": 0.4128,
+        "survival": 0.4256,
+        "stealth": 0.4434,
+        "breeding": 0.4291
+      }
+    },
+    {
+      "tick": 93000,
+      "epoch": "ice_age",
+      "population": 50,
+      "births": 1171,
+      "avg_behavior": {
+        "food_seeking": 0.1731,
+        "combat": 0.4219,
+        "survival": 0.4362,
+        "stealth": 0.4542,
+        "breeding": 0.4061
+      }
+    },
+    {
+      "tick": 96000,
+      "epoch": "predator_bloom",
+      "population": 49,
+      "births": 1204,
+      "avg_behavior": {
+        "food_seeking": 0.1661,
+        "combat": 0.4132,
+        "survival": 0.4438,
+        "stealth": 0.4578,
+        "breeding": 0.4074
+      }
+    },
+    {
+      "tick": 99000,
+      "epoch": "expansion",
+      "population": 49,
+      "births": 1242,
+      "avg_behavior": {
+        "food_seeking": 0.1615,
+        "combat": 0.4041,
+        "survival": 0.446,
+        "stealth": 0.4619,
+        "breeding": 0.4128
+      }
+    }
+  ]
+}

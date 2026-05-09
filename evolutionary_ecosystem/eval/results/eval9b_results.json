@@ -1,0 +1,119 @@
+{
+  "parameters": {
+    "n_ticks": 10000,
+    "n_creatures": 12,
+    "n_trials": 5,
+    "seeds": [
+      42,
+      142,
+      242,
+      342,
+      442
+    ],
+    "llm_model": "gemma-4-e2b",
+    "llm_base_url": "http://localhost:8355/v1"
+  },
+  "summary": {
+    "haploid": {
+      "final_population": {
+        "mean": 47.2,
+        "std": 3.5637,
+        "source": "eval2b_bear_on"
+      },
+      "total_births": {
+        "mean": 128.0,
+        "std": 3.0822,
+        "source": "eval2b_bear_on"
+      },
+      "max_generation": {
+        "mean": 7.6,
+        "std": 0.5477,
+        "source": "eval2b_bear_on"
+      },
+      "gene_diversity": {
+        "mean": 0.348,
+        "std": 0.0104,
+        "source": "eval2b_bear_on"
+      },
+      "hausdorff": {
+        "mean": 0.5871,
+        "std": 0.0105,
+        "source": "eval2b_bear_on"
+      }
+    },
+    "diploid_dominant": {
+      "final_population": {
+        "mean": NaN,
+        "std": NaN
+      },
+      "total_births": {
+        "mean": NaN,
+        "std": NaN
+      },
+      "max_generation": {
+        "mean": NaN,
+        "std": NaN
+      },
+      "gene_diversity": {
+        "mean": NaN,
+        "std": NaN
+      },
+      "hausdorff": {
+        "mean": NaN,
+        "std": NaN
+      }
+    }
+  },
+  "comparisons": {
+    "haploid_vs_diploid_dominant": {
+      "final_population": {
+        "a_mean": 47.2,
+        "a_std": 3.5637,
+        "b_mean": NaN,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": NaN,
+        "significant_005": false
+      },
+      "total_births": {
+        "a_mean": 128.0,
+        "a_std": 3.0822,
+        "b_mean": NaN,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": NaN,
+        "significant_005": false
+      },
+      "max_generation": {
+        "a_mean": 7.6,
+        "a_std": 0.5477,
+        "b_mean": NaN,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": NaN,
+        "significant_005": false
+      },
+      "gene_diversity": {
+        "a_mean": 0.348,
+        "a_std": 0.0104,
+        "b_mean": NaN,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": NaN,
+        "significant_005": false
+      },
+      "hausdorff": {
+        "a_mean": 0.5871,
+        "a_std": 0.0105,
+        "b_mean": NaN,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": NaN,
+        "significant_005": false
+      }
+    }
+  },
+  "trials": {
+    "diploid_dominant": []
+  }
+}
