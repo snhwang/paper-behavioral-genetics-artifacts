@@ -10,3 +10,9 @@ matplotlib
 python-dotenv
 openai
 PyYAML
+# Live evolutionary_ecosystem sim (run.py / server/app.py / server/brain.py).
+# The headless eval scripts don't need these; they're for eval9b and any
+# direct invocations of run.py.
+fastapi
+uvicorn
+websockets

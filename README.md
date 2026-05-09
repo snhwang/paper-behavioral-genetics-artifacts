@@ -39,13 +39,17 @@ evolutionary_ecosystem/
 results/                    # 63 paper-canonical result files
 SIM_LOGS.md                 # Zenodo pointer for 13 simulation logs (~266 MB)
 run_evals.sh                # runner for §11.10–§11.19
-requirements.txt            # bear@v0.1.5 + scipy/numpy/python-dotenv/openai/PyYAML
+requirements.txt            # bear@v0.1.5 + numerics + FastAPI for live-sim runs
 ```
 
-The live-demo webserver pieces (`server/app.py`, `server/brain.py`) and their
-FastAPI dependencies are **not** included here — they live in the full
-`bear/examples/evolutionary_ecosystem/` directory. This artifacts repo contains
-only what the 14 eval scripts need.
+The artifacts repo is **self-contained**: `run.py`, `server/app.py`, and
+`server/brain.py` are vendored from `bear/examples/evolutionary_ecosystem/`
+(at the same v0.1.5 tag pinned in `requirements.txt`) so the live-sim
+evals (e.g. eval9b) and direct invocations of `run.py` work without
+needing a separate bear checkout. The FastAPI / uvicorn / websockets
+deps required by the live sim are listed in `requirements.txt`. If you
+patch bear and want the artifacts to follow, re-copy the three files
+from your local bear checkout and bump the pin.
 
 ## Reproduce
 
