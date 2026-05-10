@@ -1315,6 +1315,14 @@ async def breed_offspring(
                 scope_to_child=False,
                 seed=rng.randint(0, 2**31),
             )
+        # Pass child_name as custom_persona to neutralise bear's recursive
+        # default persona template, which embeds both parents' full persona
+        # content into the child and grows the persona instruction's content
+        # exponentially across generations (~2^N). The four personality-
+        # adjacent gene loci (personality, social_style, reaction_pattern,
+        # movement_style) already segregate Mendelian-style under the
+        # configured ploidy, so polygenic personality blending is preserved
+        # without the recursive PERSONA growth.
         breed_result = breed(
             request.parent_a_corpus,
             request.parent_b_corpus,
@@ -1322,6 +1330,7 @@ async def breed_offspring(
             request.parent_a_name,
             request.parent_b_name,
             config=config,
+            custom_persona=request.child_name,
         )
 
         # Trust bear's bred corpus and mutate it per (locus, allele).
