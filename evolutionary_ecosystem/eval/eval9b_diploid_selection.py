@@ -77,7 +77,7 @@ N_TRIALS  = 5
 N_TICKS   = 10_000
 BASE_SEED = 42
 
-CONDITIONS = ["diploid_dominant"]
+CONDITIONS = ["diploid_dominant", "diploid_codominant"]
 LABELS     = {"diploid_dominant": "Diploid Dom.",
               "diploid_codominant": "Diploid Codom."}
 EVAL2B_RESULTS = Path(__file__).resolve().parent / "results" / "eval2b_results.json"
@@ -254,21 +254,23 @@ def main():
             row += f" {summary[cond][m]['mean']:>12.3f}"
         print(row)
 
-    print("\n=== HAPLOID vs DIPLOID DOMINANT ===")
-    print(f"{'Metric':<22} {'Haploid':>10} {'Dip.Dom.':>10} {'p':>8} {'d':>6} {'sig':>4}")
-    print("-" * 64)
-    comp = comparisons["haploid_vs_diploid_dominant"]
-    for m, v in comp.items():
-        sig = "*" if v["significant_005"] else ""
-        print(f"{m:<22} {v['a_mean']:>10.3f} {v['b_mean']:>10.3f} "
-              f"{v['p_value']:>8.4f} {v['cohens_d']:>6.3f} {sig:>4}")
-
-    print("\n=== HAPLOID vs DIPLOID CODOMINANT ===")
-    comp2 = comparisons["haploid_vs_diploid_codominant"]
-    for m, v in comp2.items():
-        sig = "*" if v["significant_005"] else ""
-        print(f"{m:<22} {v['a_mean']:>10.3f} {v['b_mean']:>10.3f} "
-              f"{v['p_value']:>8.4f} {v['cohens_d']:>6.3f} {sig:>4}")
+    # Print whichever ploidy comparisons were actually computed.
+    # CONDITIONS may include only diploid_dominant (default), only
+    # diploid_codominant, or both -- skip headers for ones not run.
+    comparison_labels = {
+        "haploid_vs_diploid_dominant":   ("HAPLOID vs DIPLOID DOMINANT",   "Dip.Dom."),
+        "haploid_vs_diploid_codominant": ("HAPLOID vs DIPLOID CODOMINANT", "Dip.Codom."),
+    }
+    for key, (header, b_label) in comparison_labels.items():
+        if key not in comparisons:
+            continue
+        print(f"\n=== {header} ===")
+        print(f"{'Metric':<22} {'Haploid':>10} {b_label:>10} {'p':>8} {'d':>6} {'sig':>4}")
+        print("-" * 64)
+        for m, v in comparisons[key].items():
+            sig = "*" if v["significant_005"] else ""
+            print(f"{m:<22} {v['a_mean']:>10.3f} {v['b_mean']:>10.3f} "
+                  f"{v['p_value']:>8.4f} {v['cohens_d']:>6.3f} {sig:>4}")
 
 
 if __name__ == "__main__":
