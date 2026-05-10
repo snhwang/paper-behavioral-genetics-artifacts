@@ -608,11 +608,15 @@ def run_simulation(
 
     # Determine ablation mode: bear_disabled=True replaces all profiles with
     # uniform 0.3 (neutral/random) so tick() has no behavioral guidance.
+    # The retriever must also be nulled — bear_strength() prefers live
+    # retrieval whenever a retriever is attached and only falls back to
+    # behavior_profile when retriever is None.
     bear_off = getattr(world, 'bear_disabled', False)
     if bear_off:
         from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
         for c in world.creatures.values():
             c.behavior_profile = NullBehaviorProfile()
+            c.retriever = None
 
     # Track dead creatures for callbacks
     prev_ids = set(world.creatures.keys())
@@ -647,10 +651,13 @@ def run_simulation(
                 world.creatures[child_id] = child
                 world.total_births += 1
 
-                # In BEAR-Off mode, replace child's profile with null
+                # In BEAR-Off mode, replace child's profile with null and
+                # drop the bred retriever so bear_strength() falls back to
+                # the null profile instead of querying the corpus.
                 if bear_off:
                     from evolutionary_ecosystem.server.gene_engine import NullBehaviorProfile
                     child.behavior_profile = NullBehaviorProfile()
+                    child.retriever = None
 
                 if on_birth:
                     on_birth(child, world, t)
