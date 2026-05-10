@@ -1,0 +1,226 @@
+============================================================
+EVAL 9b: Haploid vs Diploid Under Selection Pressure
+============================================================
+Ticks: 500  Creatures: 12  Trials: 1
+Seeds: [42]
+LLM: http://127.0.0.1:8355/v1 / gemma-4-e2b
+run.py: /mnt/c/Users/Scott/Documents/Work/paper-behavioral-genetics-artifacts/evolutionary_ecosystem/run.py
+
+Loaded 5 haploid baseline trials from eval2b
+
+--- Trial 1/1 (seed=42) ---
+  [Diploid Dom.      ] seed=42 ...
+2026-05-10 13:46:20,167 server.app Starting at http://127.0.0.1:8003
+2026-05-10 13:46:20,949 server.app Using explicit base URL http://127.0.0.1:8355/v1, model=gemma-4-e2b
+2026-05-10 13:46:20,968 server.app LLM: openai/gemma-4-e2b  Embedder: BAAI/bge-base-en-v1.5
+2026-05-10 13:48:53,331 bear.retriever Loading sentence-transformers model: BAAI/bge-base-en-v1.5 ...
+2026-05-10 13:48:55,359 bear.retriever Loaded sentence-transformers model: BAAI/bge-base-en-v1.5 (dim=768)
+2026-05-10 13:48:55,370 server.app Embedding model loaded
+2026-05-10 13:48:55,370 server.app Breeding: recombination=locus, ploidy=diploid_dominant
+2026-05-10 13:48:55,370 server.app Spawned 21 world items
+2026-05-10 13:48:55,370 server.app Generating 12 creatures...
+2026-05-10 13:48:55,480 server.gene_engine Gene bank loaded: 8 archetypes
+2026-05-10 13:49:09,357 openai._base_client Retrying request to /chat/completions in 0.416600 seconds
+2026-05-10 13:49:09,779 openai._base_client Retrying request to /chat/completions in 0.846516 seconds
+2026-05-10 13:49:10,799 openai._base_client Retrying request to /chat/completions in 0.437698 seconds
+2026-05-10 13:49:11,246 openai._base_client Retrying request to /chat/completions in 0.993305 seconds
+2026-05-10 13:49:16,250 openai._base_client Retrying request to /chat/completions in 0.480833 seconds
+2026-05-10 13:49:16,734 openai._base_client Retrying request to /chat/completions in 0.972677 seconds
+2026-05-10 13:49:25,718 openai._base_client Retrying request to /chat/completions in 0.395772 seconds
+2026-05-10 13:49:26,117 openai._base_client Retrying request to /chat/completions in 0.951943 seconds
+2026-05-10 13:49:41,259 openai._base_client Retrying request to /chat/completions in 0.386166 seconds
+2026-05-10 13:49:41,653 openai._base_client Retrying request to /chat/completions in 0.765624 seconds
+2026-05-10 13:49:43,632 server.app   Dash (c1): body=0.15 hue=45 speed=1.39
+2026-05-10 13:49:43,632 server.app   1/12 creatures ready
+2026-05-10 13:49:43,634 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:43,695 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.8,2.3) energy=72
+2026-05-10 13:49:43,695 openai._base_client Retrying request to /chat/completions in 0.459014 seconds
+2026-05-10 13:49:44,162 openai._base_client Retrying request to /chat/completions in 0.821744 seconds
+2026-05-10 13:49:46,215 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:46,248 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.8,2.3) energy=72
+2026-05-10 13:49:46,999 openai._base_client Retrying request to /chat/completions in 0.380886 seconds
+2026-05-10 13:49:47,385 openai._base_client Retrying request to /chat/completions in 0.978140 seconds
+2026-05-10 13:49:48,764 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:48,789 server.brain DECISION Dash: trigger=idle intent=wandering target=(13.2,3.8) pos=(1.8,2.3) energy=72
+2026-05-10 13:49:51,314 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:51,337 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(5.3,2.8) energy=100
+2026-05-10 13:49:52,371 openai._base_client Retrying request to /chat/completions in 0.480687 seconds
+2026-05-10 13:49:52,855 openai._base_client Retrying request to /chat/completions in 0.961190 seconds
+2026-05-10 13:49:53,856 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:53,885 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(11.9,3.7) energy=100
+2026-05-10 13:49:56,409 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:56,434 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=100
+2026-05-10 13:49:58,961 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:49:58,987 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=100
+2026-05-10 13:50:01,505 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:01,528 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=100
+2026-05-10 13:50:01,832 openai._base_client Retrying request to /chat/completions in 0.471823 seconds
+2026-05-10 13:50:02,308 openai._base_client Retrying request to /chat/completions in 0.891500 seconds
+2026-05-10 13:50:04,049 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:04,077 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=99
+2026-05-10 13:50:06,598 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:06,625 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=99
+2026-05-10 13:50:07,311 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:07,337 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=99
+2026-05-10 13:50:09,858 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:09,884 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=99
+2026-05-10 13:50:12,406 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:12,435 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=99
+2026-05-10 13:50:14,959 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:14,986 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=99
+2026-05-10 13:50:17,379 openai._base_client Retrying request to /chat/completions in 0.459156 seconds
+2026-05-10 13:50:17,509 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:17,533 server.brain DECISION Dash: trigger=idle intent= target=no pos=(13.0,3.8) energy=98
+2026-05-10 13:50:17,843 openai._base_client Retrying request to /chat/completions in 0.774306 seconds
+2026-05-10 13:50:19,635 server.app   Drift (c2): body=0.15 hue=45 speed=1.39
+2026-05-10 13:50:19,635 server.app   2/12 creatures ready
+2026-05-10 13:50:19,658 server.brain BRAIN: 1 pending (Drift:idle)
+2026-05-10 13:50:19,681 server.brain DECISION Drift: trigger=idle intent=wandering target=(2.3,8.6) pos=(1.2,4.4) energy=78
+2026-05-10 13:50:19,681 openai._base_client Retrying request to /chat/completions in 0.438230 seconds
+2026-05-10 13:50:20,125 openai._base_client Retrying request to /chat/completions in 0.975611 seconds
+2026-05-10 13:50:20,690 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:20,719 server.brain DECISION Dash: trigger=idle intent=approaching Drift target=(1.5,5.6) pos=(13.0,3.8) energy=98
+2026-05-10 13:50:22,234 server.brain BRAIN: 1 pending (Drift:idle)
+2026-05-10 13:50:22,268 server.brain DECISION Drift: trigger=idle intent=wandering target=(14.5,7.8) pos=(2.1,7.6) energy=77
+2026-05-10 13:50:23,114 openai._base_client Retrying request to /chat/completions in 0.395593 seconds
+2026-05-10 13:50:23,274 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:50:23,306 server.brain DECISION Dash: trigger=idle intent=approaching Drift target=(3.5,7.7) pos=(9.6,4.3) energy=98
+2026-05-10 13:50:23,515 openai._base_client Retrying request to /chat/completions in 0.905627 seconds
+2026-05-10 13:50:24,816 server.brain BRAIN: 2 pending (Dash:greeting, Drift:greeting)
+2026-05-10 13:50:24,868 openai._base_client Retrying request to /chat/completions in 0.444838 seconds
+2026-05-10 13:50:24,869 openai._base_client Retrying request to /chat/completions in 0.398435 seconds
+2026-05-10 13:50:25,275 openai._base_client Retrying request to /chat/completions in 0.839868 seconds
+2026-05-10 13:50:25,317 openai._base_client Retrying request to /chat/completions in 0.814782 seconds
+2026-05-10 13:50:28,128 openai._base_client Retrying request to /chat/completions in 0.464146 seconds
+2026-05-10 13:50:28,137 openai._base_client Retrying request to /chat/completions in 0.498829 seconds
+2026-05-10 13:50:28,436 openai._base_client Retrying request to /chat/completions in 0.387430 seconds
+2026-05-10 13:50:28,597 openai._base_client Retrying request to /chat/completions in 0.888957 seconds
+2026-05-10 13:50:28,639 openai._base_client Retrying request to /chat/completions in 0.850089 seconds
+2026-05-10 13:50:28,831 openai._base_client Retrying request to /chat/completions in 0.756209 seconds
+2026-05-10 13:50:33,497 openai._base_client Retrying request to /chat/completions in 0.498286 seconds
+2026-05-10 13:50:33,497 openai._base_client Retrying request to /chat/completions in 0.443438 seconds
+2026-05-10 13:50:33,949 openai._base_client Retrying request to /chat/completions in 0.778121 seconds
+2026-05-10 13:50:34,001 openai._base_client Retrying request to /chat/completions in 0.962957 seconds
+2026-05-10 13:50:35,761 server.app Tick limit 500 reached -- saving results and exiting
+2026-05-10 13:50:36,408 server.app Sim log saved to /mnt/c/Users/Scott/Documents/Work/paper-behavioral-genetics-artifacts/evolutionary_ecosystem/eval/results/_eval9b_tmp_42_diploid_dominant.json
+  Diploid Dom.         pop=0 births=0 gen=0 div=0.000
+  [Diploid Codom.    ] seed=42 ...
+2026-05-10 13:50:38,597 server.app Starting at http://127.0.0.1:8003
+2026-05-10 13:50:39,138 server.app Using explicit base URL http://127.0.0.1:8355/v1, model=gemma-4-e2b
+2026-05-10 13:50:39,153 server.app LLM: openai/gemma-4-e2b  Embedder: BAAI/bge-base-en-v1.5
+2026-05-10 13:56:38,341 bear.retriever Loading sentence-transformers model: BAAI/bge-base-en-v1.5 ...
+2026-05-10 13:56:46,697 bear.retriever Loaded sentence-transformers model: BAAI/bge-base-en-v1.5 (dim=768)
+2026-05-10 13:56:46,704 server.app Embedding model loaded
+2026-05-10 13:56:46,704 server.app Breeding: recombination=locus, ploidy=diploid_codominant
+2026-05-10 13:56:46,704 server.app Spawned 21 world items
+2026-05-10 13:56:46,704 server.app Generating 12 creatures...
+2026-05-10 13:56:48,120 server.gene_engine Gene bank loaded: 8 archetypes
+2026-05-10 13:59:18,263 openai._base_client Retrying request to /chat/completions in 0.408394 seconds
+2026-05-10 13:59:18,675 openai._base_client Retrying request to /chat/completions in 0.843856 seconds
+2026-05-10 13:59:21,524 openai._base_client Retrying request to /chat/completions in 0.405880 seconds
+2026-05-10 13:59:21,932 openai._base_client Retrying request to /chat/completions in 0.923282 seconds
+2026-05-10 13:59:26,862 openai._base_client Retrying request to /chat/completions in 0.485293 seconds
+2026-05-10 13:59:27,351 openai._base_client Retrying request to /chat/completions in 0.815220 seconds
+2026-05-10 13:59:35,283 openai._base_client Retrying request to /chat/completions in 0.461411 seconds
+2026-05-10 13:59:35,747 openai._base_client Retrying request to /chat/completions in 0.988864 seconds
+2026-05-10 13:59:52,741 openai._base_client Retrying request to /chat/completions in 0.465080 seconds
+2026-05-10 13:59:53,210 openai._base_client Retrying request to /chat/completions in 0.954834 seconds
+2026-05-10 13:59:56,137 server.app   Dash (c1): body=0.15 hue=45 speed=1.39
+2026-05-10 13:59:56,137 server.app   1/12 creatures ready
+2026-05-10 13:59:56,139 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:59:56,187 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.8,2.3) energy=72
+2026-05-10 13:59:56,188 openai._base_client Retrying request to /chat/completions in 0.395266 seconds
+2026-05-10 13:59:56,585 openai._base_client Retrying request to /chat/completions in 0.825566 seconds
+2026-05-10 13:59:58,697 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:59:58,716 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.8,2.3) energy=72
+2026-05-10 13:59:59,420 openai._base_client Retrying request to /chat/completions in 0.393329 seconds
+2026-05-10 13:59:59,818 openai._base_client Retrying request to /chat/completions in 0.956188 seconds
+2026-05-10 13:59:59,328 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 13:59:59,348 server.brain DECISION Dash: trigger=idle intent=wandering target=(5.4,8.1) pos=(1.8,2.3) energy=72
+2026-05-10 14:00:01,859 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:01,879 server.brain DECISION Dash: trigger=idle intent= target=no pos=(3.6,5.2) energy=100
+2026-05-10 14:00:02,887 openai._base_client Retrying request to /chat/completions in 0.435923 seconds
+2026-05-10 14:00:03,326 openai._base_client Retrying request to /chat/completions in 0.934493 seconds
+2026-05-10 14:00:04,392 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:04,411 server.brain DECISION Dash: trigger=idle intent= target=no pos=(5.4,8.1) energy=100
+2026-05-10 14:00:06,921 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:06,944 server.brain DECISION Dash: trigger=idle intent=wandering target=(4.1,2.0) pos=(5.4,8.1) energy=100
+2026-05-10 14:00:09,453 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:09,473 server.brain DECISION Dash: trigger=idle intent= target=no pos=(4.7,4.7) energy=100
+2026-05-10 14:00:11,986 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:12,005 server.brain DECISION Dash: trigger=idle intent=wandering target=(1.5,5.0) pos=(4.1,2.1) energy=100
+2026-05-10 14:00:12,268 openai._base_client Retrying request to /chat/completions in 0.421764 seconds
+2026-05-10 14:00:12,693 openai._base_client Retrying request to /chat/completions in 0.949655 seconds
+2026-05-10 14:00:14,513 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:14,535 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.8,4.7) energy=100
+2026-05-10 14:00:17,055 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:17,086 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.6,5.0) energy=100
+2026-05-10 14:00:19,606 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:19,621 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.6,5.0) energy=100
+2026-05-10 14:00:22,133 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:22,154 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.6,5.0) energy=99
+2026-05-10 14:00:24,679 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:24,698 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.6,5.0) energy=99
+2026-05-10 14:00:27,212 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:27,233 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.6,5.0) energy=99
+2026-05-10 14:00:27,737 openai._base_client Retrying request to /chat/completions in 0.455190 seconds
+2026-05-10 14:00:27,836 server.brain BRAIN: 1 pending (Dash:idle)
+2026-05-10 14:00:27,855 server.brain DECISION Dash: trigger=idle intent=rallying target=no pos=(1.6,5.0) energy=99
+2026-05-10 14:00:28,196 openai._base_client Retrying request to /chat/completions in 0.840061 seconds
+2026-05-10 14:00:29,844 server.app   Fang (c2): body=0.15 hue=45 speed=1.39
+2026-05-10 14:00:29,844 server.app   2/12 creatures ready
+2026-05-10 14:00:29,864 server.brain BRAIN: 2 pending (Dash:greeting, Fang:greeting)
+2026-05-10 14:00:29,906 openai._base_client Retrying request to /chat/completions in 0.429474 seconds
+2026-05-10 14:00:29,906 openai._base_client Retrying request to /chat/completions in 0.462609 seconds
+2026-05-10 14:00:29,907 openai._base_client Retrying request to /chat/completions in 0.402759 seconds
+2026-05-10 14:00:30,314 openai._base_client Retrying request to /chat/completions in 0.857171 seconds
+2026-05-10 14:00:30,339 openai._base_client Retrying request to /chat/completions in 0.951745 seconds
+2026-05-10 14:00:30,372 openai._base_client Retrying request to /chat/completions in 0.961853 seconds
+2026-05-10 14:00:33,181 openai._base_client Retrying request to /chat/completions in 0.482381 seconds
+2026-05-10 14:00:33,302 openai._base_client Retrying request to /chat/completions in 0.438170 seconds
+2026-05-10 14:00:33,341 openai._base_client Retrying request to /chat/completions in 0.380301 seconds
+2026-05-10 14:00:33,667 openai._base_client Retrying request to /chat/completions in 0.771339 seconds
+2026-05-10 14:00:33,724 openai._base_client Retrying request to /chat/completions in 0.949662 seconds
+2026-05-10 14:00:33,743 openai._base_client Retrying request to /chat/completions in 0.845144 seconds
+2026-05-10 14:00:38,447 openai._base_client Retrying request to /chat/completions in 0.414483 seconds
+2026-05-10 14:00:38,594 openai._base_client Retrying request to /chat/completions in 0.425343 seconds
+2026-05-10 14:00:38,680 openai._base_client Retrying request to /chat/completions in 0.448513 seconds
+2026-05-10 14:00:38,864 openai._base_client Retrying request to /chat/completions in 0.868214 seconds
+2026-05-10 14:00:39,022 openai._base_client Retrying request to /chat/completions in 0.808449 seconds
+2026-05-10 14:00:39,131 openai._base_client Retrying request to /chat/completions in 0.806038 seconds
+2026-05-10 14:00:44,550 server.app Tick limit 500 reached -- saving results and exiting
+2026-05-10 14:00:45,651 server.app Sim log saved to /mnt/c/Users/Scott/Documents/Work/paper-behavioral-genetics-artifacts/evolutionary_ecosystem/eval/results/_eval9b_tmp_42_diploid_codominant.json
+/mnt/c/Users/Scott/Documents/Work/paper-behavioral-genetics-artifacts/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:219: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/mnt/c/Users/Scott/Documents/Work/paper-behavioral-genetics-artifacts/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:211: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+  Diploid Codom.       pop=0 births=0 gen=0 div=0.000
+
+Results saved to /mnt/c/Users/Scott/Documents/Work/paper-behavioral-genetics-artifacts/evolutionary_ecosystem/eval/results/eval9b_results.json
+
+=== SUMMARY ===
+Metric                      Haploid     Dip.Dom.   Dip.Codom.
+--------------------------------------------------------------
+final_population              0.000        0.000
+total_births                  0.000        0.000
+max_generation                0.000        0.000
+gene_diversity                0.000        0.000
+hausdorff                     0.000        0.000
+
+=== HAPLOID vs DIPLOID DOMINANT ===
+Metric                    Haploid   Dip.Dom.        p      d  sig
+----------------------------------------------------------------
+final_population           47.200      0.000   0.2348  0.000     
+total_births              128.000      0.000   0.2134  0.000     
+max_generation              7.600      0.000   0.2059  0.000     
+gene_diversity              0.348      0.000   0.3333  0.000     
+hausdorff                   0.587      0.000   0.3333  0.000     
+
+=== HAPLOID vs DIPLOID CODOMINANT ===
+Metric                    Haploid Dip.Codom.        p      d  sig
+----------------------------------------------------------------
+final_population           47.200      0.000   0.2348  0.000     
+total_births              128.000      0.000   0.2134  0.000     
+max_generation              7.600      0.000   0.2059  0.000     
+gene_diversity              0.348      0.000   0.3333  0.000     
+hausdorff                   0.587      0.000   0.3333  0.000     

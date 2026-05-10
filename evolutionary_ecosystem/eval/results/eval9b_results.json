@@ -1,17 +1,13 @@
 {
   "parameters": {
-    "n_ticks": 10000,
+    "n_ticks": 500,
     "n_creatures": 12,
-    "n_trials": 5,
+    "n_trials": 1,
     "seeds": [
-      42,
-      142,
-      242,
-      342,
-      442
+      42
     ],
     "llm_model": "gemma-4-e2b",
-    "llm_base_url": "http://localhost:8355/v1"
+    "llm_base_url": "http://127.0.0.1:8355/v1"
   },
   "summary": {
     "haploid": {
@@ -43,23 +39,45 @@
     },
     "diploid_dominant": {
       "final_population": {
-        "mean": NaN,
+        "mean": 0.0,
         "std": NaN
       },
       "total_births": {
-        "mean": NaN,
+        "mean": 0.0,
         "std": NaN
       },
       "max_generation": {
-        "mean": NaN,
+        "mean": 0.0,
         "std": NaN
       },
       "gene_diversity": {
-        "mean": NaN,
+        "mean": 0.0,
         "std": NaN
       },
       "hausdorff": {
-        "mean": NaN,
+        "mean": 0.0,
+        "std": NaN
+      }
+    },
+    "diploid_codominant": {
+      "final_population": {
+        "mean": 0.0,
+        "std": NaN
+      },
+      "total_births": {
+        "mean": 0.0,
+        "std": NaN
+      },
+      "max_generation": {
+        "mean": 0.0,
+        "std": NaN
+      },
+      "gene_diversity": {
+        "mean": 0.0,
+        "std": NaN
+      },
+      "hausdorff": {
+        "mean": 0.0,
         "std": NaN
       }
     }
@@ -69,51 +87,703 @@
       "final_population": {
         "a_mean": 47.2,
         "a_std": 3.5637,
-        "b_mean": NaN,
+        "b_mean": 0.0,
         "b_std": NaN,
         "cohens_d": 0.0,
-        "p_value": NaN,
+        "p_value": 0.2348,
         "significant_005": false
       },
       "total_births": {
         "a_mean": 128.0,
         "a_std": 3.0822,
-        "b_mean": NaN,
+        "b_mean": 0.0,
         "b_std": NaN,
         "cohens_d": 0.0,
-        "p_value": NaN,
+        "p_value": 0.2134,
         "significant_005": false
       },
       "max_generation": {
         "a_mean": 7.6,
         "a_std": 0.5477,
-        "b_mean": NaN,
+        "b_mean": 0.0,
         "b_std": NaN,
         "cohens_d": 0.0,
-        "p_value": NaN,
+        "p_value": 0.2059,
         "significant_005": false
       },
       "gene_diversity": {
         "a_mean": 0.348,
         "a_std": 0.0104,
-        "b_mean": NaN,
+        "b_mean": 0.0,
         "b_std": NaN,
         "cohens_d": 0.0,
-        "p_value": NaN,
+        "p_value": 0.3333,
         "significant_005": false
       },
       "hausdorff": {
         "a_mean": 0.5871,
         "a_std": 0.0105,
-        "b_mean": NaN,
+        "b_mean": 0.0,
         "b_std": NaN,
         "cohens_d": 0.0,
-        "p_value": NaN,
+        "p_value": 0.3333,
+        "significant_005": false
+      }
+    },
+    "haploid_vs_diploid_codominant": {
+      "final_population": {
+        "a_mean": 47.2,
+        "a_std": 3.5637,
+        "b_mean": 0.0,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": 0.2348,
+        "significant_005": false
+      },
+      "total_births": {
+        "a_mean": 128.0,
+        "a_std": 3.0822,
+        "b_mean": 0.0,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": 0.2134,
+        "significant_005": false
+      },
+      "max_generation": {
+        "a_mean": 7.6,
+        "a_std": 0.5477,
+        "b_mean": 0.0,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": 0.2059,
+        "significant_005": false
+      },
+      "gene_diversity": {
+        "a_mean": 0.348,
+        "a_std": 0.0104,
+        "b_mean": 0.0,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": 0.3333,
+        "significant_005": false
+      },
+      "hausdorff": {
+        "a_mean": 0.5871,
+        "a_std": 0.0105,
+        "b_mean": 0.0,
+        "b_std": NaN,
+        "cohens_d": 0.0,
+        "p_value": 0.3333,
         "significant_005": false
       }
     }
   },
   "trials": {
-    "diploid_dominant": []
+    "diploid_dominant": [
+      {
+        "metadata": {
+          "seed": 42,
+          "epoch": null,
+          "n_ticks": 500,
+          "n_creatures": 12,
+          "recombination": "locus"
+        },
+        "final": {
+          "population": 2,
+          "total_births": 0,
+          "total_deaths": 0,
+          "max_generation": 0,
+          "gene_diversity": 0.009,
+          "avg_behavior": {
+            "food_seeking": 0.8001,
+            "combat": 0.7232,
+            "survival": 0.682,
+            "stealth": 0.7996,
+            "breeding": 0.5416
+          }
+        },
+        "birth_log": [],
+        "death_log": [],
+        "action_log": [
+          {
+            "tick": 1,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 25,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 49,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "wandering",
+            "breed": false
+          },
+          {
+            "tick": 74,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 98,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 122,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 145,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 169,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 193,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 217,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 241,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 265,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 289,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 313,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 337,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 349,
+            "epoch": "abundance",
+            "creature": "Drift",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "wandering",
+            "breed": false
+          },
+          {
+            "tick": 358,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "approaching Drift",
+            "breed": true
+          },
+          {
+            "tick": 373,
+            "epoch": "abundance",
+            "creature": "Drift",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "wandering",
+            "breed": false
+          },
+          {
+            "tick": 383,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "approaching Drift",
+            "breed": true
+          }
+        ],
+        "snapshots": [
+          {
+            "tick": 500,
+            "epoch": "abundance",
+            "population": 2,
+            "births": 0,
+            "deaths": 0,
+            "avg_behavior": {
+              "food_seeking": 0.8001,
+              "combat": 0.7232,
+              "survival": 0.682,
+              "stealth": 0.7996,
+              "breeding": 0.5416
+            },
+            "per_creature": [
+              {
+                "id": "c1",
+                "name": "Dash",
+                "generation": 0,
+                "genes": {
+                  "personality": "Cunning and calculating, always scheming and watching for advantages. Processes social dynamics as a strategic game, identifying leverage points and exploitable patterns in every interaction.",
+                  "social_style": "Manipulative charmer who befriends the strong and ignores the weak. Builds alliances through calculated flattery and strategic generosity, always with an eye toward future benefit.",
+                  "movement_style": "Sneaks and stalks with low profile, always positioning for maximum tactical advantage. Every movement serves a purpose \u2014 approaching from blind spots, maintaining escape routes, staying near cover. [!sneak]",
+                  "reaction_pattern": "Watches from a safe distance, gathering information and waiting for the perfect moment to act. Never commits to a response until the situation is fully understood and the optimal move is clear.",
+                  "mating": "Low interest in reproducing [!approach(nearest)] [!breed(nearest)]",
+                  "foraging": "Steals food from others when they are distracted, timing theft to moments of maximum inattention. Hoards stolen food in hidden caches distributed across multiple secret locations.",
+                  "predator_defense": "Uses other creatures as decoys and shields during predator attacks. Positions self behind others, lets them absorb the danger, then escapes during the resulting confusion. [!flee]",
+                  "climate_survival": "Finds the most sheltered spots through systematic environmental scanning and monopolizes the best micro-climates. Arrives first at optimal shelter and defends it through social manipulation.",
+                  "territorial": "Claims resource-rich territory through deception and social manipulation rather than direct confrontation. Retreats immediately when outmatched, preserving energy for future opportunities.",
+                  "stealth": "Expert at concealment and misdirection. Moves through shadows, masks scent by rolling in environmental debris, and can change pace and posture to mimic non-threatening shapes. Uses terrain features to break line of sight systematically. [!sneak]",
+                  "sensory": "Sharp situational awareness focused on identifying vulnerabilities and opportunities. Reads body language of other creatures to predict their next move. Detects when a competitor is distracted or weakened before others notice."
+                },
+                "behavior": {
+                  "food_seeking": 0.7954,
+                  "combat": 0.7226,
+                  "survival": 0.678,
+                  "stealth": 0.8006,
+                  "breeding": 0.5318
+                }
+              },
+              {
+                "id": "c2",
+                "name": "Drift",
+                "generation": 0,
+                "genes": {
+                  "personality": "Cunning and calculating, always scheming and watching for advantages. Processes social dynamics as a strategic game, identifying leverage points and exploitable patterns in every interaction.",
+                  "social_style": "Manipulative charmer who befriends the strong and ignores the weak. Builds alliances through calculated flattery and strategic generosity, always with an eye toward future benefit.",
+                  "movement_style": "Sneaks and stalks with low profile, always positioning for maximum tactical advantage. Every movement serves a purpose \u2014 approaching from blind spots, maintaining escape routes, staying near cover. [!sneak]",
+                  "reaction_pattern": "Watches from a safe distance, gathering information and waiting for the perfect moment to act. Never commits to a response until the situation is fully understood and the optimal move is clear.",
+                  "mating": "Rarely interested in reproducing [!approach(nearest)]",
+                  "foraging": "Steals food from others when they are distracted, timing theft to moments of maximum inattention. Hoards stolen food in hidden caches distributed across multiple secret locations.",
+                  "predator_defense": "Uses other creatures as decoys and shields during predator attacks. Positions self behind others, lets them absorb the danger, then escapes during the resulting confusion. [!flee]",
+                  "climate_survival": "Finds the most sheltered spots through systematic environmental scanning and monopolizes the best micro-climates. Arrives first at optimal shelter and defends it through social manipulation.",
+                  "territorial": "Claims resource-rich territory through deception and social manipulation rather than direct confrontation. Retreats immediately when outmatched, preserving energy for future opportunities.",
+                  "stealth": "Expert at concealment and misdirection. Moves through shadows, masks scent by rolling in environmental debris, and can change pace and posture to mimic non-threatening shapes. Uses terrain features to break line of sight systematically. [!sneak]",
+                  "sensory": "Sharp situational awareness focused on identifying vulnerabilities and opportunities. Reads body language of other creatures to predict their next move. Detects when a competitor is distracted or weakened before others notice."
+                },
+                "behavior": {
+                  "food_seeking": 0.8048,
+                  "combat": 0.7238,
+                  "survival": 0.6859,
+                  "stealth": 0.7985,
+                  "breeding": 0.5513
+                }
+              }
+            ]
+          }
+        ],
+        "epoch_snapshots": [],
+        "ploidy": "diploid_dominant"
+      }
+    ],
+    "diploid_codominant": [
+      {
+        "metadata": {
+          "seed": 42,
+          "epoch": null,
+          "n_ticks": 500,
+          "n_creatures": 12,
+          "recombination": "locus"
+        },
+        "final": {
+          "population": 2,
+          "total_births": 0,
+          "total_deaths": 0,
+          "max_generation": 0,
+          "gene_diversity": 0.009,
+          "avg_behavior": {
+            "food_seeking": 0.8004,
+            "combat": 0.7266,
+            "survival": 0.6787,
+            "stealth": 0.7965,
+            "breeding": 0.5463
+          }
+        },
+        "birth_log": [],
+        "death_log": [],
+        "action_log": [
+          {
+            "tick": 1,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 25,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 50,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "wandering",
+            "breed": false
+          },
+          {
+            "tick": 74,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 99,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 124,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "wandering",
+            "breed": false
+          },
+          {
+            "tick": 149,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": null,
+            "intent": "",
+            "breed": true
+          },
+          {
+            "tick": 173,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": false,
+            "rally": false,
+            "mood": null,
+            "animation": "walk",
+            "intent": "wandering",
+            "breed": false
+          },
+          {
+            "tick": 198,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 222,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 246,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 270,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 294,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 319,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          },
+          {
+            "tick": 343,
+            "epoch": "abundance",
+            "creature": "Dash",
+            "trigger": "idle",
+            "flee": true,
+            "rally": true,
+            "mood": null,
+            "animation": "sprint",
+            "intent": "rallying",
+            "breed": false
+          }
+        ],
+        "snapshots": [
+          {
+            "tick": 500,
+            "epoch": "abundance",
+            "population": 2,
+            "births": 0,
+            "deaths": 0,
+            "avg_behavior": {
+              "food_seeking": 0.8004,
+              "combat": 0.7266,
+              "survival": 0.6787,
+              "stealth": 0.7965,
+              "breeding": 0.5463
+            },
+            "per_creature": [
+              {
+                "id": "c1",
+                "name": "Dash",
+                "generation": 0,
+                "genes": {
+                  "personality": "Cunning and calculating, always scheming and watching for advantages. Processes social dynamics as a strategic game, identifying leverage points and exploitable patterns in every interaction.",
+                  "social_style": "Manipulative charmer who befriends the strong and ignores the weak. Builds alliances through calculated flattery and strategic generosity, always with an eye toward future benefit.",
+                  "movement_style": "Sneaks and stalks with low profile, always positioning for maximum tactical advantage. Every movement serves a purpose \u2014 approaching from blind spots, maintaining escape routes, staying near cover. [!sneak]",
+                  "reaction_pattern": "Watches from a safe distance, gathering information and waiting for the perfect moment to act. Never commits to a response until the situation is fully understood and the optimal move is clear.",
+                  "mating": "Low interest in reproducing [!approach(nearest)] [!breed(nearest)]",
+                  "foraging": "Steals food from others when they are distracted, timing theft to moments of maximum inattention. Hoards stolen food in hidden caches distributed across multiple secret locations.",
+                  "predator_defense": "Uses other creatures as decoys and shields during predator attacks. Positions self behind others, lets them absorb the danger, then escapes during the resulting confusion. [!flee]",
+                  "climate_survival": "Finds the most sheltered spots through systematic environmental scanning and monopolizes the best micro-climates. Arrives first at optimal shelter and defends it through social manipulation.",
+                  "territorial": "Claims resource-rich territory through deception and social manipulation rather than direct confrontation. Retreats immediately when outmatched, preserving energy for future opportunities.",
+                  "stealth": "Expert at concealment and misdirection. Moves through shadows, masks scent by rolling in environmental debris, and can change pace and posture to mimic non-threatening shapes. Uses terrain features to break line of sight systematically. [!sneak]",
+                  "sensory": "Sharp situational awareness focused on identifying vulnerabilities and opportunities. Reads body language of other creatures to predict their next move. Detects when a competitor is distracted or weakened before others notice."
+                },
+                "behavior": {
+                  "food_seeking": 0.7954,
+                  "combat": 0.7226,
+                  "survival": 0.678,
+                  "stealth": 0.8006,
+                  "breeding": 0.5318
+                }
+              },
+              {
+                "id": "c2",
+                "name": "Fang",
+                "generation": 0,
+                "genes": {
+                  "personality": "Cunning and calculating, always scheming and watching for advantages. Processes social dynamics as a strategic game, identifying leverage points and exploitable patterns in every interaction.",
+                  "social_style": "Manipulative charmer who befriends the strong and ignores the weak. Builds alliances through calculated flattery and strategic generosity, always with an eye toward future benefit.",
+                  "movement_style": "Sneaks and stalks with low profile, always positioning for maximum tactical advantage. Every movement serves a purpose \u2014 approaching from blind spots, maintaining escape routes, staying near cover. [!sneak]",
+                  "reaction_pattern": "Watches from a safe distance, gathering information and waiting for the perfect moment to act. Never commits to a response until the situation is fully understood and the optimal move is clear.",
+                  "mating": "Rarely interested in reproducing [!approach(nearest)]",
+                  "foraging": "Steals food from others when they are distracted, timing theft to moments of maximum inattention. Hoards stolen food in hidden caches distributed across multiple secret locations.",
+                  "predator_defense": "Uses other creatures as decoys and shields during predator attacks. Positions self behind others, lets them absorb the danger, then escapes during the resulting confusion. [!flee]",
+                  "climate_survival": "Finds the most sheltered spots through systematic environmental scanning and monopolizes the best micro-climates. Arrives first at optimal shelter and defends it through social manipulation.",
+                  "territorial": "Claims resource-rich territory through deception and social manipulation rather than direct confrontation. Retreats immediately when outmatched, preserving energy for future opportunities.",
+                  "stealth": "Expert at concealment and misdirection. Moves through shadows, masks scent by rolling in environmental debris, and can change pace and posture to mimic non-threatening shapes. Uses terrain features to break line of sight systematically. [!sneak]",
+                  "sensory": "Sharp situational awareness focused on identifying vulnerabilities and opportunities. Reads body language of other creatures to predict their next move. Detects when a competitor is distracted or weakened before others notice."
+                },
+                "behavior": {
+                  "food_seeking": 0.8053,
+                  "combat": 0.7306,
+                  "survival": 0.6795,
+                  "stealth": 0.7924,
+                  "breeding": 0.5607
+                }
+              }
+            ]
+          }
+        ],
+        "epoch_snapshots": [],
+        "ploidy": "diploid_codominant"
+      }
+    ]
   }
 }

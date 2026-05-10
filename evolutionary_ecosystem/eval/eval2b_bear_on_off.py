@@ -66,7 +66,26 @@ def run_single(seed: int, bear_on: bool, base_url: str, model: str,
             with open(out_file) as f:
                 data = json.load(f)
             out_file.unlink(missing_ok=True)
-            return data
+            # app.py writes a nested schema ({"metadata": {...}, "final": {...}}).
+            # Flatten the keys the rest of this script consumes so summary,
+            # statistical_tests, and the printout below all see real values
+            # instead of 0 from missing-key defaults.
+            final    = data.get("final",    {}) or {}
+            metadata = data.get("metadata", {}) or {}
+            flat = {
+                "final_population": final.get("population", 0),
+                "total_births":     final.get("total_births", 0),
+                "total_deaths":     final.get("total_deaths", 0),
+                "max_generation":   final.get("max_generation", 0),
+                "gene_diversity":   final.get("gene_diversity", 0.0),
+                "hausdorff":        final.get("hausdorff", 0.0),
+                "elapsed_seconds":  metadata.get("elapsed_seconds", 0.0),
+                "n_ticks":          metadata.get("n_ticks"),
+                "seed":             metadata.get("seed"),
+                "birth_log":        data.get("birth_log", []),
+                "snapshots":        data.get("snapshots", []),
+            }
+            return flat
         except Exception as e:
             print(f"  ERROR reading output: {e}")
     elif result.returncode != 0:
