@@ -16,7 +16,7 @@ set -e
 cd "$(dirname "$0")"
 
 BASE_URL="${BASE_URL:-http://127.0.0.1:8355/v1}"
-MODEL="${MODEL:-gemma4:e2b}"
+MODEL="${MODEL:-gemma-4-e2b}"
 SEED="${SEED:-42}"
 TICKS="${TICKS:-100000}"
 CREATURES="${CREATURES:-30}"
