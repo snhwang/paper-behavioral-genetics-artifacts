@@ -30,7 +30,17 @@ import numpy as np
 from scipy import stats as scipy_stats
 
 _HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(_HERE.parent.parent.parent))
+# Layout-aware sys.path setup. Two layouts supported:
+#   bear-style:      <root>/examples/evolutionary_ecosystem/eval/eval_combined_v2.py
+#   artifacts-style: <root>/evolutionary_ecosystem/eval/eval_combined_v2.py
+# `from evolutionary_ecosystem...` resolves when the parent of the
+# evolutionary_ecosystem dir is on sys.path. Walk up looking for that.
+for _cand in (_HERE.parent.parent, _HERE.parent.parent.parent):
+    if (_cand / "evolutionary_ecosystem").is_dir():
+        sys.path.insert(0, str(_cand))
+        break
+else:
+    sys.path.insert(0, str(_HERE.parent.parent))
 
 from bear import Config, Corpus, EmbeddingBackend
 from bear.evolution import BreedingConfig, CrossoverMethod, breed as bear_breed
