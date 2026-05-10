@@ -47,7 +47,6 @@ echo "  output:     $OUTPUT (chunked)"
 echo "=========================================="
 
 python3 evolutionary_ecosystem/run.py \
-    --headless \
     --ticks       "$TICKS" \
     --creatures   "$CREATURES" \
     --seed        "$SEED" \
