@@ -200,6 +200,13 @@ def run_bear_llm(
         epoch=EPOCHS[0],
         epoch_index=0,
     )
+    # _check_breeding gates on world.autonomous_breeding (defaults False on
+    # the World dataclass) -- without this enabled, no breed tuples are
+    # ever pushed to world.breed_queue and the LLM breeding path stays
+    # idle for the entire run, producing zero births. The deterministic
+    # path works because harness.make_world / run_simulation set this
+    # flag explicitly.
+    world.autonomous_breeding = True
 
     name_counter = [0]
     print(f"Creating {n_creatures} creatures...")
