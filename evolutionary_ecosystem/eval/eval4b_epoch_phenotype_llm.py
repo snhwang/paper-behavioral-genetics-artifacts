@@ -62,15 +62,9 @@ def run_single(seed: int, bear_on: bool, base_url: str, model: str,
 
     print(f"  [{label}] seed={seed} ticks={n_ticks} ...", flush=True)
     result = subprocess.run(cmd, capture_output=False, text=True)
-<<<<<<< Updated upstream
-=======
-    if result.returncode != 0:
-        print(f"  WARNING: exit code {result.returncode}")
->>>>>>> Stashed changes
 
     # Check output file regardless of exit code — uvicorn exit is noisy
     if out_file.exists():
-<<<<<<< Updated upstream
         try:
             with open(out_file) as f:
                 data = json.load(f)
@@ -80,12 +74,6 @@ def run_single(seed: int, bear_on: bool, base_url: str, model: str,
             print(f"  ERROR reading output: {e}")
     elif result.returncode != 0:
         print(f"  ERROR: exit code {result.returncode}, no output file")
-=======
-        with open(out_file) as f:
-            data = json.load(f)
-        return data
-    print(f"  ERROR: no results file produced")
->>>>>>> Stashed changes
     return {}
 
 
