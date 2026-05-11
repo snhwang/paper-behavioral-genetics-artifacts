@@ -621,6 +621,7 @@ async def _breed_dispatch_loop() -> None:
                             generation       = max(a.generation, b.generation) + 1,
                             recombination    = world.recombination,
                             ploidy           = world.ploidy,
+                            mutation_rate    = getattr(args_ns, "mutation_rate", 0.15),
                         )
                         # Cache parent genes for birth logging
                         _pending_parent_genes[child_id] = (
@@ -1234,6 +1235,10 @@ def main():
                         help="Breeding recombination method")
     parser.add_argument("--ploidy", choices=["haploid", "diploid_dominant", "diploid_codominant"],
                         default="haploid", help="Inheritance ploidy mode")
+    parser.add_argument("--mutation-rate", type=float, default=0.15, dest="mutation_rate",
+                        help="Per-locus probability that an allele is mutated at each "
+                             "breeding event. Default 0.15. Set to 0 to disable mutation "
+                             "and let pure selection act on founder gene pool.")
     parser.add_argument("--chunk-size", type=int, default=None, dest="chunk_size",
                         help="Rotate the output file every N ticks. Each chunk is written "
                              "as <output>_NN.<ext> (zero-padded). Keeps individual files "
