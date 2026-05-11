@@ -35,11 +35,40 @@ modes. The main changes are:
   alleles. The r = -0.41 correlation is preserved; the explanation is
   sharper.
 
-- **New finding: generation depth differs between ploidies.** In the
-  100,000-tick runs, Mendelian haploid populations reach generation 128
-  while diploid co-dominant populations reach only generation 92 — a
-  quantitative signature of heterozygote masking slowing individual
-  turnover. This was not in the original submission.
+- **New finding: lineage branching differs between ploidies.** In the
+  100,000-tick runs, Mendelian haploid populations reach generation 121
+  while diploid co-dominant populations reach only generation 90. Mean
+  age at death is essentially identical in both modes (386 vs 394
+  ticks). The generation gap therefore reflects faster lineage branching
+  in haploid rather than longer diploid lifespan.
+
+- **New finding: diploid creatures average 37 percent more offspring
+  per lifetime** (8.77 vs 6.41 children at death, SEMs 0.05 and 0.07
+  respectively). The two modes have nearly identical total births
+  (1254 vs 1278) and population size (50 stable). The extra offspring
+  per individual is the downstream effect of codominant retrieval
+  indexing both alleles at the breeding query, producing a higher
+  retrieval score on average and therefore a higher autonomous-breeding
+  probability per encounter.
+
+- **New finding: diploid creatures die almost exclusively of old age.**
+  98.1 percent of diploid deaths are old age, 1.9 percent vitality
+  loss, 0 percent starvation. Haploid creatures show 92.4 percent old
+  age, 6.3 percent vitality loss, 1.3 percent starvation, 0.1 percent
+  combat. The two-allele corpus apparently makes diploid creatures
+  more robust to environmental stressors, so they reach old age more
+  reliably.
+
+- **New finding: action markers decay under LLM-mediated mutation.**
+  Default mutation rate 0.15 with the spontaneous-gene rewrite path
+  purges literal action tokens (`[!flee]`, `[!rally]`, `[!mood(happy)]`)
+  from the gene pool over generations. Haploid reaches a marker-free
+  state by generation 60. Diploid retains mating-related markers
+  longer through heterozygous carriage (generation 90 plus) but loses
+  predator-defense markers by generation 40. This is a substrate-loss
+  problem, not a selection-power problem, and motivates a supplementary
+  set of mutation-rate-zero runs to measure fitness effects on
+  preserved markers.
 
 - **Total births shifted modestly.** Mendelian haploid: 1744 → 1278
   (−27%). Diploid co-dominant: 1202 → 1254 (+4%). Sentence-level
