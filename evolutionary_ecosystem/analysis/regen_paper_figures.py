@@ -7,8 +7,14 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-RESULTS = Path("examples/evolutionary_ecosystem/eval/results")
+# Layout-aware: bear-style ("examples/evolutionary_ecosystem/eval/results")
+# vs artifacts-style ("evolutionary_ecosystem/eval/results"). Pick whichever
+# actually exists from the current cwd.
+_ART = Path("evolutionary_ecosystem/eval/results")
+_BEAR = Path("examples/evolutionary_ecosystem/eval/results")
+RESULTS = _ART if _ART.is_dir() else _BEAR
 PAPER_FIGS = Path("figures")
+PAPER_FIGS.mkdir(exist_ok=True)
 
 FONT_TITLE = 13
 FONT_LABEL = 12
