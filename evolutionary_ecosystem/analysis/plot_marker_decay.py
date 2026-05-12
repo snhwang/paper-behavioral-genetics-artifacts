@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """Plot action marker prevalence across generations.
 
-Reads the 100k haploid + diploid sim_logs (action variants) and produces
-a two-panel figure showing the fraction of births at each generation
-that contain four action markers: [!flee], [!rally], [!mood(happy)],
-[!breed(nearest)].
+Produces a 2x2 figure comparing marker dynamics under default mutation
+rate (0.15, top row) versus mutation rate zero (bottom row), in both
+haploid and diploid co-dominant populations.
 
-Demonstrates the LLM-mediated mutation operator's gradual purging of
-literal action tokens from the gene pool.
+Top row uses the 100k figure-data sims to show LLM-mediated mutation
+purging literal action tokens from the gene pool over generations.
+
+Bottom row uses the 30k mutation-rate-zero sims aggregated over 5
+seeds per ploidy. With mutation disabled, founder marker frequencies
+stay roughly stable across generations and selection visibly shifts
+the favored/disfavored markers in opposite directions.
 
 Output: figures/fig_marker_decay.png at the repo root.
 """
@@ -27,8 +31,6 @@ _HERE = Path(__file__).resolve().parent
 _ROOT = _HERE.parent.parent
 sys.path.insert(0, str(_ROOT))
 
-from evolutionary_ecosystem.analysis.sim_log_loader import load_sim_log  # noqa: E402
-
 
 MARKERS = [
     ("predator_defense", "!flee",           "[!flee]"),
@@ -42,24 +44,33 @@ COLORS = {
     "[!mood(happy)]":     "#2ca02c",
     "[!breed(nearest)]":  "#d62728",
 }
-GEN_BIN = 10
+GEN_BIN_DEFAULT = 10
+GEN_BIN_MUTZERO = 5
 
 
 def load_births(base_prefix: str) -> list[dict]:
-    """Concatenate birth_log across the 6 chunks of a 100k sim."""
+    """Concatenate birth_log across chunks of one simulation."""
     blog = []
-    for f in sorted(glob.glob(f"{base_prefix}_0[1-6].json")):
+    for f in sorted(glob.glob(f"{base_prefix}_0[1-9].json")):
         d = json.load(open(f))
         blog.extend(d.get("birth_log", []))
     return blog
 
 
-def marker_freq_by_gen(blog: list[dict]) -> dict:
-    """For each marker, return {gen_bin: (carriers, total)}."""
-    counts = defaultdict(lambda: defaultdict(lambda: [0, 0]))  # marker -> bin -> [carriers, total]
+def load_births_seeds(prefix_template: str, seeds: list[int]) -> list[dict]:
+    """Aggregate births across all seeds for one condition."""
+    blog = []
+    for seed in seeds:
+        blog.extend(load_births(prefix_template.format(seed=seed)))
+    return blog
+
+
+def marker_freq_by_gen(blog: list[dict], gen_bin: int) -> dict:
+    """Return {marker_label: {gen_bin_start: [carriers, total]}}."""
+    counts = defaultdict(lambda: defaultdict(lambda: [0, 0]))
     for b in blog:
         gen = b.get("generation", 0)
-        gbin = (gen // GEN_BIN) * GEN_BIN
+        gbin = (gen // gen_bin) * gen_bin
         cg = b.get("child_genes", {})
         for cat, token, label in MARKERS:
             counts[label][gbin][1] += 1
@@ -68,7 +79,8 @@ def marker_freq_by_gen(blog: list[dict]) -> dict:
     return counts
 
 
-def plot_panel(ax, counts: dict, title: str, max_gen: int) -> None:
+def plot_panel(ax, counts: dict, title: str, max_gen: int, gen_bin: int,
+               show_legend: bool, show_ylabel: bool) -> None:
     for cat, token, label in MARKERS:
         bins = sorted(counts[label])
         xs, ys = [], []
@@ -78,37 +90,77 @@ def plot_panel(ax, counts: dict, title: str, max_gen: int) -> None:
                 continue
             if b > max_gen:
                 continue
-            xs.append(b + GEN_BIN / 2)
+            xs.append(b + gen_bin / 2)
             ys.append(100 * carriers / total)
         ax.plot(xs, ys, marker="o", label=label, color=COLORS[label], linewidth=2)
     ax.set_xlabel("Generation")
-    ax.set_ylabel("Carrier prevalence (%)")
+    if show_ylabel:
+        ax.set_ylabel("Carrier prevalence (%)")
     ax.set_title(title)
     ax.set_ylim(0, 100)
     ax.grid(True, alpha=0.3)
-    ax.legend(loc="upper right", fontsize=9)
+    if show_legend:
+        ax.legend(loc="upper right", fontsize=9, framealpha=0.85)
 
 
 def main() -> None:
-    hap = load_births(str(_ROOT / "sim_log_mendelian_haploid_action"))
-    dip = load_births(str(_ROOT / "sim_log_diploid_codominant_action"))
+    # Top row: 100k figure-data sims with default mutation rate
+    hap_default = load_births(str(_ROOT / "sim_log_mendelian_haploid_action"))
+    dip_default = load_births(str(_ROOT / "sim_log_diploid_codominant_action"))
 
-    print(f"haploid births: {len(hap)}")
-    print(f"diploid births: {len(dip)}")
+    # Bottom row: 30k mutation-rate-zero sims, aggregated over 5 seeds
+    SEEDS = [42, 142, 242, 342, 442]
+    hap_mutzero = load_births_seeds(
+        str(_ROOT / "sim_log_selection_haploid_seed{seed}"), SEEDS)
+    dip_mutzero = load_births_seeds(
+        str(_ROOT / "sim_log_selection_diploid_codominant_seed{seed}"), SEEDS)
 
-    hap_counts = marker_freq_by_gen(hap)
-    dip_counts = marker_freq_by_gen(dip)
+    print(f"haploid default-rate births: {len(hap_default)}")
+    print(f"diploid default-rate births: {len(dip_default)}")
+    print(f"haploid mut=0 births (5 seeds): {len(hap_mutzero)}")
+    print(f"diploid mut=0 births (5 seeds): {len(dip_mutzero)}")
 
-    max_gen_h = max((b.get("generation", 0) for b in hap), default=0)
-    max_gen_d = max((b.get("generation", 0) for b in dip), default=0)
-    max_gen = max(max_gen_h, max_gen_d)
+    hap_default_counts = marker_freq_by_gen(hap_default, GEN_BIN_DEFAULT)
+    dip_default_counts = marker_freq_by_gen(dip_default, GEN_BIN_DEFAULT)
+    hap_mutzero_counts = marker_freq_by_gen(hap_mutzero, GEN_BIN_MUTZERO)
+    dip_mutzero_counts = marker_freq_by_gen(dip_mutzero, GEN_BIN_MUTZERO)
 
-    fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
-    plot_panel(axes[0], hap_counts, "Mendelian haploid", max_gen)
-    plot_panel(axes[1], dip_counts, "Diploid co-dominant", max_gen)
-    fig.suptitle("Action marker prevalence across generations (100k tick sim)",
-                 fontsize=13)
-    fig.tight_layout()
+    # Determine x-axis limits per row
+    max_gen_default = max(
+        max((b.get("generation", 0) for b in hap_default), default=0),
+        max((b.get("generation", 0) for b in dip_default), default=0),
+    )
+    max_gen_mutzero = max(
+        max((b.get("generation", 0) for b in hap_mutzero), default=0),
+        max((b.get("generation", 0) for b in dip_mutzero), default=0),
+    )
+
+    fig, axes = plt.subplots(2, 2, figsize=(13, 9), sharey=True)
+
+    plot_panel(axes[0, 0], hap_default_counts,
+               "Mendelian haploid, default mutation rate (0.15)",
+               max_gen_default, GEN_BIN_DEFAULT,
+               show_legend=True, show_ylabel=True)
+    plot_panel(axes[0, 1], dip_default_counts,
+               "Diploid co-dominant, default mutation rate (0.15)",
+               max_gen_default, GEN_BIN_DEFAULT,
+               show_legend=False, show_ylabel=False)
+    plot_panel(axes[1, 0], hap_mutzero_counts,
+               "Mendelian haploid, mutation rate 0 (5 seeds aggregated)",
+               max_gen_mutzero, GEN_BIN_MUTZERO,
+               show_legend=False, show_ylabel=True)
+    plot_panel(axes[1, 1], dip_mutzero_counts,
+               "Diploid co-dominant, mutation rate 0 (5 seeds aggregated)",
+               max_gen_mutzero, GEN_BIN_MUTZERO,
+               show_legend=False, show_ylabel=False)
+
+    fig.suptitle(
+        "Action marker prevalence across generations\n"
+        "Top: 100k-tick sims with default mutation (substrate erosion). "
+        "Bottom: 30k-tick sims with mutation disabled (substrate preserved).",
+        fontsize=12,
+    )
+    fig.tight_layout(rect=(0, 0, 1, 0.94))
 
     out_dir = _ROOT / "figures"
     out_dir.mkdir(exist_ok=True)
