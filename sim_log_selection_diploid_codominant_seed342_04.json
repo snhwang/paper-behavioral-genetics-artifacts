@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "seed": 342,
+    "epoch": null,
+    "n_ticks": 30000,
+    "n_creatures": 30,
+    "recombination": "locus",
+    "chunk_index": 4,
+    "chunk_size": 10000
+  },
+  "final": {
+    "population": 49,
+    "total_births": 396,
+    "total_deaths": 377,
+    "max_generation": 44,
+    "gene_diversity": 0.1805,
+    "avg_behavior": {
+      "food_seeking": 0.786,
+      "combat": 0.772,
+      "survival": 0.7203,
+      "stealth": 0.789,
+      "breeding": 0.5763
+    }
+  },
+  "birth_log": [],
+  "death_log": [],
+  "action_log": [],
+  "snapshots": [],
+  "epoch_snapshots": []
+}
