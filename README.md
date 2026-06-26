@@ -24,6 +24,7 @@ not load-bearing for any quantitative claim in the manuscript.
 | eval4_epoch_phenotype_shift    | no  | **yes** | `sec:eval-evoeco-epoch`, `figures/eval4_epoch_shift.png`, `figures/eval4_epoch_heatmap.png` |
 | eval5b_llm_breeding            | yes | **yes** | `sec:eval-breeding-sim` |
 | 100k live sims (haploid + diploid co-dominant) | yes | **yes** | `sec:action-log` — action-log + predator-response analysis |
+| mutation-novelty (analysis, not an eval) | no  | **yes** | `sec:mutation-novelty` — post-hoc from the action-log + selection logs via `analysis/mutation_novelty.py` |
 | eval2_dual_pathway_ablation    | no  | no      | supplementary |
 | eval2b_bear_on_off             | yes | no      | supplementary (live-sim ablation) |
 | eval3b_locus_breeding          | no  | no      | supplementary |
@@ -84,6 +85,38 @@ bear checkout. The FastAPI / uvicorn / websockets deps required by the
 live sim are listed in `requirements.txt`. If you patch bear and want
 the artifacts to follow, re-copy the three files from your local bear
 checkout and bump the pin.
+
+## Script descriptions
+
+Every script also carries a module docstring with full detail; the one-liners
+below are an index. Eval scripts live in `evolutionary_ecosystem/eval/`,
+analysis scripts in `evolutionary_ecosystem/analysis/`.
+
+### Eval scripts
+- `eval1_population_dynamics` — multi-generational population dynamics and diversity over ~340 generations (headless).
+- `eval2_dual_pathway_ablation` — ablation of the fast (BEAR) vs slow (LLM) decision pathways.
+- `eval2b_bear_on_off` — BEAR-on vs BEAR-off behavior in the full LLM pipeline (live sim).
+- `eval3_inheritance_fidelity` — parent/offspring gene-text inheritance fidelity (headless); the `d = 5.55` result.
+- `eval3_livedata` — inheritance fidelity computed from live-sim population data.
+- `eval3b_locus_breeding` — locus-based vs legacy breeding comparison.
+- `eval4_epoch_phenotype_shift` — epoch-driven phenotype shift across 5 locked epochs (ANOVA).
+- `eval4b_epoch_phenotype_llm` — epoch shift with the full LLM pipeline, BEAR on vs off.
+- `eval5_ga_baseline` — numeric genetic-algorithm baseline for comparison.
+- `eval5b_llm_breeding` — LLM-mediated breeding diversity in the full sim (paper LLM eval).
+- `eval5b_v2`, `eval5b_v3` — redesigned breeding-diversity comparisons (supplementary).
+- `eval6_dialogue_quality` — genome-conditioned retrieval diversity.
+- `eval6b_llm_dialogue` — genome-conditioned LLM output diversity.
+- `eval7_mutation_diversity` — semantic vs numeric mutation diversity, operator-level micro-benchmark (not population genetics; superseded in the paper by `analysis/mutation_novelty.py`).
+- `eval7b_llm_mutation` — LLM-mediated mutation diversity, operator-level.
+- `eval8_diploid_diversity` — diploid vs haploid diversity preservation.
+- `eval8_evolution_dynamics` — teaching, autonomous evolution, and breeding dynamics.
+- `eval9_diploid_selection` — diploid vs haploid inheritance under selection pressure.
+- `eval9b_diploid_selection` — live-sim diploid vs haploid under selection.
+- `harness` — shared headless harness (world setup, gene bank, embedder, run loop).
+- `compute_eval3_from_checkpoint`, `postprocess_eval2b`, `tune_params` — checkpoint/postprocess/parameter-tuning utilities.
+
+### Analysis scripts
+Full list with inputs/outputs in `evolutionary_ecosystem/analysis/README.md`. Paper-cited: `mutation_novelty` (`sec:mutation-novelty`), `aggregate_selection` (selection statistics), `compute_inheritance_stats` (inheritance-comparison table), `plot_marker_decay` (`fig:marker-decay`), and `regen_paper_figures` / `reproduce_all` (figure regeneration).
 
 ## Reproduce just the paper numbers
 

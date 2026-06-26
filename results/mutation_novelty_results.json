@@ -1,0 +1,39 @@
+{
+  "haploid_action": {
+    "files": 6,
+    "births": 1278,
+    "loci_examined": 14058,
+    "novel_loci": 1959,
+    "novel_pct": 13.94,
+    "births_with_novel_pct": 82.9,
+    "mutation_rate": 0.15
+  },
+  "diploid_action": {
+    "files": 6,
+    "births": 1254,
+    "loci_examined": 13794,
+    "novel_loci": 3686,
+    "novel_pct": 26.72,
+    "births_with_novel_pct": 95.8,
+    "mutation_rate": 0.15
+  },
+  "haploid_selection": {
+    "files": 20,
+    "births": 1920,
+    "loci_examined": 21120,
+    "novel_loci": 0,
+    "novel_pct": 0.0,
+    "births_with_novel_pct": 0.0,
+    "mutation_rate": 0.0
+  },
+  "diploid_selection": {
+    "files": 20,
+    "births": 1962,
+    "loci_examined": 21582,
+    "novel_loci": 2903,
+    "novel_pct": 13.45,
+    "births_with_novel_pct": 74.6,
+    "mutation_rate": 0.0
+  },
+  "diploid_mutation_contribution_approx_pct": 13.27
+}
