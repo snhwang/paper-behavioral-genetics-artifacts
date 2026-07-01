@@ -1,0 +1,222 @@
+[
+  {
+    "scenario": "predator_flee",
+    "probe_query": "A predator is approaching me right now. What should I do?",
+    "id": "memory-scout-1782888591-1",
+    "priority": 45,
+    "content": "Memory \u2014 Scout previously shared: I learned the hard way that standing still gets you caught; the moment I see a predator now I flee immediately toward the nearest cover.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "scout",
+      "survival",
+      "predator",
+      "fleeing",
+      "instinct",
+      "learning"
+    ],
+    "tags": [
+      "memory",
+      "scout",
+      "survival",
+      "predator",
+      "fleeing",
+      "instinct",
+      "learning"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888591.1558363
+    }
+  },
+  {
+    "scenario": "predator_flee",
+    "probe_query": "A predator is approaching me right now. What should I do?",
+    "id": "memory-scout-1782888591-2",
+    "priority": 45,
+    "content": "Memory \u2014 Scout previously shared: Treat every predator as lethal and flee at once toward the nearest cover; speed and early reaction beat strength every single time.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "scout",
+      "predator",
+      "strategy",
+      "speed",
+      "reaction",
+      "survival"
+    ],
+    "tags": [
+      "memory",
+      "scout",
+      "predator",
+      "strategy",
+      "speed",
+      "reaction",
+      "survival"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888591.1558363
+    }
+  },
+  {
+    "scenario": "forage_caution",
+    "probe_query": "I am hungry and found some food. How should I approach eating it?",
+    "id": "memory-forager-1782888591-1",
+    "priority": 45,
+    "content": "Memory \u2014 Forager previously shared: I learned to remember every productive feeding spot and return to them in order, as wandering randomly wastes energy.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "forager",
+      "foraging",
+      "memory",
+      "efficiency",
+      "survival"
+    ],
+    "tags": [
+      "memory",
+      "forager",
+      "foraging",
+      "memory",
+      "efficiency",
+      "survival"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888591.7182934
+    }
+  },
+  {
+    "scenario": "forage_caution",
+    "probe_query": "I am hungry and found some food. How should I approach eating it?",
+    "id": "memory-forager-1782888591-2",
+    "priority": 45,
+    "content": "Memory \u2014 Forager previously shared: I learned to observe a food source briefly before eating because the best patches are often where predators wait in ambush.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "forager",
+      "danger",
+      "observation",
+      "predators",
+      "caution"
+    ],
+    "tags": [
+      "memory",
+      "forager",
+      "danger",
+      "observation",
+      "predators",
+      "caution"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888591.7182934
+    }
+  },
+  {
+    "scenario": "stealth_hide",
+    "probe_query": "Danger is near and I want to avoid being seen. What is the best approach?",
+    "id": "memory-shade-1782888592-1",
+    "priority": 45,
+    "content": "Memory \u2014 Shade previously shared: I learned that staying unseen is safer than being fast, emphasizing staying low, moving slowly, and freezing instantly.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "shade",
+      "stealth",
+      "survival",
+      "caution",
+      "movement",
+      "safety"
+    ],
+    "tags": [
+      "memory",
+      "shade",
+      "stealth",
+      "survival",
+      "caution",
+      "movement",
+      "safety"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888592.3306038
+    }
+  },
+  {
+    "scenario": "stealth_hide",
+    "probe_query": "Danger is near and I want to avoid being seen. What is the best approach?",
+    "id": "memory-shade-1782888592-2",
+    "priority": 45,
+    "content": "Memory \u2014 Shade previously shared: The core rule for danger is to stay low, stay silent, and freeze when danger is near, as being unseen is key.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "shade",
+      "danger",
+      "rule",
+      "stillness",
+      "silence",
+      "survival"
+    ],
+    "tags": [
+      "memory",
+      "shade",
+      "danger",
+      "rule",
+      "stillness",
+      "silence",
+      "survival"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888592.3306038
+    }
+  },
+  {
+    "scenario": "rally_cooperate",
+    "probe_query": "The group is in danger. How should I respond to help everyone survive?",
+    "id": "memory-caller-1782888592-1",
+    "priority": 45,
+    "content": "Memory \u2014 Caller previously shared: I learned that a lone warning saves the whole group by raising a loud alarm when spotting a predator.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "caller",
+      "danger",
+      "warning",
+      "group",
+      "predator",
+      "defense"
+    ],
+    "tags": [
+      "memory",
+      "caller",
+      "danger",
+      "warning",
+      "group",
+      "predator",
+      "defense"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888592.9044495
+    }
+  },
+  {
+    "scenario": "rally_cooperate",
+    "probe_query": "The group is in danger. How should I respond to help everyone survive?",
+    "id": "memory-caller-1782888592-2",
+    "priority": 45,
+    "content": "Memory \u2014 Caller previously shared: Collective defence beats every creature fleeing alone, and a coordinated group withstands pressure that would destroy isolated creatures.\nMention this naturally if the topic comes up again.",
+    "scope_tags": [
+      "caller",
+      "cooperation",
+      "defense",
+      "survival",
+      "group",
+      "strength"
+    ],
+    "tags": [
+      "memory",
+      "caller",
+      "cooperation",
+      "defense",
+      "survival",
+      "group",
+      "strength"
+    ],
+    "metadata": {
+      "source": "memory_extractor",
+      "created": 1782888592.9044495
+    }
+  }
+]
