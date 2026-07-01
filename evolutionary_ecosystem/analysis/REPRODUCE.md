@@ -173,6 +173,38 @@ python examples/evolutionary_ecosystem/analysis/plot_mood_happy.py
 
 ---
 
+### Figure: Memory Inheritance (fig:memory-inheritance)
+**Experiment:** `eval10_memory_inheritance.py` — validates the Lamarckian
+memory-inheritance channel end to end (LLM extraction, transmission, expression,
+F2 persistence).
+**Plot script:** `plot_memory_inheritance.py`
+**Cached inputs:** `eval10_memories.json` (extracted memories),
+`eval10_results.json` (measurement)
+**Output:** `eval10_memory_inheritance.png`
+
+Two phases:
+
+```bash
+# Phase 1 (one-time): extract real memories with the LLM. Requires vLLM (below).
+python examples/evolutionary_ecosystem/eval/eval10_memory_inheritance.py \
+    --extract --base-url http://localhost:8355/v1 --model gemma-4-e2b
+
+# Phase 2: deterministic headless measurement (no LLM), then plot.
+python examples/evolutionary_ecosystem/eval/eval10_memory_inheritance.py \
+    --n-genomes 5 --n-offspring 25 --seed 12345
+python examples/evolutionary_ecosystem/analysis/plot_memory_inheritance.py
+```
+
+Phase 1 runs BEAR's `LLMMemoryExtractor` prompt and 8-exchange cadence with a JSON
+parse tolerant of small models' malformed output (gemma-4-E2B often emits unquoted
+topic tokens). The resulting `eval10_memories.json` is committed, so Phase 2
+reproduces the reported numbers deterministically with no LLM. Reported result
+(1,000 offspring, mutation rate 0): transmission 0.491 (95% CI 0.460--0.522, versus
+the 0.5 crossover expectation), expression recall 1.000 in carriers, F2
+transmission 0.511, 0/1000 control false-carriers.
+
+---
+
 ## Regenerating Headless Eval Data from Scratch
 
 If you want to rerun the headless evals rather than use the provided result files:
