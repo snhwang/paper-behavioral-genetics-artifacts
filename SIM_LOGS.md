@@ -1,10 +1,11 @@
 # Simulation Logs (Zenodo)
 
-The 13 `sim_log_*.json` files referenced by the paper (total ~266 MB, with four
-files exceeding GitHub's 50 MB soft limit) are archived on Zenodo with a DOI
-rather than checked into this repository.
+The complete set of 13 `sim_log_*.json` files referenced by the paper
+(total ~256 MB) is archived on Zenodo as a citable dataset. The six largest logs
+are hosted on Zenodo only; the seven smaller ones are also mirrored in this
+repository for convenience.
 
-**Zenodo DOI:** _TBD — will be added once the deposit is finalized._
+**Zenodo DOI:** [10.5281/zenodo.21151214](https://doi.org/10.5281/zenodo.21151214)
 
 **Contents of the Zenodo bundle:**
 

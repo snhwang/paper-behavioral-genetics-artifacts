@@ -5,3 +5,12 @@ venv/
 .DS_Store
 .env
 evolutionary_ecosystem/**/.cache/
+
+# Large simulation logs live only on Zenodo (doi.org/10.5281/zenodo.21151214);
+# guard against accidentally committing them into this repo.
+sim_log_diploid_v2_action.json
+sim_log_mendelian_haploid.json
+sim_log_mendelian_v2_action.json
+sim_log_diploid_codominant.json
+sim_log_mendelian_haploid_run1.json
+sim_log_diploid_codominant_run1.json

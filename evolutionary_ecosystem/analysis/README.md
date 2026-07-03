@@ -1,7 +1,7 @@
 # Analysis Scripts
 
 Figure generation scripts for the behavioral genetics paper.
-Run from the repo root: `python examples/evolutionary_ecosystem/analysis/<script>.py`
+Run from the repo root: `python evolutionary_ecosystem/analysis/<script>.py`
 
 ## Paper figures (eval data)
 
@@ -61,5 +61,5 @@ Run from the repo root: `python examples/evolutionary_ecosystem/analysis/<script
 pip install matplotlib numpy scipy sentence-transformers
 ```
 
-The scripts import from `examples/evolutionary_ecosystem/eval/harness.py` for the embedder.
+The scripts import from `evolutionary_ecosystem/eval/harness.py` for the embedder.
 Run from the repo root so imports resolve correctly.

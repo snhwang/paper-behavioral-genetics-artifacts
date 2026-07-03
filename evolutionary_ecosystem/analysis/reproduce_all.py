@@ -1,48 +1,60 @@
 #!/usr/bin/env python3
-"""Reproduce all paper figures and tables in one run.
+"""Reproduce the paper's data-backed figures and tables in one run.
 
-Run from repo root: python examples/evolutionary_ecosystem/analysis/reproduce_all.py
+Run from the repo root:  python evolutionary_ecosystem/analysis/reproduce_all.py
 
-Outputs all figures to paper_figures/ directory.
-Prints table numbers to stdout.
+Regenerates every figure/table that has a data pipeline, from committed results
+(no simulation and no LLM required). See REPRODUCE.md for per-item detail,
+inputs, and the optional from-scratch reruns.
+
+Figures land in figures/ (and evolutionary_ecosystem/analysis/ for the memory
+figure); table statistics are printed to stdout.
 """
 
 import subprocess
 import sys
-from pathlib import Path
 
-ANALYSIS_DIR = Path("examples/evolutionary_ecosystem/analysis")
-OUT_DIR = Path("paper_figures")
-OUT_DIR.mkdir(exist_ok=True)
+# Scripts are invoked with paths relative to the repo root; each globs its
+# inputs relative to the current directory, so run this from the repo root.
+STEPS = [
+    ("evolutionary_ecosystem/analysis/regen_paper_figures.py",
+     "fig:inheritance + fig:epoch-heatmap (eval3 + eval4, from committed results)"),
+    ("evolutionary_ecosystem/analysis/compute_inheritance_stats.py",
+     "tab:inheritance-comparison (cross-mode inheritance stats)"),
+    ("evolutionary_ecosystem/analysis/aggregate_selection.py",
+     "tab:selection-pressure (flee vs. rally under mutation rate 0)"),
+    ("evolutionary_ecosystem/analysis/plot_marker_decay.py",
+     "fig:marker-decay (action-marker prevalence across generations)"),
+    ("evolutionary_ecosystem/eval/eval10_memory_inheritance.py",
+     "fig:memory-inheritance, phase 2 (headless, from cached extraction)"),
+    ("evolutionary_ecosystem/analysis/plot_memory_inheritance.py",
+     "fig:memory-inheritance (plot)"),
+]
+
 
 def run(script, desc):
-    print(f"\n{'='*60}")
-    print(f"  {desc}")
-    print(f"{'='*60}")
-    result = subprocess.run(
-        [sys.executable, str(ANALYSIS_DIR / script)],
-        capture_output=False
-    )
+    print(f"\n{'='*60}\n  {desc}\n{'='*60}")
+    result = subprocess.run([sys.executable, script], capture_output=False)
     if result.returncode != 0:
         print(f"  WARNING: {script} exited with code {result.returncode}")
+    return result.returncode
 
-# ── Eval figures (headless data) ──────────────────────────────
-run("regen_paper_figures.py", "Eval 1: Population dynamics figure")
-run("regen_paper_figures.py", "Eval 3: Inheritance fidelity figure + table numbers")
-run("regen_paper_figures.py", "Eval 4: Epoch shift figure + heatmap + table numbers")
 
-# ── Cross-mode inheritance table ─────────────────────────────
-run("compute_inheritance_stats.py", "Cross-mode inheritance stats (tab:inheritance-comparison)")
+def main():
+    failures = [s for s, d in STEPS if run(s, d) != 0]
 
-# ── Action log figures ────────────────────────────────────────
-run("plot_action_results.py",
-    "Action log: flee/rally epoch, mood(happy) fitness, children dist")
+    print(f"\n{'='*60}")
+    print("  Done. Figures in figures/ (memory figure in "
+          "evolutionary_ecosystem/analysis/); table numbers above.")
+    print("  tab:population-dynamics needs no script — its values are the "
+          "committed results/eval1_results.json.")
+    print("  From-scratch reruns of eval1/eval3/eval4/eval10 extraction: see "
+          "REPRODUCE.md.")
+    if failures:
+        print(f"  {len(failures)} step(s) failed: {failures}")
+    print(f"{'='*60}\n")
+    return 1 if failures else 0
 
-# ── Supporting figures ────────────────────────────────────────
-run("plot_mood_happy.py",    "Mood(happy) tag frequency over births")
-run("plot_mating_drift.py",  "LLM blend mating drift")
-run("plot_action_tags.py",   "Action tag frequency and count")
 
-print(f"\n{'='*60}")
-print("  Done. Check paper_figures/ and figures/ for outputs.")
-print(f"{'='*60}\n")
+if __name__ == "__main__":
+    sys.exit(main())
