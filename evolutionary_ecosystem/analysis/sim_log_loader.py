@@ -38,7 +38,10 @@ _CHUNK_RE = re.compile(r"_(\d+)\.json$")
 def _chunked_paths(base_path: str) -> list[str]:
     """Return chunked sibling paths sorted by chunk index, or empty list."""
     base, ext = os.path.splitext(base_path)
-    pattern = f"{base}_*{ext}"
+    # Chunk suffix is _NN only. Require a digit immediately after the base so a
+    # base name that is a prefix of another log (e.g. "sim_log_mendelian_haploid"
+    # vs "sim_log_mendelian_haploid_action") does not sweep in the other's chunks.
+    pattern = f"{base}_[0-9]*{ext}"
     candidates = glob(pattern)
     indexed: list[tuple[int, str]] = []
     for p in candidates:
