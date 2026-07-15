@@ -21,7 +21,7 @@ Two parts:
 
 Usage:
     python -m evolutionary_ecosystem.eval.eval5b_v2 \
-        --base-url http://192.168.1.175:11434/v1 \
+        --base-url http://localhost:11434/v1 \
         --model gemma4:e2b
 """
 from __future__ import annotations
@@ -535,7 +535,7 @@ def run_part_b(llm: LLM) -> dict:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base-url", default="http://192.168.1.175:11434/v1")
+    parser.add_argument("--base-url", default="http://localhost:11434/v1")
     parser.add_argument("--model",    default="gemma4:e2b")
     parser.add_argument("--skip-b",   action="store_true",
                         help="Skip Part B (population viability)")

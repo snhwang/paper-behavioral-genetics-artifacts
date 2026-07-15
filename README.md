@@ -131,12 +131,32 @@ python3 evolutionary_ecosystem/eval/eval4_epoch_phenotype_shift.py
 
 # Part B: the one LLM-mediated paper-cited eval (needs an OpenAI-compatible LLM)
 python3 evolutionary_ecosystem/eval/eval5b_llm_breeding.py \
-    --backend local --base-url http://127.0.0.1:8355/v1 --model gemma-4-e2b
+    --backend local --base-url http://localhost:11434/v1 --model gemma4:e2b
 
 # Part C: the two 100k-tick live sims that anchor sec:action-log
 ./run_sim_100k_haploid.sh
 ./run_sim_100k_diploid.sh
 ```
+
+## Serving the LLM
+
+The LLM-mediated evals (`eval2b`, `eval4b`, `eval5b`, `eval6b`, `eval7b`,
+`eval8`, `eval9b`, `eval10`) and the live sims need an OpenAI-compatible
+endpoint. Any backend works; the reported runs used `gemma-4-E2B-it`. The
+simplest, most portable option is **Ollama**:
+
+```bash
+ollama pull gemma4:e2b
+ollama serve          # OpenAI-compatible API at http://localhost:11434/v1
+# then pass to any script:
+#   --base-url http://localhost:11434/v1 --model gemma4:e2b
+```
+
+vLLM also works (serve `google/gemma-4-E2B-it`, then use
+`--base-url http://localhost:8355/v1 --model gemma-4-e2b`) but is more
+sensitive to library-version drift. The model **name differs by backend**
+(`gemma4:e2b` for Ollama, `gemma-4-e2b` for vLLM) — pass the one that matches
+your server. Script defaults assume Ollama on `localhost:11434`.
 
 ## Reproduce everything (paper + supplementary)
 

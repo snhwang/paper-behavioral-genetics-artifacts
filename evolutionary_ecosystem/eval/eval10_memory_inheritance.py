@@ -23,7 +23,7 @@ Two phases:
 Usage:
     # one-time extraction (needs an OpenAI-compatible LLM endpoint)
     PYTHONPATH=. python evolutionary_ecosystem/eval/eval10_memory_inheritance.py \
-        --extract --base-url http://172.24.0.1:11434/v1 --model gemma4:e2b
+        --extract --base-url http://localhost:11434/v1 --model gemma4:e2b
 
     # deterministic measurement (no LLM)
     PYTHONPATH=. python evolutionary_ecosystem/eval/eval10_memory_inheritance.py \
@@ -501,7 +501,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--extract", action="store_true",
                     help="run the one-time LLM extraction phase")
-    ap.add_argument("--base-url", default="http://172.24.0.1:11434/v1",
+    ap.add_argument("--base-url", default="http://localhost:11434/v1",
                     help="OpenAI-compatible LLM endpoint for extraction")
     ap.add_argument("--model", default="gemma4:e2b")
     ap.add_argument("--n-genomes", type=int, default=6)

@@ -16,7 +16,7 @@ situational context (predator bloom → evasion, famine → food-seeking).
 
 Usage:
   python eval4b_epoch_phenotype_llm.py \\
-    --base-url http://192.168.1.175:11434/v1 \\
+    --base-url http://localhost:11434/v1 \\
     --model gemma4:e2b
 """
 

@@ -17,7 +17,7 @@ Multiple seeded trials give statistical validity.
 
 Usage:
   python eval9b_diploid_selection.py \\
-    --base-url http://192.168.1.175:11434/v1 \\
+    --base-url http://localhost:11434/v1 \\
     --model gemma4:e2b [--seeds 42 142 242 342 442] [--ticks 10000]
 """
 

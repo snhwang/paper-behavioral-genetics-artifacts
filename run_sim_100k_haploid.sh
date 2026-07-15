@@ -5,7 +5,7 @@
 # Runs the 100k-tick haploid simulation that anchors §sec:eval-diploid in the
 # paper. Saves to chunked sim_log files (each <50MB so GitHub-friendly).
 #
-# Requires: bear v0.1.8+ installed, vLLM running gemma4:e2b on localhost:8355.
+# Requires: bear v0.1.8+ installed, an OpenAI-compatible LLM (e.g. Ollama) serving gemma4:e2b on localhost:11434.
 #
 # Usage:
 #   ./run_sim_100k_haploid.sh                                  # defaults
@@ -15,8 +15,8 @@
 set -e
 cd "$(dirname "$0")"
 
-BASE_URL="${BASE_URL:-http://127.0.0.1:8355/v1}"
-MODEL="${MODEL:-gemma-4-e2b}"
+BASE_URL="${BASE_URL:-http://localhost:11434/v1}"
+MODEL="${MODEL:-gemma4:e2b}"
 SEED="${SEED:-42}"
 TICKS="${TICKS:-100000}"
 CREATURES="${CREATURES:-30}"

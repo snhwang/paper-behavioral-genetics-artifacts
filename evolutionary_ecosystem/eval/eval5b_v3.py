@@ -15,8 +15,8 @@ Uses same seeds and tick count as eval_combined_v2 for comparability.
 
 Usage:
     python -m evolutionary_ecosystem.eval.eval5b_v3 \
-        --base-url http://localhost:8355/v1 \
-        --model gemma-4-e2b
+        --base-url http://localhost:11434/v1 \
+        --model gemma4:e2b
 """
 from __future__ import annotations
 
@@ -394,8 +394,8 @@ def compare_conditions(results: dict) -> dict:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base-url", default="http://localhost:8355/v1")
-    parser.add_argument("--model",    default="gemma-4-e2b")
+    parser.add_argument("--base-url", default="http://localhost:11434/v1")
+    parser.add_argument("--model",    default="gemma4:e2b")
     parser.add_argument("--skip-locus", action="store_true",
                         help="Skip locus conditions (use if already have data)")
     parser.add_argument("--skip-blend", action="store_true",

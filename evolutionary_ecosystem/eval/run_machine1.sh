@@ -6,7 +6,7 @@
 set -e
 cd "$(dirname "$0")/../../.."
 
-BASE_URL="http://192.168.1.175:11434/v1"
+BASE_URL="http://localhost:11434/v1"
 MODEL="gemma4:e2b"
 TICKS=10000
 CREATURES=30

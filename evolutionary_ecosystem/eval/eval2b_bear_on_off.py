@@ -12,7 +12,7 @@ Multiple seeded trials give statistical validity (mean, std, p-values, Cohen's d
 
 Usage:
   python eval2b_bear_on_off.py \\
-    --base-url http://192.168.1.175:11434/v1 \\
+    --base-url http://localhost:11434/v1 \\
     --model gemma4:e2b [--trials 5] [--ticks 30000]
 """
 
@@ -135,7 +135,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Eval 2b: BEAR On vs Off — full LLM pipeline via headless sim")
     parser.add_argument("--base-url",   required=True, dest="base_url",
-                        help="OpenAI-compatible endpoint e.g. http://192.168.1.175:11434/v1")
+                        help="OpenAI-compatible endpoint e.g. http://localhost:11434/v1")
     parser.add_argument("--model",      required=True,
                         help="LLM model name e.g. gemma4:e2b")
     parser.add_argument("--trials",     type=int, default=N_TRIALS)

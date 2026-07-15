@@ -9,7 +9,7 @@
 # are functionally equivalent (continuous Uniform(0,1)/Beta(1,4) scores
 # never tie in practice). Codominant is the more honest label.
 #
-# Requires: bear v0.1.8+ installed, vLLM running gemma4:e2b on localhost:8355.
+# Requires: bear v0.1.8+ installed, an OpenAI-compatible LLM (e.g. Ollama) serving gemma4:e2b on localhost:11434.
 #
 # Usage:
 #   ./run_sim_100k_diploid.sh                                  # defaults
@@ -19,8 +19,8 @@
 set -e
 cd "$(dirname "$0")"
 
-BASE_URL="${BASE_URL:-http://127.0.0.1:8355/v1}"
-MODEL="${MODEL:-gemma-4-e2b}"
+BASE_URL="${BASE_URL:-http://localhost:11434/v1}"
+MODEL="${MODEL:-gemma4:e2b}"
 SEED="${SEED:-42}"
 TICKS="${TICKS:-100000}"
 CREATURES="${CREATURES:-30}"
